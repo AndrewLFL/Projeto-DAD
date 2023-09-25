@@ -30,9 +30,9 @@ namespace Estudio
         private void InitializeComponent()
         {
             this.gbModalidades = new System.Windows.Forms.GroupBox();
-            this.lblDesc = new System.Windows.Forms.Label();
-            this.cbDesc = new System.Windows.Forms.ComboBox();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.cbDesc = new System.Windows.Forms.ComboBox();
+            this.lblDesc = new System.Windows.Forms.Label();
             this.gbModalidades.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,14 +48,15 @@ namespace Estudio
             this.gbModalidades.TabStop = false;
             this.gbModalidades.Text = "Modalidades";
             // 
-            // lblDesc
+            // btnExcluir
             // 
-            this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(22, 64);
-            this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(58, 13);
-            this.lblDesc.TabIndex = 0;
-            this.lblDesc.Text = "Descrição:";
+            this.btnExcluir.Location = new System.Drawing.Point(25, 111);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(339, 23);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // cbDesc
             // 
@@ -65,14 +66,14 @@ namespace Estudio
             this.cbDesc.Size = new System.Drawing.Size(265, 21);
             this.cbDesc.TabIndex = 1;
             // 
-            // btnExcluir
+            // lblDesc
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(25, 111);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(339, 23);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Location = new System.Drawing.Point(22, 64);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(58, 13);
+            this.lblDesc.TabIndex = 0;
+            this.lblDesc.Text = "Descrição:";
             // 
             // Form7
             // 

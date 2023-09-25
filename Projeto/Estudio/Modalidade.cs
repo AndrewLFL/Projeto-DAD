@@ -35,7 +35,7 @@ namespace Estudio
         public double Preco { get => preco; set => preco = value; }
         public int QtdeAulas { get => qtdeAulas; set => qtdeAulas = value; }
         public int QtdeAlunos { get => qtdeAlunos; set => qtdeAlunos = value; }
-       
+
         public bool cadastrarModalidade()
         {
             bool cad = false;
@@ -94,7 +94,6 @@ namespace Estudio
             {
                 Console.WriteLine(ex.ToString());
             }
-            DAO_Conexao.con.Close();
             return resultado;
         }
 /*

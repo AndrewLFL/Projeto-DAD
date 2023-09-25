@@ -37,16 +37,16 @@ namespace Estudio
             this.excluirAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCadastrarModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiExcluirModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAtualizarModalidade = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogar = new System.Windows.Forms.Button();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.modalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCadastrarModalidade = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiExcluirModalidade = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAtualizarModalidade = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +117,37 @@ namespace Estudio
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // modalidadeToolStripMenuItem
+            // 
+            this.modalidadeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCadastrarModalidade,
+            this.tsmiExcluirModalidade,
+            this.tsmiAtualizarModalidade});
+            this.modalidadeToolStripMenuItem.Name = "modalidadeToolStripMenuItem";
+            this.modalidadeToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.modalidadeToolStripMenuItem.Text = "Modalidade";
+            // 
+            // tsmiCadastrarModalidade
+            // 
+            this.tsmiCadastrarModalidade.Name = "tsmiCadastrarModalidade";
+            this.tsmiCadastrarModalidade.Size = new System.Drawing.Size(176, 22);
+            this.tsmiCadastrarModalidade.Text = "Cadastrar";
+            this.tsmiCadastrarModalidade.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
+            // 
+            // tsmiExcluirModalidade
+            // 
+            this.tsmiExcluirModalidade.Name = "tsmiExcluirModalidade";
+            this.tsmiExcluirModalidade.Size = new System.Drawing.Size(176, 22);
+            this.tsmiExcluirModalidade.Text = "Excluir";
+            this.tsmiExcluirModalidade.Click += new System.EventHandler(this.tsmiExcluirModalidade_Click);
+            // 
+            // tsmiAtualizarModalidade
+            // 
+            this.tsmiAtualizarModalidade.Name = "tsmiAtualizarModalidade";
+            this.tsmiAtualizarModalidade.Size = new System.Drawing.Size(176, 22);
+            this.tsmiAtualizarModalidade.Text = "Atualizar/Consultar";
+            this.tsmiAtualizarModalidade.Click += new System.EventHandler(this.tsmiAtualizarModalidade_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnLogar);
@@ -170,6 +201,7 @@ namespace Estudio
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(194, 31);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.Text = "2343";
             // 
             // txtLogin
             // 
@@ -177,37 +209,7 @@ namespace Estudio
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(194, 31);
             this.txtLogin.TabIndex = 0;
-            // 
-            // modalidadeToolStripMenuItem
-            // 
-            this.modalidadeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCadastrarModalidade,
-            this.tsmiExcluirModalidade,
-            this.tsmiAtualizarModalidade});
-            this.modalidadeToolStripMenuItem.Name = "modalidadeToolStripMenuItem";
-            this.modalidadeToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.modalidadeToolStripMenuItem.Text = "Modalidade";
-            // 
-            // tsmiCadastrarModalidade
-            // 
-            this.tsmiCadastrarModalidade.Name = "tsmiCadastrarModalidade";
-            this.tsmiCadastrarModalidade.Size = new System.Drawing.Size(180, 22);
-            this.tsmiCadastrarModalidade.Text = "Cadastrar";
-            this.tsmiCadastrarModalidade.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
-            // 
-            // tsmiExcluirModalidade
-            // 
-            this.tsmiExcluirModalidade.Name = "tsmiExcluirModalidade";
-            this.tsmiExcluirModalidade.Size = new System.Drawing.Size(180, 22);
-            this.tsmiExcluirModalidade.Text = "Excluir";
-            this.tsmiExcluirModalidade.Click += new System.EventHandler(this.tsmiExcluirModalidade_Click);
-            // 
-            // tsmiAtualizarModalidade
-            // 
-            this.tsmiAtualizarModalidade.Name = "tsmiAtualizarModalidade";
-            this.tsmiAtualizarModalidade.Size = new System.Drawing.Size(180, 22);
-            this.tsmiAtualizarModalidade.Text = "Atualizar/Consultar";
-            this.tsmiAtualizarModalidade.Click += new System.EventHandler(this.tsmiAtualizarModalidade_Click);
+            this.txtLogin.Text = "carla";
             // 
             // Form1
             // 

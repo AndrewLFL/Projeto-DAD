@@ -16,21 +16,36 @@ namespace Estudio
         public Form7()
         {
             InitializeComponent();
+
+            atualizaComboBox();
+        }
+
+        public void atualizaComboBox()
+        {
             Modalidade mod = new Modalidade();
             try
             {
                 MySqlDataReader r = mod.consultarTodasModalidade();
-                Console.WriteLine(r["descricaoModalidade"].ToString());
-                while(r.Read())
+               // Console.WriteLine(r["descricaoModalidade"].ToString());
+                if (r.HasRows)
                 {
-                    cbDesc.Items.Add(r["descricaoModalidade"].ToString());
+                    while (r.Read())
+                    {
+                        cbDesc.Items.Add(r["descricaoModalidade"].ToString());
+                    }
                 }
+                r.Close();
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
             DAO_Conexao.con.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
