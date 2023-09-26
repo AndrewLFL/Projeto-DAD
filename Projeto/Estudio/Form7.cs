@@ -26,7 +26,6 @@ namespace Estudio
             try
             {
                 MySqlDataReader r = mod.consultarTodasModalidade();
-               // Console.WriteLine(r["descricaoModalidade"].ToString());
                 if (r.HasRows)
                 {
                     while (r.Read())
@@ -45,7 +44,19 @@ namespace Estudio
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Modalidade m = new Modalidade(cbDesc.SelectedItem.ToString());
+                if (m.excluirModalidade())
+                {
+                    this.atualizaComboBox(); // tem que ver porque não ta atualizando 
+                    MessageBox.Show("Modalidade excluída com sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

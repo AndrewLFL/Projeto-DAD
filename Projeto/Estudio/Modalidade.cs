@@ -86,8 +86,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade", DAO_Conexao.con);
-                Console.WriteLine("entrou");
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade where ativa NOT IN (1)", DAO_Conexao.con); // ta funfando
                 resultado = consulta.ExecuteReader();
             }
             catch (Exception ex)
@@ -101,9 +100,30 @@ namespace Estudio
         {
 
         }
+*/
+        public bool excluirModalidade() {
+            bool exc = false;
 
-        public bool excluirModalidade() { 
-        
-        }*/
+            try
+            {
+                Console.WriteLine(descricao);
+                Console.WriteLine(descricao);
+                Console.WriteLine(descricao);
+
+                DAO_Conexao.con.Open();
+                MySqlCommand exclui = new MySqlCommand("update Estudio_Modalidade set ativa = 1 where descricaoModalidade = '" + descricao + "'", DAO_Conexao.con);
+                exclui.ExecuteNonQuery();
+                exc = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return exc;
+        }
     }
 }
