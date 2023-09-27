@@ -49,17 +49,44 @@ namespace Estudio
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            try
+            { 
+                Modalidade m = new Modalidade(cbDesc.SelectedItem.ToString(), Convert.ToDouble(txtPreco.Text), Convert.ToInt32(txtAlunos.Text), Convert.ToInt32(txtAulas.Text));
+                m.atualizarModalidade();
+                this.atualizaComboBox();
+                MessageBox.Show("Modalidade atualizada com sucesso!");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(e.ToString());
+            }
 
         }
 
         private void cbDesc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Modalidade mod = new Modalidade(cbDesc.SelectedItem.ToString());
-            MySqlDataReader r = mod.consultarModalidade();
-            txtPreco.Text = r["precoModalidade"].ToString();
-            txtAlunos.Text = r["qtdeAluno"].ToString();
-            txtAulas.Text = r["qtdeAulas"].ToString();
-
+            try
+            {
+                Modalidade mod = new Modalidade(cbDesc.SelectedItem.ToString());
+                MySqlDataReader r = mod.consultarModalidade();
+                if (r.HasRows)
+                {
+                    while (r.Read())
+                    {
+                    txtPreco.Text = r["precoModalidade"].ToString();
+                    txtAlunos.Text = r["qtdeAluno"].ToString();
+                    txtAulas.Text = r["qtdeAulas"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
         }
     }
 }

@@ -89,12 +89,27 @@ namespace Estudio
             }
             return resultado;
         }
-/*
         public bool atualizarModalidade()
         {
-
+            bool at = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand atualizar = new MySqlCommand("Update Estudio_Modalidade set precoModalidade = " + preco + ", qtdeAluno = " + qtdeAlunos + ", qtdeAulas = " + qtdeAulas + " where descricaoModalidade = '"+ descricao + "'", DAO_Conexao.con);
+                atualizar.ExecuteNonQuery();
+                at = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return at;
         }
-*/
+
         public bool excluirModalidade() {
             bool exc = false;
 
