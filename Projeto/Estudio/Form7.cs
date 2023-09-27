@@ -50,7 +50,7 @@ namespace Estudio
                 Modalidade m = new Modalidade(cbDesc.SelectedItem.ToString());
                 if (m.excluirModalidade())
                 {
-                    this.atualizaComboBox(); // tem que ver porque não ta atualizando 
+                    this.atualizaComboBox();
                     cbDesc.Text = "";
                     MessageBox.Show("Modalidade excluída com sucesso!");
                 }

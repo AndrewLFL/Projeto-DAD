@@ -76,5 +76,10 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
