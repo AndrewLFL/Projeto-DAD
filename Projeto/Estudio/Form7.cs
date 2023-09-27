@@ -22,6 +22,7 @@ namespace Estudio
 
         public void atualizaComboBox()
         {
+            cbDesc.Items.Clear();
             Modalidade mod = new Modalidade();
             try
             {
@@ -50,6 +51,7 @@ namespace Estudio
                 if (m.excluirModalidade())
                 {
                     this.atualizaComboBox(); // tem que ver porque não ta atualizando 
+                    cbDesc.Text = "";
                     MessageBox.Show("Modalidade excluída com sucesso!");
                 }
             }

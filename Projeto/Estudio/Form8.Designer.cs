@@ -30,9 +30,9 @@ namespace Estudio
         private void InitializeComponent()
         {
             this.gbModalidade = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAulas = new System.Windows.Forms.TextBox();
+            this.txtAlunos = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.cbDesc = new System.Windows.Forms.ComboBox();
             this.lblAulas = new System.Windows.Forms.Label();
             this.lblAlunos = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@ namespace Estudio
             // 
             // gbModalidade
             // 
-            this.gbModalidade.Controls.Add(this.textBox3);
-            this.gbModalidade.Controls.Add(this.textBox2);
-            this.gbModalidade.Controls.Add(this.textBox1);
+            this.gbModalidade.Controls.Add(this.txtAulas);
+            this.gbModalidade.Controls.Add(this.txtAlunos);
+            this.gbModalidade.Controls.Add(this.txtPreco);
             this.gbModalidade.Controls.Add(this.cbDesc);
             this.gbModalidade.Controls.Add(this.lblAulas);
             this.gbModalidade.Controls.Add(this.lblAlunos);
@@ -60,27 +60,27 @@ namespace Estudio
             this.gbModalidade.TabStop = false;
             this.gbModalidade.Text = "Modalidades";
             // 
-            // textBox3
+            // txtAulas
             // 
-            this.textBox3.Location = new System.Drawing.Point(164, 192);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(409, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtAulas.Location = new System.Drawing.Point(164, 192);
+            this.txtAulas.Name = "txtAulas";
+            this.txtAulas.Size = new System.Drawing.Size(409, 20);
+            this.txtAulas.TabIndex = 8;
             // 
-            // textBox2
+            // txtAlunos
             // 
-            this.textBox2.Location = new System.Drawing.Point(164, 148);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(409, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtAlunos.Location = new System.Drawing.Point(164, 148);
+            this.txtAlunos.Name = "txtAlunos";
+            this.txtAlunos.Size = new System.Drawing.Size(409, 20);
+            this.txtAlunos.TabIndex = 7;
             // 
-            // textBox1
+            // txtPreco
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(422, 20);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtPreco.Location = new System.Drawing.Point(151, 103);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(422, 20);
+            this.txtPreco.TabIndex = 6;
+            this.txtPreco.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // cbDesc
             // 
@@ -91,6 +91,7 @@ namespace Estudio
             this.cbDesc.Name = "cbDesc";
             this.cbDesc.Size = new System.Drawing.Size(422, 21);
             this.cbDesc.TabIndex = 5;
+            this.cbDesc.SelectedIndexChanged += new System.EventHandler(this.cbDesc_SelectedIndexChanged);
             // 
             // lblAulas
             // 
@@ -136,6 +137,7 @@ namespace Estudio
             this.btnAtualizar.TabIndex = 0;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // Form8
             // 
@@ -154,9 +156,9 @@ namespace Estudio
         #endregion
 
         private System.Windows.Forms.GroupBox gbModalidade;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAulas;
+        private System.Windows.Forms.TextBox txtAlunos;
+        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.ComboBox cbDesc;
         private System.Windows.Forms.Label lblAulas;
         private System.Windows.Forms.Label lblAlunos;

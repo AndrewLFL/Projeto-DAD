@@ -57,28 +57,22 @@ namespace Estudio
             }
             return cad;
         }
- /*
+ 
         public MySqlDataReader consultarModalidade()
         {
-            bool existe = false;
+            MySqlDataReader resultado = null;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade WHERE CPFAluno = '" + CPF + "'", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
-                    existe = true;
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade WHERE descricaoModalidade = '" + descricao + "'", DAO_Conexao.con);
+                resultado = consulta.ExecuteReader();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                DAO_Conexao.con.Close();
-            }
-            return existe;
-        }*/
+            return resultado;
+        }
 
         public MySqlDataReader consultarTodasModalidade()
         {
@@ -106,10 +100,6 @@ namespace Estudio
 
             try
             {
-                Console.WriteLine(descricao);
-                Console.WriteLine(descricao);
-                Console.WriteLine(descricao);
-
                 DAO_Conexao.con.Open();
                 MySqlCommand exclui = new MySqlCommand("update Estudio_Modalidade set ativa = 1 where descricaoModalidade = '" + descricao + "'", DAO_Conexao.con);
                 exclui.ExecuteNonQuery();
