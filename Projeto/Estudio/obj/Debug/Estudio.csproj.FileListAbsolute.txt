@@ -92,3 +92,4 @@ C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.C
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.CopyComplete
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.exe
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.pdb
+C:\Users\aluno\3D Objects\TimeSkip\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.FrmCadastrarTurma.resources

@@ -26,7 +26,7 @@ namespace Estudio
                     throw new Exception();
                 }
 
-                Modalidade modalidade = new Modalidade(txtDesc.Text, Convert.ToDouble(txtPreco.Text), Convert.ToInt32(txtAlunos.Text), Convert.ToInt32(txtAulas.Text));
+                Modalidade modalidade = new Modalidade(txtDesc.Text, Convert.ToDecimal(txtPreco.Text), Convert.ToInt32(txtAlunos.Text), Convert.ToInt32(txtAulas.Text));
                 if (modalidade.cadastrarModalidade())
                 {
                     MessageBox.Show("Modalidade cadastrada com sucesso");

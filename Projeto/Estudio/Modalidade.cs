@@ -10,7 +10,7 @@ namespace Estudio
     class Modalidade
     {
         private String descricao;
-        private double preco;
+        private decimal preco;
         private int qtdeAlunos;
         private int qtdeAulas;
 
@@ -23,7 +23,7 @@ namespace Estudio
             this.descricao = descricao;
         }
 
-        public Modalidade(string descricao, double preco, int qtdeAlunos, int qtdeAulas)
+        public Modalidade(string descricao, decimal preco, int qtdeAlunos, int qtdeAulas)
         {
             this.descricao = descricao;
             this.preco = preco;
@@ -32,7 +32,7 @@ namespace Estudio
         }
 
         public string Descricao { get => descricao; set => descricao = value; }
-        public double Preco { get => preco; set => preco = value; }
+        public decimal Preco { get => preco; set => preco = value; }
         public int QtdeAulas { get => qtdeAulas; set => qtdeAulas = value; }
         public int QtdeAlunos { get => qtdeAlunos; set => qtdeAlunos = value; }
 
@@ -80,7 +80,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade where ativa NOT IN (1)", DAO_Conexao.con); // ta funfando
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade where ativa NOT IN (1)", DAO_Conexao.con);
                 resultado = consulta.ExecuteReader();
             }
             catch (Exception ex)

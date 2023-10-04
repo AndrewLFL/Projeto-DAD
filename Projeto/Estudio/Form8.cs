@@ -50,8 +50,8 @@ namespace Estudio
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             try
-            { 
-                Modalidade m = new Modalidade(cbDesc.SelectedItem.ToString(), Convert.ToDouble(txtPreco.Text), Convert.ToInt32(txtAlunos.Text), Convert.ToInt32(txtAulas.Text));
+            {
+                Modalidade m = new Modalidade(cbDesc.SelectedItem.ToString(), Convert.ToDecimal(txtPreco.Text), Convert.ToInt32(txtAlunos.Text), Convert.ToInt32(txtAulas.Text));
                 m.atualizarModalidade();
                 this.atualizaComboBox();
                 MessageBox.Show("Modalidade atualizada com sucesso!");
