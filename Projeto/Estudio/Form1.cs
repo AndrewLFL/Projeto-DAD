@@ -108,5 +108,10 @@ namespace Estudio
             atualizarModalidade.MdiParent = this;
             atualizarModalidade.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -93,3 +93,28 @@ C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.C
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.exe
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.pdb
 C:\Users\aluno\3D Objects\TimeSkip\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.FrmCadastrarTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\Estudio.exe.config
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\MySql.Data.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\System.Memory.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\System.Buffers.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\bin\Debug\MySql.Data.xml
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form1.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form2.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form3.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form4.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form5.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form6.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form7.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Form8.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.FrmCadastrarTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.Properties.Resources.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\obj\Debug\Estudio.pdb
