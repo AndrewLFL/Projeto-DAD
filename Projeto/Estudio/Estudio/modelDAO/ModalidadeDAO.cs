@@ -140,7 +140,7 @@ namespace Estudio.modelDAO
                 MySqlDataReader dr = sql.ExecuteReader();
                 while (dr.Read())
                 {
-                    mod = new Modalidade(dr.GetString("descricao"), dr.GetDouble("preco"), dr.GetInt32("qtdeAlunos"), dr.GetInt32("qtdeAulas"), dr.GetInt32("ativo"));
+                    mod = new Modalidade(dr.GetInt32("id"), dr.GetString("descricao"), dr.GetDouble("preco"), dr.GetInt32("qtdeAlunos"), dr.GetInt32("qtdeAulas"), dr.GetInt32("ativo"));
                 }
             }
             catch (Exception ex)

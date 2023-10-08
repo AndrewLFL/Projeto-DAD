@@ -89,7 +89,9 @@ namespace Estudio
 
         private void mitCadastrarTurma_Click(object sender, EventArgs e)
         {
-            
+            FrmCadastrarTurma frmCadastrarTurma = new FrmCadastrarTurma();
+            frmCadastrarTurma.MdiParent = this;
+            frmCadastrarTurma.Show();
         }
     }
 }

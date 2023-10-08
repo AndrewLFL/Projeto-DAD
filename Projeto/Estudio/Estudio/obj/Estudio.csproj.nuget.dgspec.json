@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto 2.0\\Estudio\\Estudio\\Estudio.csproj": {}
+    "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto\\Estudio\\Estudio\\Estudio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto 2.0\\Estudio\\Estudio\\Estudio.csproj": {
+    "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto\\Estudio\\Estudio\\Estudio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto 2.0\\Estudio\\Estudio\\Estudio.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto\\Estudio\\Estudio\\Estudio.csproj",
         "projectName": "Estudio",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto 2.0\\Estudio\\Estudio\\Estudio.csproj",
+        "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto\\Estudio\\Estudio\\Estudio.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto 2.0\\Estudio\\Estudio\\obj\\",
+        "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto\\Estudio\\Estudio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

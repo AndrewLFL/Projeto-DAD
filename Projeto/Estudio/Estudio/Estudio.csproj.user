@@ -13,6 +13,9 @@
     <Compile Update="view\FrmCadastrarModalidade.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="view\FrmCadastrarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="view\FrmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

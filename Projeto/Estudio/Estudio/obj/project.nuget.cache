@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kw3IPPh4ZqPRvatR/o4OrAAKqM0lR0gEryiOTlaPPLCajRknR/LDUgZCVwS51YRk48MZHMRyxMMKJUzq8NM3tg==",
+  "dgSpecHash": "/SBSx8Gv7UIhx+wilecFsjrzQ9Sh0pvjDiVmetZL/TWuW+yQvTMubPJyWgyW6zBKMjid0AM755n7y2Y9xQChag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto 2.0\\Estudio\\Estudio\\Estudio.csproj",
+  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Documentos\\Estudo\\Projeto-DAD\\Projeto\\Estudio\\Estudio\\Estudio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

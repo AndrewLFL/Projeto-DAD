@@ -40,3 +40,46 @@ C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto 2.0\Estudio\Estudi
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto 2.0\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmExcluirModalidade.resources
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto 2.0\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.FrmMain.resources
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto 2.0\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\Estudio.deps.json
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\Estudio.runtimeconfig.json
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\Estudio.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\System.IO.Pipelines.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\ZstdSharp.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmAtualizarAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmAtualizarModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmCadastrarAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmCadastrarModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmCadastrarTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmCadastrarUsuario.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmExcluirAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmExcluirModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.FrmMain.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\refint\Estudio.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.genruntimeconfig.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\ref\Estudio.dll
