@@ -25,6 +25,9 @@
     <Compile Update="view\FrmExcluirModalidade.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="view\FrmExcluirTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="view\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>

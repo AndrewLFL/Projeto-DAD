@@ -93,5 +93,13 @@ namespace Estudio
             frmCadastrarTurma.MdiParent = this;
             frmCadastrarTurma.Show();
         }
+
+        private void excluirTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmExcluirTurma frmExcluirTurma = new FrmExcluirTurma();
+            frmExcluirTurma.MdiParent = this;
+            frmExcluirTurma.Show();
+        }
+
     }
 }

@@ -23,5 +23,47 @@ namespace Estudio.control
             }
             return false;
         }
+
+        public List<String> consultarTodasTurmasAtivas()
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                return turmaDAO.consultarTodasTurmasAtivas();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            return null;
+        }
+
+        public bool excluir(int id)
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                return turmaDAO.excluir(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao excluir: " + ex.Message);
+            }
+            return false;
+        }
+
+        public Turma buscar(int id)
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                return turmaDAO.buscar(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            return null;
+        }
     }
 }

@@ -49,6 +49,7 @@
             txtUsername = new TextBox();
             lblSenha = new Label();
             lblUsername = new Label();
+            excluirTurmaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             gbValidacao.SuspendLayout();
             SuspendLayout();
@@ -148,7 +149,7 @@
             // 
             // mitTurma
             // 
-            mitTurma.DropDownItems.AddRange(new ToolStripItem[] { mitCadastrarTurma });
+            mitTurma.DropDownItems.AddRange(new ToolStripItem[] { mitCadastrarTurma, excluirTurmaToolStripMenuItem });
             mitTurma.Name = "mitTurma";
             mitTurma.Size = new Size(53, 20);
             mitTurma.Text = "Turma";
@@ -218,6 +219,13 @@
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Nome de usuario:";
             // 
+            // excluirTurmaToolStripMenuItem
+            // 
+            excluirTurmaToolStripMenuItem.Name = "excluirTurmaToolStripMenuItem";
+            excluirTurmaToolStripMenuItem.Size = new Size(180, 22);
+            excluirTurmaToolStripMenuItem.Text = "Excluir Turma ";
+            excluirTurmaToolStripMenuItem.Click += excluirTurmaToolStripMenuItem_Click;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -260,5 +268,6 @@
         private ToolStripMenuItem mitAtualizarModalidade;
         private ToolStripMenuItem mitTurma;
         private ToolStripMenuItem mitCadastrarTurma;
+        private ToolStripMenuItem excluirTurmaToolStripMenuItem;
     }
 }

@@ -83,3 +83,4 @@ C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\ob
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.pdb
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\ref\Estudio.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\net6.0-windows\Estudio.view.FrmExcluirTurma.resources
