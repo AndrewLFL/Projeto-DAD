@@ -117,5 +117,11 @@ namespace Estudio
             frmCadastrarUsuario.Show();
         }
 
+        private void atualizarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAtualizarTurma frmAtualizarTurma = new FrmAtualizarTurma();
+            frmAtualizarTurma.MdiParent = this;
+            frmAtualizarTurma.Show();
+        }
     }
 }

@@ -153,5 +153,30 @@ namespace Estudio.modelDAO
             }
             return mod;
         }
+
+        public String buscarDescricao(int id)
+        {
+            String res = null;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT descricao FROM EstudioModalidade WHERE id = '{id}'", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    res = dr.GetString("descricao");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return res;
+        }
     }
 }

@@ -53,6 +53,7 @@ namespace Estudio
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.atualizarTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.gbValidacao.SuspendLayout();
             this.SuspendLayout();
@@ -85,20 +86,20 @@ namespace Estudio
             // cadastrarUsuárioToolStripMenuItem
             // 
             this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
-            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
             this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuárioToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 22);
             this.toolStripMenuItem2.Text = "____________________";
             // 
             // mitSair
             // 
             this.mitSair.Name = "mitSair";
-            this.mitSair.Size = new System.Drawing.Size(180, 22);
+            this.mitSair.Size = new System.Drawing.Size(174, 22);
             this.mitSair.Text = "Sair";
             this.mitSair.Click += new System.EventHandler(this.mitSair_Click);
             // 
@@ -115,21 +116,21 @@ namespace Estudio
             // mitCadastrarAluno
             // 
             this.mitCadastrarAluno.Name = "mitCadastrarAluno";
-            this.mitCadastrarAluno.Size = new System.Drawing.Size(180, 22);
+            this.mitCadastrarAluno.Size = new System.Drawing.Size(159, 22);
             this.mitCadastrarAluno.Text = "Cadastrar Aluno";
             this.mitCadastrarAluno.Click += new System.EventHandler(this.mitCadastrarAluno_Click);
             // 
             // mitExcluirAluno
             // 
             this.mitExcluirAluno.Name = "mitExcluirAluno";
-            this.mitExcluirAluno.Size = new System.Drawing.Size(180, 22);
+            this.mitExcluirAluno.Size = new System.Drawing.Size(159, 22);
             this.mitExcluirAluno.Text = "Excluir Aluno";
             this.mitExcluirAluno.Click += new System.EventHandler(this.mitExcluirAluno_Click);
             // 
             // mitAtualizarAluno
             // 
             this.mitAtualizarAluno.Name = "mitAtualizarAluno";
-            this.mitAtualizarAluno.Size = new System.Drawing.Size(180, 22);
+            this.mitAtualizarAluno.Size = new System.Drawing.Size(159, 22);
             this.mitAtualizarAluno.Text = "Atualizar Aluno";
             this.mitAtualizarAluno.Click += new System.EventHandler(this.mitAtualizarAluno_Click);
             // 
@@ -168,7 +169,8 @@ namespace Estudio
             // 
             this.mitTurma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mitCadastrarTurma,
-            this.excluirTurmaToolStripMenuItem});
+            this.excluirTurmaToolStripMenuItem,
+            this.atualizarTurmaToolStripMenuItem});
             this.mitTurma.Name = "mitTurma";
             this.mitTurma.Size = new System.Drawing.Size(53, 20);
             this.mitTurma.Text = "Turma";
@@ -245,6 +247,13 @@ namespace Estudio
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Nome de usuario:";
             // 
+            // atualizarTurmaToolStripMenuItem
+            // 
+            this.atualizarTurmaToolStripMenuItem.Name = "atualizarTurmaToolStripMenuItem";
+            this.atualizarTurmaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.atualizarTurmaToolStripMenuItem.Text = "Atualizar Turma";
+            this.atualizarTurmaToolStripMenuItem.Click += new System.EventHandler(this.atualizarTurmaToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +300,7 @@ namespace Estudio
         private System.Windows.Forms.ToolStripMenuItem mitTurma;
         private System.Windows.Forms.ToolStripMenuItem mitCadastrarTurma;
         private System.Windows.Forms.ToolStripMenuItem excluirTurmaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarTurmaToolStripMenuItem;
     }
 }
 

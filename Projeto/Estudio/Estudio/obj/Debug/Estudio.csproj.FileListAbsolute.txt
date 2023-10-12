@@ -43,3 +43,4 @@ C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\ob
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.CopyComplete
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.exe
 C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarTurma.resources

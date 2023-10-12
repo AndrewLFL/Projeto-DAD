@@ -93,5 +93,19 @@ namespace Estudio.control
             }
             return null;
         }
+
+        public String buscarDescricao(int id)
+        {
+            try
+            {
+                ModalidadeDAO modalidadeDAO = new ModalidadeDAO();
+                return modalidadeDAO.buscarDescricao(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            return null;
+        }
     }
 }

@@ -35,6 +35,31 @@ namespace Estudio.modelDAO
             return cad;
         }
 
+        public List<String> consultarTodasTurmas()
+        {
+            List<String> lista = new List<String>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand("SELECT * FROM EstudioTurma", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(dr["id"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
         public List<String> consultarTodasTurmasAtivas()
         {
             List<String> lista = new List<String>();
@@ -93,7 +118,7 @@ namespace Estudio.modelDAO
                 MySqlDataReader dr = sql.ExecuteReader();
                 if (dr.Read())
                 {
-                    turma = new Turma(int.Parse(dr["modalidade"].ToString()), dr["professor"].ToString(), dr["diaSemana"].ToString(), dr["horario"].ToString());
+                    turma = new Turma(int.Parse(dr["modalidade"].ToString()), dr["professor"].ToString(), dr["diaSemana"].ToString(), dr["horario"].ToString(), int.Parse(dr["numAlunos"].ToString()), int.Parse(dr["ativo"].ToString()));
                 }
             }
             catch (Exception ex)
@@ -105,6 +130,28 @@ namespace Estudio.modelDAO
                 con.Close();
             }
             return turma;
+        }
+
+        public bool atualizar(Turma t)
+        {
+            bool att = false;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioTurma SET modalidade = {t.getSetModalidade}, professor = '{t.getSetProfessor}', diaSemana = '{t.getSetDiaSemana}', horario = '{t.getSetHorario}', ativo = {t.getSetAtivo} WHERE id = '{t.getSetId}'", con);
+                sql.ExecuteNonQuery();
+                att = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao atualizar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return att;
         }
     }
 }

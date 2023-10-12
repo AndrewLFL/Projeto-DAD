@@ -74,6 +74,12 @@
     <Compile Include="view\FrmAtualizarModalidade.designer.cs">
       <DependentUpon>FrmAtualizarModalidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmAtualizarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAtualizarTurma.Designer.cs">
+      <DependentUpon>FrmAtualizarTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FrmCadastrarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmAtualizarModalidade.resx">
       <DependentUpon>FrmAtualizarModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmAtualizarTurma.resx">
+      <DependentUpon>FrmAtualizarTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmCadastrarAluno.resx">
       <DependentUpon>FrmCadastrarAluno.cs</DependentUpon>
