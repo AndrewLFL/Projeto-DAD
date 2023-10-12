@@ -28,7 +28,7 @@ namespace Estudio.view
                     cbId.Items.Add(turma);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Erro ao listar turmas");
             }
@@ -50,7 +50,7 @@ namespace Estudio.view
                     MessageBox.Show("Erro ao excluir turma!");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Erro ao excluir turma!");
             }

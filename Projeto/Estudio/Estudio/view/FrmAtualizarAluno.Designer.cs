@@ -20,301 +20,294 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            gbAtualizarDados = new GroupBox();
-            mtxtTel = new MaskedTextBox();
-            mtxtCpf = new MaskedTextBox();
-            mtxtCep = new MaskedTextBox();
-            txtEstado = new TextBox();
-            txtComplemento = new TextBox();
-            txtNum = new TextBox();
-            txtEmail = new TextBox();
-            txtCidade = new TextBox();
-            txtBairro = new TextBox();
-            txtEndereco = new TextBox();
-            txtNome = new TextBox();
-            btnAtualizar = new Button();
-            lblEstado = new Label();
-            lblComplemento = new Label();
-            lblNum = new Label();
-            lblEmail = new Label();
-            lblCidade = new Label();
-            lblTel = new Label();
-            lblCep = new Label();
-            lblBairro = new Label();
-            lblEndereco = new Label();
-            lblNome = new Label();
-            lblCpf = new Label();
-            gbAtualizarDados.SuspendLayout();
-            SuspendLayout();
+            this.gbAtualizarDados = new System.Windows.Forms.GroupBox();
+            this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCep = new System.Windows.Forms.MaskedTextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblComplemento = new System.Windows.Forms.Label();
+            this.lblNum = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.lblTel = new System.Windows.Forms.Label();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.gbAtualizarDados.SuspendLayout();
+            this.SuspendLayout();
             // 
             // gbAtualizarDados
             // 
-            gbAtualizarDados.Controls.Add(mtxtTel);
-            gbAtualizarDados.Controls.Add(mtxtCpf);
-            gbAtualizarDados.Controls.Add(mtxtCep);
-            gbAtualizarDados.Controls.Add(txtEstado);
-            gbAtualizarDados.Controls.Add(txtComplemento);
-            gbAtualizarDados.Controls.Add(txtNum);
-            gbAtualizarDados.Controls.Add(txtEmail);
-            gbAtualizarDados.Controls.Add(txtCidade);
-            gbAtualizarDados.Controls.Add(txtBairro);
-            gbAtualizarDados.Controls.Add(txtEndereco);
-            gbAtualizarDados.Controls.Add(txtNome);
-            gbAtualizarDados.Controls.Add(btnAtualizar);
-            gbAtualizarDados.Controls.Add(lblEstado);
-            gbAtualizarDados.Controls.Add(lblComplemento);
-            gbAtualizarDados.Controls.Add(lblNum);
-            gbAtualizarDados.Controls.Add(lblEmail);
-            gbAtualizarDados.Controls.Add(lblCidade);
-            gbAtualizarDados.Controls.Add(lblTel);
-            gbAtualizarDados.Controls.Add(lblCep);
-            gbAtualizarDados.Controls.Add(lblBairro);
-            gbAtualizarDados.Controls.Add(lblEndereco);
-            gbAtualizarDados.Controls.Add(lblNome);
-            gbAtualizarDados.Controls.Add(lblCpf);
-            gbAtualizarDados.Location = new Point(12, 12);
-            gbAtualizarDados.Name = "gbAtualizarDados";
-            gbAtualizarDados.Size = new Size(665, 375);
-            gbAtualizarDados.TabIndex = 1;
-            gbAtualizarDados.TabStop = false;
-            gbAtualizarDados.Text = "Atualizar Dados";
+            this.gbAtualizarDados.Controls.Add(this.mtxtTel);
+            this.gbAtualizarDados.Controls.Add(this.mtxtCpf);
+            this.gbAtualizarDados.Controls.Add(this.mtxtCep);
+            this.gbAtualizarDados.Controls.Add(this.txtEstado);
+            this.gbAtualizarDados.Controls.Add(this.txtComplemento);
+            this.gbAtualizarDados.Controls.Add(this.txtNum);
+            this.gbAtualizarDados.Controls.Add(this.txtEmail);
+            this.gbAtualizarDados.Controls.Add(this.txtCidade);
+            this.gbAtualizarDados.Controls.Add(this.txtBairro);
+            this.gbAtualizarDados.Controls.Add(this.txtEndereco);
+            this.gbAtualizarDados.Controls.Add(this.txtNome);
+            this.gbAtualizarDados.Controls.Add(this.btnAtualizar);
+            this.gbAtualizarDados.Controls.Add(this.lblEstado);
+            this.gbAtualizarDados.Controls.Add(this.lblComplemento);
+            this.gbAtualizarDados.Controls.Add(this.lblNum);
+            this.gbAtualizarDados.Controls.Add(this.lblEmail);
+            this.gbAtualizarDados.Controls.Add(this.lblCidade);
+            this.gbAtualizarDados.Controls.Add(this.lblTel);
+            this.gbAtualizarDados.Controls.Add(this.lblCep);
+            this.gbAtualizarDados.Controls.Add(this.lblBairro);
+            this.gbAtualizarDados.Controls.Add(this.lblEndereco);
+            this.gbAtualizarDados.Controls.Add(this.lblNome);
+            this.gbAtualizarDados.Controls.Add(this.lblCpf);
+            this.gbAtualizarDados.Location = new System.Drawing.Point(10, 10);
+            this.gbAtualizarDados.Name = "gbAtualizarDados";
+            this.gbAtualizarDados.Size = new System.Drawing.Size(567, 325);
+            this.gbAtualizarDados.TabIndex = 1;
+            this.gbAtualizarDados.TabStop = false;
+            this.gbAtualizarDados.Text = "Atualizar Dados";
             // 
             // mtxtTel
             // 
-            mtxtTel.Location = new Point(98, 268);
-            mtxtTel.Mask = "(00) 00000-0000";
-            mtxtTel.Name = "mtxtTel";
-            mtxtTel.Size = new Size(147, 23);
-            mtxtTel.TabIndex = 22;
+            this.mtxtTel.Location = new System.Drawing.Point(84, 232);
+            this.mtxtTel.Mask = "(00) 00000-0000";
+            this.mtxtTel.Name = "mtxtTel";
+            this.mtxtTel.Size = new System.Drawing.Size(127, 20);
+            this.mtxtTel.TabIndex = 22;
             // 
             // mtxtCpf
             // 
-            mtxtCpf.Location = new Point(98, 47);
-            mtxtCpf.Mask = "000,000,000-00";
-            mtxtCpf.Name = "mtxtCpf";
-            mtxtCpf.Size = new Size(147, 23);
-            mtxtCpf.TabIndex = 21;
-            mtxtCpf.KeyPress += mtxtCpf_KeyPress;
+            this.mtxtCpf.Location = new System.Drawing.Point(84, 41);
+            this.mtxtCpf.Mask = "000,000,000-00";
+            this.mtxtCpf.Name = "mtxtCpf";
+            this.mtxtCpf.Size = new System.Drawing.Size(127, 20);
+            this.mtxtCpf.TabIndex = 21;
+            this.mtxtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtCpf_KeyPress);
             // 
             // mtxtCep
             // 
-            mtxtCep.Location = new Point(98, 219);
-            mtxtCep.Mask = "00,000-00";
-            mtxtCep.Name = "mtxtCep";
-            mtxtCep.Size = new Size(121, 23);
-            mtxtCep.TabIndex = 20;
+            this.mtxtCep.Location = new System.Drawing.Point(84, 190);
+            this.mtxtCep.Mask = "00,000-00";
+            this.mtxtCep.Name = "mtxtCep";
+            this.mtxtCep.Size = new System.Drawing.Size(104, 20);
+            this.mtxtCep.TabIndex = 20;
             // 
             // txtEstado
             // 
-            txtEstado.Location = new Point(463, 222);
-            txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(160, 23);
-            txtEstado.TabIndex = 19;
+            this.txtEstado.Location = new System.Drawing.Point(397, 192);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(138, 20);
+            this.txtEstado.TabIndex = 19;
             // 
             // txtComplemento
             // 
-            txtComplemento.Location = new Point(463, 169);
-            txtComplemento.Name = "txtComplemento";
-            txtComplemento.Size = new Size(160, 23);
-            txtComplemento.TabIndex = 18;
+            this.txtComplemento.Location = new System.Drawing.Point(397, 146);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(138, 20);
+            this.txtComplemento.TabIndex = 18;
             // 
             // txtNum
             // 
-            txtNum.Location = new Point(523, 129);
-            txtNum.Name = "txtNum";
-            txtNum.Size = new Size(100, 23);
-            txtNum.TabIndex = 17;
+            this.txtNum.Location = new System.Drawing.Point(448, 112);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(86, 20);
+            this.txtNum.TabIndex = 17;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(310, 268);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(313, 23);
-            txtEmail.TabIndex = 16;
+            this.txtEmail.Location = new System.Drawing.Point(266, 232);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(269, 20);
+            this.txtEmail.TabIndex = 16;
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(290, 219);
-            txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(100, 23);
-            txtCidade.TabIndex = 15;
+            this.txtCidade.Location = new System.Drawing.Point(249, 190);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(86, 20);
+            this.txtCidade.TabIndex = 15;
             // 
             // txtBairro
             // 
-            txtBairro.Location = new Point(98, 169);
-            txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(254, 23);
-            txtBairro.TabIndex = 14;
+            this.txtBairro.Location = new System.Drawing.Point(84, 146);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(218, 20);
+            this.txtBairro.TabIndex = 14;
             // 
             // txtEndereco
             // 
-            txtEndereco.Location = new Point(98, 129);
-            txtEndereco.Name = "txtEndereco";
-            txtEndereco.Size = new Size(359, 23);
-            txtEndereco.TabIndex = 13;
+            this.txtEndereco.Location = new System.Drawing.Point(84, 112);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(308, 20);
+            this.txtEndereco.TabIndex = 13;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(98, 81);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(359, 23);
-            txtNome.TabIndex = 12;
+            this.txtNome.Location = new System.Drawing.Point(84, 70);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(308, 20);
+            this.txtNome.TabIndex = 12;
             // 
             // btnAtualizar
             // 
-            btnAtualizar.Location = new Point(38, 322);
-            btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(585, 23);
-            btnAtualizar.TabIndex = 11;
-            btnAtualizar.Text = "Atualizar";
-            btnAtualizar.UseVisualStyleBackColor = true;
-            btnAtualizar.Click += btnAtualizar_Click;
+            this.btnAtualizar.Location = new System.Drawing.Point(27, 279);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(508, 20);
+            this.btnAtualizar.TabIndex = 11;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // lblEstado
             // 
-            lblEstado.AutoSize = true;
-            lblEstado.Location = new Point(412, 222);
-            lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(45, 15);
-            lblEstado.TabIndex = 10;
-            lblEstado.Text = "Estado:";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(353, 192);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(43, 13);
+            this.lblEstado.TabIndex = 10;
+            this.lblEstado.Text = "Estado:";
             // 
             // lblComplemento
             // 
-            lblComplemento.AutoSize = true;
-            lblComplemento.Location = new Point(370, 172);
-            lblComplemento.Name = "lblComplemento";
-            lblComplemento.Size = new Size(87, 15);
-            lblComplemento.TabIndex = 9;
-            lblComplemento.Text = "Complemento:";
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Location = new System.Drawing.Point(317, 149);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(74, 13);
+            this.lblComplemento.TabIndex = 9;
+            this.lblComplemento.Text = "Complemento:";
             // 
             // lblNum
             // 
-            lblNum.AutoSize = true;
-            lblNum.Location = new Point(495, 137);
-            lblNum.Name = "lblNum";
-            lblNum.Size = new Size(22, 15);
-            lblNum.TabIndex = 8;
-            lblNum.Text = "nº:";
+            this.lblNum.AutoSize = true;
+            this.lblNum.Location = new System.Drawing.Point(424, 119);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(20, 13);
+            this.lblNum.TabIndex = 8;
+            this.lblNum.Text = "nº:";
             // 
             // lblEmail
             // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(260, 271);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(44, 15);
-            lblEmail.TabIndex = 7;
-            lblEmail.Text = "E-mail:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(223, 235);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "E-mail:";
             // 
             // lblCidade
             // 
-            lblCidade.AutoSize = true;
-            lblCidade.Location = new Point(237, 222);
-            lblCidade.Name = "lblCidade";
-            lblCidade.Size = new Size(47, 15);
-            lblCidade.TabIndex = 6;
-            lblCidade.Text = "Cidade:";
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(203, 192);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(43, 13);
+            this.lblCidade.TabIndex = 6;
+            this.lblCidade.Text = "Cidade:";
             // 
             // lblTel
             // 
-            lblTel.AutoSize = true;
-            lblTel.Location = new Point(38, 271);
-            lblTel.Name = "lblTel";
-            lblTel.Size = new Size(54, 15);
-            lblTel.TabIndex = 5;
-            lblTel.Text = "Telefone:";
+            this.lblTel.AutoSize = true;
+            this.lblTel.Location = new System.Drawing.Point(24, 236);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(52, 13);
+            this.lblTel.TabIndex = 5;
+            this.lblTel.Text = "Telefone:";
             // 
             // lblCep
             // 
-            lblCep.AutoSize = true;
-            lblCep.Location = new Point(38, 222);
-            lblCep.Name = "lblCep";
-            lblCep.Size = new Size(31, 15);
-            lblCep.TabIndex = 4;
-            lblCep.Text = "Cep:";
+            this.lblCep.AutoSize = true;
+            this.lblCep.Location = new System.Drawing.Point(24, 193);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(29, 13);
+            this.lblCep.TabIndex = 4;
+            this.lblCep.Text = "Cep:";
             // 
             // lblBairro
             // 
-            lblBairro.AutoSize = true;
-            lblBairro.Location = new Point(38, 172);
-            lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(41, 15);
-            lblBairro.TabIndex = 3;
-            lblBairro.Text = "Bairro:";
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Location = new System.Drawing.Point(24, 150);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(37, 13);
+            this.lblBairro.TabIndex = 3;
+            this.lblBairro.Text = "Bairro:";
             // 
             // lblEndereco
             // 
-            lblEndereco.AutoSize = true;
-            lblEndereco.Location = new Point(38, 132);
-            lblEndereco.Name = "lblEndereco";
-            lblEndereco.Size = new Size(59, 15);
-            lblEndereco.TabIndex = 2;
-            lblEndereco.Text = "Endereço:";
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Location = new System.Drawing.Point(24, 115);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(56, 13);
+            this.lblEndereco.TabIndex = 2;
+            this.lblEndereco.Text = "Endereço:";
             // 
             // lblNome
             // 
-            lblNome.AutoSize = true;
-            lblNome.Location = new Point(38, 89);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(43, 15);
-            lblNome.TabIndex = 1;
-            lblNome.Text = "Nome:";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(24, 78);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome:";
             // 
             // lblCpf
             // 
-            lblCpf.AutoSize = true;
-            lblCpf.Location = new Point(38, 50);
-            lblCpf.Name = "lblCpf";
-            lblCpf.Size = new Size(29, 15);
-            lblCpf.TabIndex = 0;
-            lblCpf.Text = "Cpf:";
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Location = new System.Drawing.Point(24, 44);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(26, 13);
+            this.lblCpf.TabIndex = 0;
+            this.lblCpf.Text = "Cpf:";
             // 
             // FrmAtualizarAluno
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(687, 399);
-            Controls.Add(gbAtualizarDados);
-            Name = "FrmAtualizarAluno";
-            Text = "Atualizar Aluno";
-            gbAtualizarDados.ResumeLayout(false);
-            gbAtualizarDados.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(589, 346);
+            this.Controls.Add(this.gbAtualizarDados);
+            this.Name = "FrmAtualizarAluno";
+            this.Text = "Atualizar Aluno";
+            this.gbAtualizarDados.ResumeLayout(false);
+            this.gbAtualizarDados.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
-        #endregion
-
-        private GroupBox gbAtualizarDados;
-        private MaskedTextBox mtxtTel;
-        private MaskedTextBox mtxtCpf;
-        private MaskedTextBox mtxtCep;
-        private TextBox txtEstado;
-        private TextBox txtComplemento;
-        private TextBox txtNum;
-        private TextBox txtEmail;
-        private TextBox txtCidade;
-        private TextBox txtBairro;
-        private TextBox txtEndereco;
-        private TextBox txtNome;
-        private Button btnAtualizar;
-        private Label lblEstado;
-        private Label lblComplemento;
-        private Label lblNum;
-        private Label lblEmail;
-        private Label lblCidade;
-        private Label lblTel;
-        private Label lblCep;
-        private Label lblBairro;
-        private Label lblEndereco;
-        private Label lblNome;
-        private Label lblCpf;
+        private System.Windows.Forms.GroupBox gbAtualizarDados;
+        private System.Windows.Forms.MaskedTextBox mtxtTel;
+        private System.Windows.Forms.MaskedTextBox mtxtCpf;
+        private System.Windows.Forms.MaskedTextBox mtxtCep;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblComplemento;
+        private System.Windows.Forms.Label lblNum;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.Label lblTel;
+        private System.Windows.Forms.Label lblCep;
+        private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblCpf;
     }
 }

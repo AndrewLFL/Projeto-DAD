@@ -32,11 +32,11 @@ namespace Estudio.view
                     MessageBox.Show("Preencha todos os campos!");
                     return;
                 }
-                else if (cbbTipo.SelectedIndex==0)
+                else if (cbbTipo.SelectedIndex == 0)
                 {
                     u = new Usuario(txtUsername.Text, txtSenha.Text, 1);
                 }
-                else if(cbbTipo.SelectedIndex == 1)
+                else if (cbbTipo.SelectedIndex == 1)
                 {
                     u = new Usuario(txtUsername.Text, txtSenha.Text, 2);
                 }
@@ -52,7 +52,7 @@ namespace Estudio.view
             (Exception ex)
             {
                 Console.WriteLine("Erro ao cadastrar: " + ex.Message);
-            }   
+            }
         }
     }
 }

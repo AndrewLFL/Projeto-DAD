@@ -1,4 +1,5 @@
-﻿namespace Estudio.view
+﻿
+namespace Estudio.view
 {
     partial class FrmCadastrarUsuario
     {
@@ -28,115 +29,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbDados = new GroupBox();
-            btnCadastrar = new Button();
-            cbbTipo = new ComboBox();
-            lblTipo = new Label();
-            txtSenha = new TextBox();
-            txtUsername = new TextBox();
-            lblSenha = new Label();
-            lblUsername = new Label();
-            gbDados.SuspendLayout();
-            SuspendLayout();
+            this.gbDados = new System.Windows.Forms.GroupBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.cbbTipo = new System.Windows.Forms.ComboBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.gbDados.SuspendLayout();
+            this.SuspendLayout();
             // 
             // gbDados
             // 
-            gbDados.Controls.Add(btnCadastrar);
-            gbDados.Controls.Add(cbbTipo);
-            gbDados.Controls.Add(lblTipo);
-            gbDados.Controls.Add(txtSenha);
-            gbDados.Controls.Add(txtUsername);
-            gbDados.Controls.Add(lblSenha);
-            gbDados.Controls.Add(lblUsername);
-            gbDados.Location = new Point(31, 28);
-            gbDados.Name = "gbDados";
-            gbDados.Size = new Size(595, 282);
-            gbDados.TabIndex = 0;
-            gbDados.TabStop = false;
-            gbDados.Text = "Dados";
+            this.gbDados.Controls.Add(this.btnCadastrar);
+            this.gbDados.Controls.Add(this.cbbTipo);
+            this.gbDados.Controls.Add(this.lblTipo);
+            this.gbDados.Controls.Add(this.txtSenha);
+            this.gbDados.Controls.Add(this.txtUsername);
+            this.gbDados.Controls.Add(this.lblSenha);
+            this.gbDados.Controls.Add(this.lblUsername);
+            this.gbDados.Location = new System.Drawing.Point(27, 24);
+            this.gbDados.Name = "gbDados";
+            this.gbDados.Size = new System.Drawing.Size(510, 244);
+            this.gbDados.TabIndex = 0;
+            this.gbDados.TabStop = false;
+            this.gbDados.Text = "Dados";
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(53, 225);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(472, 23);
-            btnCadastrar.TabIndex = 7;
-            btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = true;
-            btnCadastrar.Click += btnCadastrar_Click;
+            this.btnCadastrar.Location = new System.Drawing.Point(45, 195);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(405, 20);
+            this.btnCadastrar.TabIndex = 7;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // cbbTipo
             // 
-            cbbTipo.FormattingEnabled = true;
-            cbbTipo.Items.AddRange(new object[] { "Administrador", "Restrito" });
-            cbbTipo.Location = new Point(182, 160);
-            cbbTipo.Name = "cbbTipo";
-            cbbTipo.Size = new Size(158, 23);
-            cbbTipo.TabIndex = 6;
+            this.cbbTipo.FormattingEnabled = true;
+            this.cbbTipo.Items.AddRange(new object[] {
+            "Administrador",
+            "Restrito"});
+            this.cbbTipo.Location = new System.Drawing.Point(156, 139);
+            this.cbbTipo.Name = "cbbTipo";
+            this.cbbTipo.Size = new System.Drawing.Size(136, 21);
+            this.cbbTipo.TabIndex = 6;
             // 
             // lblTipo
             // 
-            lblTipo.AutoSize = true;
-            lblTipo.Location = new Point(53, 163);
-            lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(33, 15);
-            lblTipo.TabIndex = 5;
-            lblTipo.Text = "Tipo:";
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(45, 141);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(31, 13);
+            this.lblTipo.TabIndex = 5;
+            this.lblTipo.Text = "Tipo:";
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(182, 96);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(343, 23);
-            txtSenha.TabIndex = 3;
+            this.txtSenha.Location = new System.Drawing.Point(156, 83);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(295, 20);
+            this.txtSenha.TabIndex = 3;
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(182, 42);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(343, 23);
-            txtUsername.TabIndex = 2;
+            this.txtUsername.Location = new System.Drawing.Point(156, 36);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(295, 20);
+            this.txtUsername.TabIndex = 2;
             // 
             // lblSenha
             // 
-            lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(53, 104);
-            lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(42, 15);
-            lblSenha.TabIndex = 1;
-            lblSenha.Text = "Senha:";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Location = new System.Drawing.Point(45, 90);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(41, 13);
+            this.lblSenha.TabIndex = 1;
+            this.lblSenha.Text = "Senha:";
             // 
             // lblUsername
             // 
-            lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(53, 45);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(102, 15);
-            lblUsername.TabIndex = 0;
-            lblUsername.Text = "Nome de Usuário:";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(45, 39);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(92, 13);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Nome de Usuário:";
             // 
             // FrmCadastrarUsuario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(657, 332);
-            Controls.Add(gbDados);
-            Name = "FrmCadastrarUsuario";
-            Text = "Cadastrar Usuário";
-            gbDados.ResumeLayout(false);
-            gbDados.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(563, 288);
+            this.Controls.Add(this.gbDados);
+            this.Name = "FrmCadastrarUsuario";
+            this.Text = "Cadastrar Usuário";
+            this.gbDados.ResumeLayout(false);
+            this.gbDados.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private GroupBox gbDados;
-        private Button btnCadastrar;
-        private ComboBox cbbTipo;
-        private Label lblTipo;
-        private TextBox txtSenha;
-        private TextBox txtUsername;
-        private Label lblSenha;
-        private Label lblUsername;
+        private System.Windows.Forms.GroupBox gbDados;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.ComboBox cbbTipo;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblUsername;
     }
 }

@@ -1,21 +1,180 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFAB20DF-D2D6-4670-8DBB-A13F179AE34D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Estudio</RootNamespace>
+    <AssemblyName>Estudio</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.1.0" />
-  </ItemGroup>
-
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\v4.6.2\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\Projeto-DAD-(Versão do VS 2019)\v4.6.2\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Include="connection\Conexao.cs" />
+    <Compile Include="control\AlunoControl.cs" />
+    <Compile Include="control\ModalidadeControl.cs" />
+    <Compile Include="control\TurmaControl.cs" />
+    <Compile Include="control\UsuarioControl.cs" />
+    <Compile Include="modelDAO\AlunoDAO.cs" />
+    <Compile Include="modelDAO\ModalidadeDAO.cs" />
+    <Compile Include="modelDAO\TurmaDAO.cs" />
+    <Compile Include="modelDAO\UsuarioDAO.cs" />
+    <Compile Include="model\Aluno.cs" />
+    <Compile Include="model\Modalidade.cs" />
+    <Compile Include="model\Turma.cs" />
+    <Compile Include="model\Usuario.cs" />
+    <Compile Include="view\FrmAtualizarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAtualizarAluno.designer.cs">
+      <DependentUpon>FrmAtualizarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmAtualizarModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAtualizarModalidade.designer.cs">
+      <DependentUpon>FrmAtualizarModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmCadastrarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmCadastrarAluno.designer.cs">
+      <DependentUpon>FrmCadastrarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmCadastrarModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmCadastrarModalidade.designer.cs">
+      <DependentUpon>FrmCadastrarModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmCadastrarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmCadastrarTurma.designer.cs">
+      <DependentUpon>FrmCadastrarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmCadastrarUsuario.Designer.cs">
+      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmExcluirAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmExcluirAluno.designer.cs">
+      <DependentUpon>FrmExcluirAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmExcluirModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmExcluirModalidade.designer.cs">
+      <DependentUpon>FrmExcluirModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmExcluirTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmExcluirTurma.designer.cs">
+      <DependentUpon>FrmExcluirTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\FrmAtualizarAluno.resx">
+      <DependentUpon>FrmAtualizarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmAtualizarModalidade.resx">
+      <DependentUpon>FrmAtualizarModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmCadastrarAluno.resx">
+      <DependentUpon>FrmCadastrarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmCadastrarModalidade.resx">
+      <DependentUpon>FrmCadastrarModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmCadastrarTurma.resx">
+      <DependentUpon>FrmCadastrarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmCadastrarUsuario.resx">
+      <DependentUpon>FrmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmExcluirAluno.resx">
+      <DependentUpon>FrmExcluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmExcluirModalidade.resx">
+      <DependentUpon>FrmExcluirModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmExcluirTurma.resx">
+      <DependentUpon>FrmExcluirTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

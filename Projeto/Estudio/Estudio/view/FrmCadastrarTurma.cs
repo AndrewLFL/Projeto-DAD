@@ -31,7 +31,7 @@ namespace Estudio.view
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao listar modalidades");
+                MessageBox.Show("Erro ao listar modalidades: " + ex.Message);
             }
         }
 
@@ -53,7 +53,7 @@ namespace Estudio.view
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar turma!");
+                MessageBox.Show("Erro ao cadastrar turma:"+ ex.Message);
             }
         }
 

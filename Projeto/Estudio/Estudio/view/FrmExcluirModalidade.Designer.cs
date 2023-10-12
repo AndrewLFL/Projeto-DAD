@@ -28,70 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            btnExcluir = new Button();
-            lblDescricao = new Label();
-            cbDescricao = new ComboBox();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.cbDescricao = new System.Windows.Forms.ComboBox();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btnExcluir);
-            groupBox1.Controls.Add(lblDescricao);
-            groupBox1.Controls.Add(cbDescricao);
-            groupBox1.Location = new Point(35, 33);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(360, 165);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Modalidades";
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Controls.Add(this.lblDescricao);
+            this.groupBox1.Controls.Add(this.cbDescricao);
+            this.groupBox1.Location = new System.Drawing.Point(30, 29);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(309, 143);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Modalidades";
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(16, 110);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(329, 23);
-            btnExcluir.TabIndex = 2;
-            btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = true;
-            btnExcluir.Click += btnExcluir_Click;
+            this.btnExcluir.Location = new System.Drawing.Point(14, 95);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(282, 20);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblDescricao
             // 
-            lblDescricao.AutoSize = true;
-            lblDescricao.Location = new Point(16, 55);
-            lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(61, 15);
-            lblDescricao.TabIndex = 1;
-            lblDescricao.Text = "Descrição:";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(14, 48);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(58, 13);
+            this.lblDescricao.TabIndex = 1;
+            this.lblDescricao.Text = "Descrição:";
             // 
             // cbDescricao
             // 
-            cbDescricao.FormattingEnabled = true;
-            cbDescricao.Location = new Point(83, 52);
-            cbDescricao.Name = "cbDescricao";
-            cbDescricao.Size = new Size(262, 23);
-            cbDescricao.TabIndex = 0;
+            this.cbDescricao.FormattingEnabled = true;
+            this.cbDescricao.Location = new System.Drawing.Point(71, 45);
+            this.cbDescricao.Name = "cbDescricao";
+            this.cbDescricao.Size = new System.Drawing.Size(225, 21);
+            this.cbDescricao.TabIndex = 0;
             // 
             // FrmExcluirModalidade
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(425, 224);
-            Controls.Add(groupBox1);
-            Name = "FrmExcluirModalidade";
-            Text = "Excluir Modalidade";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(364, 194);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "FrmExcluirModalidade";
+            this.Text = "Excluir Modalidade";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private Button btnExcluir;
-        private Label lblDescricao;
-        private ComboBox cbDescricao;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.ComboBox cbDescricao;
     }
 }

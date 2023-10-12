@@ -28,161 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbTurma = new GroupBox();
-            txtHorario = new TextBox();
-            txtDiaSemana = new TextBox();
-            txtProfessor = new TextBox();
-            txtModalidade = new TextBox();
-            btnCadastrar = new Button();
-            lblHorario = new Label();
-            lblDiaSemana = new Label();
-            lblProfessor = new Label();
-            lblModalidade = new Label();
-            dgvTurma = new DataGridView();
-            cdgvModalidade = new DataGridViewTextBoxColumn();
-            gbTurma.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTurma).BeginInit();
-            SuspendLayout();
+            this.gbTurma = new System.Windows.Forms.GroupBox();
+            this.txtHorario = new System.Windows.Forms.TextBox();
+            this.txtDiaSemana = new System.Windows.Forms.TextBox();
+            this.txtProfessor = new System.Windows.Forms.TextBox();
+            this.txtModalidade = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.lblHorario = new System.Windows.Forms.Label();
+            this.lblDiaSemana = new System.Windows.Forms.Label();
+            this.lblProfessor = new System.Windows.Forms.Label();
+            this.lblModalidade = new System.Windows.Forms.Label();
+            this.dgvTurma = new System.Windows.Forms.DataGridView();
+            this.cdgvModalidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbTurma.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).BeginInit();
+            this.SuspendLayout();
             // 
             // gbTurma
             // 
-            gbTurma.Controls.Add(txtHorario);
-            gbTurma.Controls.Add(txtDiaSemana);
-            gbTurma.Controls.Add(txtProfessor);
-            gbTurma.Controls.Add(txtModalidade);
-            gbTurma.Controls.Add(btnCadastrar);
-            gbTurma.Controls.Add(lblHorario);
-            gbTurma.Controls.Add(lblDiaSemana);
-            gbTurma.Controls.Add(lblProfessor);
-            gbTurma.Controls.Add(lblModalidade);
-            gbTurma.Location = new Point(26, 17);
-            gbTurma.Name = "gbTurma";
-            gbTurma.Size = new Size(479, 235);
-            gbTurma.TabIndex = 0;
-            gbTurma.TabStop = false;
-            gbTurma.Text = "Turma";
+            this.gbTurma.Controls.Add(this.txtHorario);
+            this.gbTurma.Controls.Add(this.txtDiaSemana);
+            this.gbTurma.Controls.Add(this.txtProfessor);
+            this.gbTurma.Controls.Add(this.txtModalidade);
+            this.gbTurma.Controls.Add(this.btnCadastrar);
+            this.gbTurma.Controls.Add(this.lblHorario);
+            this.gbTurma.Controls.Add(this.lblDiaSemana);
+            this.gbTurma.Controls.Add(this.lblProfessor);
+            this.gbTurma.Controls.Add(this.lblModalidade);
+            this.gbTurma.Location = new System.Drawing.Point(22, 15);
+            this.gbTurma.Name = "gbTurma";
+            this.gbTurma.Size = new System.Drawing.Size(411, 204);
+            this.gbTurma.TabIndex = 0;
+            this.gbTurma.TabStop = false;
+            this.gbTurma.Text = "Turma";
             // 
             // txtHorario
             // 
-            txtHorario.Location = new Point(129, 148);
-            txtHorario.Name = "txtHorario";
-            txtHorario.Size = new Size(327, 23);
-            txtHorario.TabIndex = 8;
+            this.txtHorario.Location = new System.Drawing.Point(111, 128);
+            this.txtHorario.Name = "txtHorario";
+            this.txtHorario.Size = new System.Drawing.Size(281, 20);
+            this.txtHorario.TabIndex = 8;
             // 
             // txtDiaSemana
             // 
-            txtDiaSemana.Location = new Point(129, 113);
-            txtDiaSemana.Name = "txtDiaSemana";
-            txtDiaSemana.Size = new Size(327, 23);
-            txtDiaSemana.TabIndex = 7;
+            this.txtDiaSemana.Location = new System.Drawing.Point(111, 98);
+            this.txtDiaSemana.Name = "txtDiaSemana";
+            this.txtDiaSemana.Size = new System.Drawing.Size(281, 20);
+            this.txtDiaSemana.TabIndex = 7;
             // 
             // txtProfessor
             // 
-            txtProfessor.Location = new Point(129, 72);
-            txtProfessor.Name = "txtProfessor";
-            txtProfessor.Size = new Size(327, 23);
-            txtProfessor.TabIndex = 6;
+            this.txtProfessor.Location = new System.Drawing.Point(111, 62);
+            this.txtProfessor.Name = "txtProfessor";
+            this.txtProfessor.Size = new System.Drawing.Size(281, 20);
+            this.txtProfessor.TabIndex = 6;
             // 
             // txtModalidade
             // 
-            txtModalidade.Location = new Point(129, 34);
-            txtModalidade.Name = "txtModalidade";
-            txtModalidade.ReadOnly = true;
-            txtModalidade.Size = new Size(327, 23);
-            txtModalidade.TabIndex = 5;
+            this.txtModalidade.Location = new System.Drawing.Point(111, 29);
+            this.txtModalidade.Name = "txtModalidade";
+            this.txtModalidade.ReadOnly = true;
+            this.txtModalidade.Size = new System.Drawing.Size(281, 20);
+            this.txtModalidade.TabIndex = 5;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(19, 189);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(437, 30);
-            btnCadastrar.TabIndex = 4;
-            btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = true;
-            btnCadastrar.Click += btnCadastrar_Click;
+            this.btnCadastrar.Location = new System.Drawing.Point(16, 164);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(375, 26);
+            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblHorario
             // 
-            lblHorario.AutoSize = true;
-            lblHorario.Location = new Point(19, 151);
-            lblHorario.Name = "lblHorario";
-            lblHorario.Size = new Size(50, 15);
-            lblHorario.TabIndex = 3;
-            lblHorario.Text = "Horário:";
+            this.lblHorario.AutoSize = true;
+            this.lblHorario.Location = new System.Drawing.Point(16, 131);
+            this.lblHorario.Name = "lblHorario";
+            this.lblHorario.Size = new System.Drawing.Size(44, 13);
+            this.lblHorario.TabIndex = 3;
+            this.lblHorario.Text = "Horário:";
             // 
             // lblDiaSemana
             // 
-            lblDiaSemana.AutoSize = true;
-            lblDiaSemana.Location = new Point(19, 116);
-            lblDiaSemana.Name = "lblDiaSemana";
-            lblDiaSemana.Size = new Size(88, 15);
-            lblDiaSemana.TabIndex = 2;
-            lblDiaSemana.Text = "Dia da Semana:";
+            this.lblDiaSemana.AutoSize = true;
+            this.lblDiaSemana.Location = new System.Drawing.Point(16, 101);
+            this.lblDiaSemana.Name = "lblDiaSemana";
+            this.lblDiaSemana.Size = new System.Drawing.Size(83, 13);
+            this.lblDiaSemana.TabIndex = 2;
+            this.lblDiaSemana.Text = "Dia da Semana:";
             // 
             // lblProfessor
             // 
-            lblProfessor.AutoSize = true;
-            lblProfessor.Location = new Point(19, 75);
-            lblProfessor.Name = "lblProfessor";
-            lblProfessor.Size = new Size(59, 15);
-            lblProfessor.TabIndex = 1;
-            lblProfessor.Text = "Professor:";
+            this.lblProfessor.AutoSize = true;
+            this.lblProfessor.Location = new System.Drawing.Point(16, 65);
+            this.lblProfessor.Name = "lblProfessor";
+            this.lblProfessor.Size = new System.Drawing.Size(54, 13);
+            this.lblProfessor.TabIndex = 1;
+            this.lblProfessor.Text = "Professor:";
             // 
             // lblModalidade
             // 
-            lblModalidade.AutoSize = true;
-            lblModalidade.Location = new Point(19, 37);
-            lblModalidade.Name = "lblModalidade";
-            lblModalidade.Size = new Size(73, 15);
-            lblModalidade.TabIndex = 0;
-            lblModalidade.Text = "Modalidade:";
+            this.lblModalidade.AutoSize = true;
+            this.lblModalidade.Location = new System.Drawing.Point(16, 32);
+            this.lblModalidade.Name = "lblModalidade";
+            this.lblModalidade.Size = new System.Drawing.Size(65, 13);
+            this.lblModalidade.TabIndex = 0;
+            this.lblModalidade.Text = "Modalidade:";
             // 
             // dgvTurma
             // 
-            dgvTurma.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTurma.Columns.AddRange(new DataGridViewColumn[] { cdgvModalidade });
-            dgvTurma.Location = new Point(26, 258);
-            dgvTurma.Name = "dgvTurma";
-            dgvTurma.ReadOnly = true;
-            dgvTurma.RowTemplate.Height = 25;
-            dgvTurma.Size = new Size(479, 249);
-            dgvTurma.TabIndex = 1;
-            dgvTurma.CellMouseDoubleClick += dgvTurma_CellMouseDoubleClick;
+            this.dgvTurma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTurma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cdgvModalidade});
+            this.dgvTurma.Location = new System.Drawing.Point(22, 224);
+            this.dgvTurma.Name = "dgvTurma";
+            this.dgvTurma.ReadOnly = true;
+            this.dgvTurma.RowTemplate.Height = 25;
+            this.dgvTurma.Size = new System.Drawing.Size(411, 216);
+            this.dgvTurma.TabIndex = 1;
+            this.dgvTurma.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTurma_CellMouseDoubleClick);
             // 
             // cdgvModalidade
             // 
-            cdgvModalidade.HeaderText = "Modalidade";
-            cdgvModalidade.Name = "cdgvModalidade";
-            cdgvModalidade.ReadOnly = true;
+            this.cdgvModalidade.HeaderText = "Modalidade";
+            this.cdgvModalidade.Name = "cdgvModalidade";
+            this.cdgvModalidade.ReadOnly = true;
             // 
             // FrmCadastrarTurma
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(533, 519);
-            Controls.Add(dgvTurma);
-            Controls.Add(gbTurma);
-            Name = "FrmCadastrarTurma";
-            Text = "Cadastro de Turma";
-            gbTurma.ResumeLayout(false);
-            gbTurma.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTurma).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(457, 450);
+            this.Controls.Add(this.dgvTurma);
+            this.Controls.Add(this.gbTurma);
+            this.Name = "FrmCadastrarTurma";
+            this.Text = "Cadastro de Turma";
+            this.gbTurma.ResumeLayout(false);
+            this.gbTurma.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private GroupBox gbTurma;
-        private TextBox txtHorario;
-        private TextBox txtDiaSemana;
-        private TextBox txtProfessor;
-        private TextBox txtModalidade;
-        private Button btnCadastrar;
-        private Label lblHorario;
-        private Label lblDiaSemana;
-        private Label lblProfessor;
-        private Label lblModalidade;
-        private DataGridView dgvTurma;
-        private DataGridViewTextBoxColumn cdgvModalidade;
+        private System.Windows.Forms.GroupBox gbTurma;
+        private System.Windows.Forms.TextBox txtHorario;
+        private System.Windows.Forms.TextBox txtDiaSemana;
+        private System.Windows.Forms.TextBox txtProfessor;
+        private System.Windows.Forms.TextBox txtModalidade;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label lblHorario;
+        private System.Windows.Forms.Label lblDiaSemana;
+        private System.Windows.Forms.Label lblProfessor;
+        private System.Windows.Forms.Label lblModalidade;
+        private System.Windows.Forms.DataGridView dgvTurma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdgvModalidade;
     }
 }

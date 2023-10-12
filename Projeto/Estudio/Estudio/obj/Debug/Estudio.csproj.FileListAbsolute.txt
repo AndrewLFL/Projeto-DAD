@@ -1,0 +1,45 @@
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\bin\Debug\Estudio.exe.config
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\bin\Debug\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\bin\Debug\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.Properties.Resources.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.FrmMain.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\bin\Debug\MySql.Data.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\bin\Debug\MySql.Data.xml
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarUsuario.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\The Last\Estudio\Estudio\obj\Debug\Estudio.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\Estudio.exe.config
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\Estudio.pdb
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\MySql.Data.xml
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.Properties.Resources.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarUsuario.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirAluno.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirModalidade.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirTurma.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.FrmMain.resources
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.exe
+C:\Users\andre\OneDrive\Documentos\Estudo\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.pdb

@@ -28,186 +28,187 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbTurma = new GroupBox();
-            txtNumAlunos = new TextBox();
-            label1 = new Label();
-            cbId = new ComboBox();
-            lblId = new Label();
-            txtModalidade = new TextBox();
-            txtHorario = new TextBox();
-            txtDiaSemana = new TextBox();
-            txtProfessor = new TextBox();
-            btnExcluir = new Button();
-            lblHorario = new Label();
-            lblDiaSemana = new Label();
-            lblProfessor = new Label();
-            lblModalidade = new Label();
-            gbTurma.SuspendLayout();
-            SuspendLayout();
+            this.gbTurma = new System.Windows.Forms.GroupBox();
+            this.txtNumAlunos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbId = new System.Windows.Forms.ComboBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtModalidade = new System.Windows.Forms.TextBox();
+            this.txtHorario = new System.Windows.Forms.TextBox();
+            this.txtDiaSemana = new System.Windows.Forms.TextBox();
+            this.txtProfessor = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.lblHorario = new System.Windows.Forms.Label();
+            this.lblDiaSemana = new System.Windows.Forms.Label();
+            this.lblProfessor = new System.Windows.Forms.Label();
+            this.lblModalidade = new System.Windows.Forms.Label();
+            this.gbTurma.SuspendLayout();
+            this.SuspendLayout();
             // 
             // gbTurma
             // 
-            gbTurma.Controls.Add(txtNumAlunos);
-            gbTurma.Controls.Add(label1);
-            gbTurma.Controls.Add(cbId);
-            gbTurma.Controls.Add(lblId);
-            gbTurma.Controls.Add(txtModalidade);
-            gbTurma.Controls.Add(txtHorario);
-            gbTurma.Controls.Add(txtDiaSemana);
-            gbTurma.Controls.Add(txtProfessor);
-            gbTurma.Controls.Add(btnExcluir);
-            gbTurma.Controls.Add(lblHorario);
-            gbTurma.Controls.Add(lblDiaSemana);
-            gbTurma.Controls.Add(lblProfessor);
-            gbTurma.Controls.Add(lblModalidade);
-            gbTurma.Location = new Point(32, 26);
-            gbTurma.Name = "gbTurma";
-            gbTurma.Size = new Size(479, 310);
-            gbTurma.TabIndex = 1;
-            gbTurma.TabStop = false;
-            gbTurma.Text = "Turma";
+            this.gbTurma.Controls.Add(this.txtNumAlunos);
+            this.gbTurma.Controls.Add(this.label1);
+            this.gbTurma.Controls.Add(this.cbId);
+            this.gbTurma.Controls.Add(this.lblId);
+            this.gbTurma.Controls.Add(this.txtModalidade);
+            this.gbTurma.Controls.Add(this.txtHorario);
+            this.gbTurma.Controls.Add(this.txtDiaSemana);
+            this.gbTurma.Controls.Add(this.txtProfessor);
+            this.gbTurma.Controls.Add(this.btnExcluir);
+            this.gbTurma.Controls.Add(this.lblHorario);
+            this.gbTurma.Controls.Add(this.lblDiaSemana);
+            this.gbTurma.Controls.Add(this.lblProfessor);
+            this.gbTurma.Controls.Add(this.lblModalidade);
+            this.gbTurma.Location = new System.Drawing.Point(27, 23);
+            this.gbTurma.Name = "gbTurma";
+            this.gbTurma.Size = new System.Drawing.Size(411, 269);
+            this.gbTurma.TabIndex = 1;
+            this.gbTurma.TabStop = false;
+            this.gbTurma.Text = "Turma";
             // 
             // txtNumAlunos
             // 
-            txtNumAlunos.Location = new Point(144, 217);
-            txtNumAlunos.Name = "txtNumAlunos";
-            txtNumAlunos.ReadOnly = true;
-            txtNumAlunos.Size = new Size(121, 23);
-            txtNumAlunos.TabIndex = 13;
+            this.txtNumAlunos.Location = new System.Drawing.Point(123, 188);
+            this.txtNumAlunos.Name = "txtNumAlunos";
+            this.txtNumAlunos.ReadOnly = true;
+            this.txtNumAlunos.Size = new System.Drawing.Size(104, 20);
+            this.txtNumAlunos.TabIndex = 13;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(19, 220);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 15);
-            label1.TabIndex = 12;
-            label1.Text = "Número de Alunos:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Número de Alunos:";
             // 
             // cbId
             // 
-            cbId.FormattingEnabled = true;
-            cbId.Location = new Point(144, 34);
-            cbId.Name = "cbId";
-            cbId.Size = new Size(121, 23);
-            cbId.TabIndex = 11;
-            cbId.SelectedIndexChanged += cbId_SelectedIndexChanged;
+            this.cbId.FormattingEnabled = true;
+            this.cbId.Location = new System.Drawing.Point(123, 29);
+            this.cbId.Name = "cbId";
+            this.cbId.Size = new System.Drawing.Size(104, 21);
+            this.cbId.TabIndex = 11;
+            this.cbId.SelectedIndexChanged += new System.EventHandler(this.cbId_SelectedIndexChanged);
             // 
             // lblId
             // 
-            lblId.AutoSize = true;
-            lblId.Location = new Point(19, 35);
-            lblId.Name = "lblId";
-            lblId.Size = new Size(21, 15);
-            lblId.TabIndex = 10;
-            lblId.Text = "ID:";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(16, 30);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(21, 13);
+            this.lblId.TabIndex = 10;
+            this.lblId.Text = "ID:";
             // 
             // txtModalidade
             // 
-            txtModalidade.Location = new Point(144, 67);
-            txtModalidade.Name = "txtModalidade";
-            txtModalidade.ReadOnly = true;
-            txtModalidade.Size = new Size(312, 23);
-            txtModalidade.TabIndex = 9;
+            this.txtModalidade.Location = new System.Drawing.Point(123, 58);
+            this.txtModalidade.Name = "txtModalidade";
+            this.txtModalidade.ReadOnly = true;
+            this.txtModalidade.Size = new System.Drawing.Size(268, 20);
+            this.txtModalidade.TabIndex = 9;
             // 
             // txtHorario
             // 
-            txtHorario.Location = new Point(144, 180);
-            txtHorario.Name = "txtHorario";
-            txtHorario.ReadOnly = true;
-            txtHorario.Size = new Size(312, 23);
-            txtHorario.TabIndex = 8;
+            this.txtHorario.Location = new System.Drawing.Point(123, 156);
+            this.txtHorario.Name = "txtHorario";
+            this.txtHorario.ReadOnly = true;
+            this.txtHorario.Size = new System.Drawing.Size(268, 20);
+            this.txtHorario.TabIndex = 8;
             // 
             // txtDiaSemana
             // 
-            txtDiaSemana.Location = new Point(144, 145);
-            txtDiaSemana.Name = "txtDiaSemana";
-            txtDiaSemana.ReadOnly = true;
-            txtDiaSemana.Size = new Size(312, 23);
-            txtDiaSemana.TabIndex = 7;
+            this.txtDiaSemana.Location = new System.Drawing.Point(123, 126);
+            this.txtDiaSemana.Name = "txtDiaSemana";
+            this.txtDiaSemana.ReadOnly = true;
+            this.txtDiaSemana.Size = new System.Drawing.Size(268, 20);
+            this.txtDiaSemana.TabIndex = 7;
             // 
             // txtProfessor
             // 
-            txtProfessor.Location = new Point(144, 104);
-            txtProfessor.Name = "txtProfessor";
-            txtProfessor.ReadOnly = true;
-            txtProfessor.Size = new Size(312, 23);
-            txtProfessor.TabIndex = 6;
+            this.txtProfessor.Location = new System.Drawing.Point(123, 90);
+            this.txtProfessor.Name = "txtProfessor";
+            this.txtProfessor.ReadOnly = true;
+            this.txtProfessor.Size = new System.Drawing.Size(268, 20);
+            this.txtProfessor.TabIndex = 6;
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(19, 261);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(437, 30);
-            btnExcluir.TabIndex = 4;
-            btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = true;
-            btnExcluir.Click += btnExcluir_Click;
+            this.btnExcluir.Location = new System.Drawing.Point(16, 226);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(375, 26);
+            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblHorario
             // 
-            lblHorario.AutoSize = true;
-            lblHorario.Location = new Point(19, 183);
-            lblHorario.Name = "lblHorario";
-            lblHorario.Size = new Size(50, 15);
-            lblHorario.TabIndex = 3;
-            lblHorario.Text = "Horário:";
+            this.lblHorario.AutoSize = true;
+            this.lblHorario.Location = new System.Drawing.Point(16, 159);
+            this.lblHorario.Name = "lblHorario";
+            this.lblHorario.Size = new System.Drawing.Size(44, 13);
+            this.lblHorario.TabIndex = 3;
+            this.lblHorario.Text = "Horário:";
             // 
             // lblDiaSemana
             // 
-            lblDiaSemana.AutoSize = true;
-            lblDiaSemana.Location = new Point(19, 148);
-            lblDiaSemana.Name = "lblDiaSemana";
-            lblDiaSemana.Size = new Size(88, 15);
-            lblDiaSemana.TabIndex = 2;
-            lblDiaSemana.Text = "Dia da Semana:";
+            this.lblDiaSemana.AutoSize = true;
+            this.lblDiaSemana.Location = new System.Drawing.Point(16, 128);
+            this.lblDiaSemana.Name = "lblDiaSemana";
+            this.lblDiaSemana.Size = new System.Drawing.Size(83, 13);
+            this.lblDiaSemana.TabIndex = 2;
+            this.lblDiaSemana.Text = "Dia da Semana:";
             // 
             // lblProfessor
             // 
-            lblProfessor.AutoSize = true;
-            lblProfessor.Location = new Point(19, 107);
-            lblProfessor.Name = "lblProfessor";
-            lblProfessor.Size = new Size(59, 15);
-            lblProfessor.TabIndex = 1;
-            lblProfessor.Text = "Professor:";
+            this.lblProfessor.AutoSize = true;
+            this.lblProfessor.Location = new System.Drawing.Point(16, 93);
+            this.lblProfessor.Name = "lblProfessor";
+            this.lblProfessor.Size = new System.Drawing.Size(54, 13);
+            this.lblProfessor.TabIndex = 1;
+            this.lblProfessor.Text = "Professor:";
             // 
             // lblModalidade
             // 
-            lblModalidade.AutoSize = true;
-            lblModalidade.Location = new Point(19, 69);
-            lblModalidade.Name = "lblModalidade";
-            lblModalidade.Size = new Size(73, 15);
-            lblModalidade.TabIndex = 0;
-            lblModalidade.Text = "Modalidade:";
+            this.lblModalidade.AutoSize = true;
+            this.lblModalidade.Location = new System.Drawing.Point(16, 60);
+            this.lblModalidade.Name = "lblModalidade";
+            this.lblModalidade.Size = new System.Drawing.Size(65, 13);
+            this.lblModalidade.TabIndex = 0;
+            this.lblModalidade.Text = "Modalidade:";
             // 
             // FrmExcluirTurma
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(541, 357);
-            Controls.Add(gbTurma);
-            Name = "FrmExcluirTurma";
-            Text = "Excluir Turma";
-            gbTurma.ResumeLayout(false);
-            gbTurma.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(464, 309);
+            this.Controls.Add(this.gbTurma);
+            this.Name = "FrmExcluirTurma";
+            this.Text = "Excluir Turma";
+            this.gbTurma.ResumeLayout(false);
+            this.gbTurma.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private GroupBox gbTurma;
-        private TextBox txtHorario;
-        private TextBox txtDiaSemana;
-        private TextBox txtProfessor;
-        private Button btnExcluir;
-        private Label lblHorario;
-        private Label lblDiaSemana;
-        private Label lblProfessor;
-        private Label lblModalidade;
-        private Label lblId;
-        private TextBox txtModalidade;
-        private ComboBox cbId;
-        private TextBox txtNumAlunos;
-        private Label label1;
+        private System.Windows.Forms.GroupBox gbTurma;
+        private System.Windows.Forms.TextBox txtHorario;
+        private System.Windows.Forms.TextBox txtDiaSemana;
+        private System.Windows.Forms.TextBox txtProfessor;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label lblHorario;
+        private System.Windows.Forms.Label lblDiaSemana;
+        private System.Windows.Forms.Label lblProfessor;
+        private System.Windows.Forms.Label lblModalidade;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtModalidade;
+        private System.Windows.Forms.ComboBox cbId;
+        private System.Windows.Forms.TextBox txtNumAlunos;
+        private System.Windows.Forms.Label label1;
     }
 }

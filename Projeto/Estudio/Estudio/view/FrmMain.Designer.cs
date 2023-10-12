@@ -1,16 +1,19 @@
-﻿namespace Estudio
+﻿
+using System;
+
+namespace Estudio
 {
     partial class FrmMain
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Limpar os recursos que estão sendo usados.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,254 +23,274 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código gerado pelo Windows Form Designer
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Método necessário para suporte ao Designer - não modifique 
+        /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip = new MenuStrip();
-            mitArquivo = new ToolStripMenuItem();
-            cadastrarUsuárioToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            mitSair = new ToolStripMenuItem();
-            mitAluno = new ToolStripMenuItem();
-            mitCadastrarAluno = new ToolStripMenuItem();
-            mitExcluirAluno = new ToolStripMenuItem();
-            mitAtualizarAluno = new ToolStripMenuItem();
-            mitModalidade = new ToolStripMenuItem();
-            mitCadastrarModalidade = new ToolStripMenuItem();
-            mitExcluirModalidade = new ToolStripMenuItem();
-            mitAtualizarModalidade = new ToolStripMenuItem();
-            mitTurma = new ToolStripMenuItem();
-            mitCadastrarTurma = new ToolStripMenuItem();
-            gbValidacao = new GroupBox();
-            btnLogar = new Button();
-            txtSenha = new TextBox();
-            txtUsername = new TextBox();
-            lblSenha = new Label();
-            lblUsername = new Label();
-            excluirTurmaToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip.SuspendLayout();
-            gbValidacao.SuspendLayout();
-            SuspendLayout();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.mitArquivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitAluno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitCadastrarAluno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitExcluirAluno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitAtualizarAluno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitCadastrarModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitExcluirModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitAtualizarModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitTurma = new System.Windows.Forms.ToolStripMenuItem();
+            this.mitCadastrarTurma = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbValidacao = new System.Windows.Forms.GroupBox();
+            this.btnLogar = new System.Windows.Forms.Button();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.menuStrip.SuspendLayout();
+            this.gbValidacao.SuspendLayout();
+            this.SuspendLayout();
             // 
             // menuStrip
             // 
-            menuStrip.Enabled = false;
-            menuStrip.Items.AddRange(new ToolStripItem[] { mitArquivo, mitAluno, mitModalidade, mitTurma });
-            menuStrip.Location = new Point(0, 0);
-            menuStrip.Name = "menuStrip";
-            menuStrip.Size = new Size(1133, 24);
-            menuStrip.TabIndex = 1;
-            menuStrip.Text = "menuStrip1";
+            this.menuStrip.Enabled = false;
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mitArquivo,
+            this.mitAluno,
+            this.mitModalidade,
+            this.mitTurma});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(971, 24);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // mitArquivo
             // 
-            mitArquivo.DropDownItems.AddRange(new ToolStripItem[] { cadastrarUsuárioToolStripMenuItem, toolStripMenuItem2, mitSair });
-            mitArquivo.Name = "mitArquivo";
-            mitArquivo.Size = new Size(61, 20);
-            mitArquivo.Text = "Arquivo";
+            this.mitArquivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarUsuárioToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.mitSair});
+            this.mitArquivo.Name = "mitArquivo";
+            this.mitArquivo.Size = new System.Drawing.Size(61, 20);
+            this.mitArquivo.Text = "Arquivo";
             // 
             // cadastrarUsuárioToolStripMenuItem
             // 
-            cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
-            cadastrarUsuárioToolStripMenuItem.Size = new Size(174, 22);
-            cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
-            cadastrarUsuárioToolStripMenuItem.Click += mitcadastrarUsuário_Click;
+            this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
+            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
+            this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuárioToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(174, 22);
-            toolStripMenuItem2.Text = "____________________";
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "____________________";
             // 
             // mitSair
             // 
-            mitSair.Name = "mitSair";
-            mitSair.Size = new Size(174, 22);
-            mitSair.Text = "Sair";
-            mitSair.Click += mitSair_Click;
+            this.mitSair.Name = "mitSair";
+            this.mitSair.Size = new System.Drawing.Size(180, 22);
+            this.mitSair.Text = "Sair";
+            this.mitSair.Click += new System.EventHandler(this.mitSair_Click);
             // 
             // mitAluno
             // 
-            mitAluno.DropDownItems.AddRange(new ToolStripItem[] { mitCadastrarAluno, mitExcluirAluno, mitAtualizarAluno });
-            mitAluno.Name = "mitAluno";
-            mitAluno.Size = new Size(51, 20);
-            mitAluno.Text = "Aluno";
+            this.mitAluno.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mitCadastrarAluno,
+            this.mitExcluirAluno,
+            this.mitAtualizarAluno});
+            this.mitAluno.Name = "mitAluno";
+            this.mitAluno.Size = new System.Drawing.Size(51, 20);
+            this.mitAluno.Text = "Aluno";
             // 
             // mitCadastrarAluno
             // 
-            mitCadastrarAluno.Name = "mitCadastrarAluno";
-            mitCadastrarAluno.Size = new Size(159, 22);
-            mitCadastrarAluno.Text = "Cadastrar Aluno";
-            mitCadastrarAluno.Click += mitCadastrarAluno_Click;
+            this.mitCadastrarAluno.Name = "mitCadastrarAluno";
+            this.mitCadastrarAluno.Size = new System.Drawing.Size(180, 22);
+            this.mitCadastrarAluno.Text = "Cadastrar Aluno";
+            this.mitCadastrarAluno.Click += new System.EventHandler(this.mitCadastrarAluno_Click);
             // 
             // mitExcluirAluno
             // 
-            mitExcluirAluno.Name = "mitExcluirAluno";
-            mitExcluirAluno.Size = new Size(159, 22);
-            mitExcluirAluno.Text = "Excluir Aluno";
-            mitExcluirAluno.Click += mitExcluirAluno_Click;
+            this.mitExcluirAluno.Name = "mitExcluirAluno";
+            this.mitExcluirAluno.Size = new System.Drawing.Size(180, 22);
+            this.mitExcluirAluno.Text = "Excluir Aluno";
+            this.mitExcluirAluno.Click += new System.EventHandler(this.mitExcluirAluno_Click);
             // 
             // mitAtualizarAluno
             // 
-            mitAtualizarAluno.Name = "mitAtualizarAluno";
-            mitAtualizarAluno.Size = new Size(159, 22);
-            mitAtualizarAluno.Text = "Atualizar Aluno";
-            mitAtualizarAluno.Click += mitAtualizarAluno_Click;
+            this.mitAtualizarAluno.Name = "mitAtualizarAluno";
+            this.mitAtualizarAluno.Size = new System.Drawing.Size(180, 22);
+            this.mitAtualizarAluno.Text = "Atualizar Aluno";
+            this.mitAtualizarAluno.Click += new System.EventHandler(this.mitAtualizarAluno_Click);
             // 
             // mitModalidade
             // 
-            mitModalidade.DropDownItems.AddRange(new ToolStripItem[] { mitCadastrarModalidade, mitExcluirModalidade, mitAtualizarModalidade });
-            mitModalidade.Name = "mitModalidade";
-            mitModalidade.Size = new Size(82, 20);
-            mitModalidade.Text = "Modalidade";
+            this.mitModalidade.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mitCadastrarModalidade,
+            this.mitExcluirModalidade,
+            this.mitAtualizarModalidade});
+            this.mitModalidade.Name = "mitModalidade";
+            this.mitModalidade.Size = new System.Drawing.Size(82, 20);
+            this.mitModalidade.Text = "Modalidade";
             // 
             // mitCadastrarModalidade
             // 
-            mitCadastrarModalidade.Name = "mitCadastrarModalidade";
-            mitCadastrarModalidade.Size = new Size(190, 22);
-            mitCadastrarModalidade.Text = "Cadastrar Modalidade";
-            mitCadastrarModalidade.Click += mitCadastrarModalidade_Click;
+            this.mitCadastrarModalidade.Name = "mitCadastrarModalidade";
+            this.mitCadastrarModalidade.Size = new System.Drawing.Size(190, 22);
+            this.mitCadastrarModalidade.Text = "Cadastrar Modalidade";
+            this.mitCadastrarModalidade.Click += new System.EventHandler(this.mitCadastrarModalidade_Click);
             // 
             // mitExcluirModalidade
             // 
-            mitExcluirModalidade.Name = "mitExcluirModalidade";
-            mitExcluirModalidade.Size = new Size(190, 22);
-            mitExcluirModalidade.Text = "Excluir Modalidade";
-            mitExcluirModalidade.Click += mitExcluirModalidade_Click;
+            this.mitExcluirModalidade.Name = "mitExcluirModalidade";
+            this.mitExcluirModalidade.Size = new System.Drawing.Size(190, 22);
+            this.mitExcluirModalidade.Text = "Excluir Modalidade";
+            this.mitExcluirModalidade.Click += new System.EventHandler(this.mitExcluirModalidade_Click);
             // 
             // mitAtualizarModalidade
             // 
-            mitAtualizarModalidade.Name = "mitAtualizarModalidade";
-            mitAtualizarModalidade.Size = new Size(190, 22);
-            mitAtualizarModalidade.Text = "Atualizar Modalidade";
-            mitAtualizarModalidade.Click += mitAtualizarModalidade_Click;
+            this.mitAtualizarModalidade.Name = "mitAtualizarModalidade";
+            this.mitAtualizarModalidade.Size = new System.Drawing.Size(190, 22);
+            this.mitAtualizarModalidade.Text = "Atualizar Modalidade";
+            this.mitAtualizarModalidade.Click += new System.EventHandler(this.mitAtualizarModalidade_Click);
             // 
             // mitTurma
             // 
-            mitTurma.DropDownItems.AddRange(new ToolStripItem[] { mitCadastrarTurma, excluirTurmaToolStripMenuItem });
-            mitTurma.Name = "mitTurma";
-            mitTurma.Size = new Size(53, 20);
-            mitTurma.Text = "Turma";
+            this.mitTurma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mitCadastrarTurma,
+            this.excluirTurmaToolStripMenuItem});
+            this.mitTurma.Name = "mitTurma";
+            this.mitTurma.Size = new System.Drawing.Size(53, 20);
+            this.mitTurma.Text = "Turma";
             // 
             // mitCadastrarTurma
             // 
-            mitCadastrarTurma.Name = "mitCadastrarTurma";
-            mitCadastrarTurma.Size = new Size(180, 22);
-            mitCadastrarTurma.Text = "Cadastrar Turma";
-            mitCadastrarTurma.Click += mitCadastrarTurma_Click;
-            // 
-            // gbValidacao
-            // 
-            gbValidacao.Controls.Add(btnLogar);
-            gbValidacao.Controls.Add(txtSenha);
-            gbValidacao.Controls.Add(txtUsername);
-            gbValidacao.Controls.Add(lblSenha);
-            gbValidacao.Controls.Add(lblUsername);
-            gbValidacao.Location = new Point(386, 137);
-            gbValidacao.Name = "gbValidacao";
-            gbValidacao.Size = new Size(406, 233);
-            gbValidacao.TabIndex = 2;
-            gbValidacao.TabStop = false;
-            gbValidacao.Text = "Validação";
-            // 
-            // btnLogar
-            // 
-            btnLogar.Location = new Point(45, 172);
-            btnLogar.Name = "btnLogar";
-            btnLogar.Size = new Size(317, 23);
-            btnLogar.TabIndex = 4;
-            btnLogar.Text = "Logar";
-            btnLogar.UseVisualStyleBackColor = true;
-            btnLogar.Click += btnLogar_Click;
-            // 
-            // txtSenha
-            // 
-            txtSenha.Location = new Point(152, 108);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(210, 23);
-            txtSenha.TabIndex = 3;
-            txtSenha.Text = "2343";
-            // 
-            // txtUsername
-            // 
-            txtUsername.Location = new Point(152, 54);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(210, 23);
-            txtUsername.TabIndex = 2;
-            txtUsername.Text = "carla";
-            // 
-            // lblSenha
-            // 
-            lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(45, 116);
-            lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(42, 15);
-            lblSenha.TabIndex = 1;
-            lblSenha.Text = "Senha:";
-            // 
-            // lblUsername
-            // 
-            lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(45, 57);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(101, 15);
-            lblUsername.TabIndex = 0;
-            lblUsername.Text = "Nome de usuario:";
+            this.mitCadastrarTurma.Name = "mitCadastrarTurma";
+            this.mitCadastrarTurma.Size = new System.Drawing.Size(180, 22);
+            this.mitCadastrarTurma.Text = "Cadastrar Turma";
+            this.mitCadastrarTurma.Click += new System.EventHandler(this.mitCadastrarTurma_Click);
             // 
             // excluirTurmaToolStripMenuItem
             // 
-            excluirTurmaToolStripMenuItem.Name = "excluirTurmaToolStripMenuItem";
-            excluirTurmaToolStripMenuItem.Size = new Size(180, 22);
-            excluirTurmaToolStripMenuItem.Text = "Excluir Turma ";
-            excluirTurmaToolStripMenuItem.Click += excluirTurmaToolStripMenuItem_Click;
+            this.excluirTurmaToolStripMenuItem.Name = "excluirTurmaToolStripMenuItem";
+            this.excluirTurmaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirTurmaToolStripMenuItem.Text = "Excluir Turma ";
+            this.excluirTurmaToolStripMenuItem.Click += new System.EventHandler(this.excluirTurmaToolStripMenuItem_Click);
+            // 
+            // gbValidacao
+            // 
+            this.gbValidacao.Controls.Add(this.btnLogar);
+            this.gbValidacao.Controls.Add(this.txtSenha);
+            this.gbValidacao.Controls.Add(this.txtUsername);
+            this.gbValidacao.Controls.Add(this.lblSenha);
+            this.gbValidacao.Controls.Add(this.lblUsername);
+            this.gbValidacao.Location = new System.Drawing.Point(331, 119);
+            this.gbValidacao.Name = "gbValidacao";
+            this.gbValidacao.Size = new System.Drawing.Size(348, 202);
+            this.gbValidacao.TabIndex = 2;
+            this.gbValidacao.TabStop = false;
+            this.gbValidacao.Text = "Validação";
+            // 
+            // btnLogar
+            // 
+            this.btnLogar.Location = new System.Drawing.Point(39, 149);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(272, 20);
+            this.btnLogar.TabIndex = 4;
+            this.btnLogar.Text = "Logar";
+            this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(130, 94);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(181, 20);
+            this.txtSenha.TabIndex = 3;
+            this.txtSenha.Text = "2343";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(130, 47);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(181, 20);
+            this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "carla";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Location = new System.Drawing.Point(39, 101);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(41, 13);
+            this.lblSenha.TabIndex = 1;
+            this.lblSenha.Text = "Senha:";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(39, 49);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(90, 13);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Nome de usuario:";
             // 
             // FrmMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1133, 520);
-            Controls.Add(gbValidacao);
-            Controls.Add(menuStrip);
-            IsMdiContainer = true;
-            MainMenuStrip = menuStrip;
-            Name = "FrmMain";
-            Text = "Estúdio";
-            menuStrip.ResumeLayout(false);
-            menuStrip.PerformLayout();
-            gbValidacao.ResumeLayout(false);
-            gbValidacao.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(971, 451);
+            this.Controls.Add(this.gbValidacao);
+            this.Controls.Add(this.menuStrip);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip;
+            this.Name = "FrmMain";
+            this.Text = "Estúdio";
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.gbValidacao.ResumeLayout(false);
+            this.gbValidacao.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
+
+
 
         #endregion
 
-        private MenuStrip menuStrip;
-        private ToolStripMenuItem mitArquivo;
-        private ToolStripMenuItem mitAluno;
-        private ToolStripMenuItem mitModalidade;
-        private GroupBox gbValidacao;
-        private Button btnLogar;
-        private TextBox txtSenha;
-        private TextBox txtUsername;
-        private Label lblSenha;
-        private Label lblUsername;
-        private ToolStripMenuItem cadastrarUsuárioToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem mitSair;
-        private ToolStripMenuItem mitCadastrarAluno;
-        private ToolStripMenuItem mitExcluirAluno;
-        private ToolStripMenuItem mitAtualizarAluno;
-        private ToolStripMenuItem mitCadastrarModalidade;
-        private ToolStripMenuItem mitExcluirModalidade;
-        private ToolStripMenuItem mitAtualizarModalidade;
-        private ToolStripMenuItem mitTurma;
-        private ToolStripMenuItem mitCadastrarTurma;
-        private ToolStripMenuItem excluirTurmaToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem mitArquivo;
+        private System.Windows.Forms.ToolStripMenuItem mitAluno;
+        private System.Windows.Forms.ToolStripMenuItem mitModalidade;
+        private System.Windows.Forms.GroupBox gbValidacao;
+        private System.Windows.Forms.Button btnLogar;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarUsuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem mitSair;
+        private System.Windows.Forms.ToolStripMenuItem mitCadastrarAluno;
+        private System.Windows.Forms.ToolStripMenuItem mitExcluirAluno;
+        private System.Windows.Forms.ToolStripMenuItem mitAtualizarAluno;
+        private System.Windows.Forms.ToolStripMenuItem mitCadastrarModalidade;
+        private System.Windows.Forms.ToolStripMenuItem mitExcluirModalidade;
+        private System.Windows.Forms.ToolStripMenuItem mitAtualizarModalidade;
+        private System.Windows.Forms.ToolStripMenuItem mitTurma;
+        private System.Windows.Forms.ToolStripMenuItem mitCadastrarTurma;
+        private System.Windows.Forms.ToolStripMenuItem excluirTurmaToolStripMenuItem;
     }
 }
+

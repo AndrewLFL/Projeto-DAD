@@ -1,5 +1,14 @@
-using Estudio.control;
+﻿using Estudio.control;
 using Estudio.view;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Estudio
 {
@@ -38,7 +47,7 @@ namespace Estudio
             Application.Exit();
         }
 
-        private void mitcadastrarUsu�rio_Click(object sender, EventArgs e)
+        private void mitcadastrarUsuário_Click(object sender, EventArgs e)
         {
             FrmCadastrarUsuario frmCadastrarUsuario = new FrmCadastrarUsuario();
             frmCadastrarUsuario.MdiParent = this;
@@ -99,6 +108,13 @@ namespace Estudio
             FrmExcluirTurma frmExcluirTurma = new FrmExcluirTurma();
             frmExcluirTurma.MdiParent = this;
             frmExcluirTurma.Show();
+        }
+
+        private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarUsuario frmCadastrarUsuario = new FrmCadastrarUsuario();
+            frmCadastrarUsuario.MdiParent = this;
+            frmCadastrarUsuario.Show();
         }
 
     }

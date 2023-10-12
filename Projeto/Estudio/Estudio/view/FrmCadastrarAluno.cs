@@ -28,7 +28,7 @@ namespace Estudio.view
                 {
                     MessageBox.Show("Preencha todos os campos");
                     return;
-                }   
+                }
                 String cpf = mtxtCpf.Text;
                 String nome = txtNome.Text;
                 String endereco = txtEndereco.Text;
@@ -40,8 +40,8 @@ namespace Estudio.view
                 String estado = txtEstado.Text;
                 String tel = mtxtTel.Text;
                 String email = txtEmail.Text;
-                Aluno al = new Aluno(cpf, nome, endereco, numero, bairro, complemento, cep, cidade, estado, tel, email); 
-                if(ac.cadastrar(al))
+                Aluno al = new Aluno(cpf, nome, endereco, numero, bairro, complemento, cep, cidade, estado, tel, email);
+                if (ac.cadastrar(al))
                 {
                     MessageBox.Show("Cadastro realizado com sucesso");
                 }

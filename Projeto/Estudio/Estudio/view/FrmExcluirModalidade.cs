@@ -58,7 +58,7 @@ namespace Estudio.view
                 {
                     MessageBox.Show("Não foi possível excluir a modalidade!");
                 }
-                
+
             }
             catch (Exception ex)
             {
