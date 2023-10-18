@@ -14,14 +14,16 @@ namespace Estudio.view
 {
     public partial class FrmCadastrarAluno : Form
     {
+        AlunoControl ac;
+
         public FrmCadastrarAluno()
         {
             InitializeComponent();
+            ac = new AlunoControl();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            AlunoControl ac = new AlunoControl();
             try
             {
                 if (mtxtCpf.Text == "" || txtNome.Text == "" || txtEndereco.Text == "" || txtNum.Text == "" || txtBairro.Text == "" || txtComplemento.Text == "" || mtxtCep.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || mtxtTel.Text == "" || txtEmail.Text == "")
@@ -53,6 +55,40 @@ namespace Estudio.view
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao cadastrar aluno: " + ex.Message);
+            }
+        }
+
+        private void mtxtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (ac.consultar(mtxtCpf.Text))
+                {
+                    MessageBox.Show("Esse cpf já está sendo usado!");
+                    txtBairro.ReadOnly = true;
+                    txtCidade.ReadOnly = true;
+                    txtComplemento.ReadOnly = true;
+                    txtEmail.ReadOnly = true;
+                    txtEndereco.ReadOnly = true;
+                    txtEstado.ReadOnly = true;
+                    txtNome.ReadOnly = true;
+                    txtNum.ReadOnly = true;
+                    mtxtCep.ReadOnly = true;
+                    mtxtTel.ReadOnly = true;
+                }
+                else
+                {
+                    txtBairro.ReadOnly = false;
+                    txtCidade.ReadOnly = false;
+                    txtComplemento.ReadOnly = false;
+                    txtEmail.ReadOnly = false;
+                    txtEndereco.ReadOnly = false;
+                    txtEstado.ReadOnly = false;
+                    txtNome.ReadOnly = false;
+                    txtNum.ReadOnly = false;
+                    mtxtCep.ReadOnly = false;
+                    mtxtTel.ReadOnly = false;
+                }
             }
         }
     }

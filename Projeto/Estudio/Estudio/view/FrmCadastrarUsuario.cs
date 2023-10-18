@@ -45,8 +45,15 @@ namespace Estudio.view
                     MessageBox.Show("Preencha todos os campos!");
                     return;
                 }
-                uc.cadastrar(u);
-                MessageBox.Show("Usuário cadastrado com sucesso!");
+
+                if(uc.cadastrar(u))
+                {
+                    MessageBox.Show("Usuário cadastrado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("O cadastro não pode ser realizado");
+                }
             }
             catch
             (Exception ex)

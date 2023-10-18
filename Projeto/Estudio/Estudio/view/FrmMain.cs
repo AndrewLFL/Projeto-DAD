@@ -30,10 +30,22 @@ namespace Estudio
                 String senha = txtSenha.Text;
                 String msg = uc.logar(username, senha);
                 MessageBox.Show(msg);
-                if (msg.Equals("Login realizado como Administrador!") || msg.Equals("Login realizado como Restrito!"))
+                if (msg.Equals("Login realizado como Administrador!"))
                 {
                     gbValidacao.Visible = false;
                     menuStrip.Enabled = true;
+                }
+                else if (msg.Equals("Login realizado como Restrito!"))
+                {
+                    gbValidacao.Visible = false;
+                    menuStrip.Enabled = true;
+                    mitAtualizarModalidade.Enabled = false;
+                    mitAtualizarTurma.Enabled = false;
+                    mitCadastrarModalidade.Enabled = false;
+                    mitCadastrarTurma.Enabled = false;
+                    mitCadastrarUsuario.Enabled = false;
+                    mitExcluirModalidade.Enabled = false;
+                    mitExcluirTurma.Enabled = false;
                 }
             }
             catch (Exception ex)

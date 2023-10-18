@@ -36,17 +36,18 @@ namespace Estudio.control
             return "Nome de usuário ou senha estão incorretos";
         }
 
-        public void cadastrar(Usuario u)
+        public bool cadastrar(Usuario u)
         {
             try
             {
                 UsuarioDAO usuarioDAO = new UsuarioDAO();
-                usuarioDAO.cadastrar(u);
+                return usuarioDAO.cadastrar(u);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao cadastrar: " + ex.Message);
             }
+            return false;
         }   
     }
 }

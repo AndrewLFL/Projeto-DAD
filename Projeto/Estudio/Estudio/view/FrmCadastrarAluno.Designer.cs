@@ -102,6 +102,7 @@
             this.mtxtCpf.Name = "mtxtCpf";
             this.mtxtCpf.Size = new System.Drawing.Size(127, 20);
             this.mtxtCpf.TabIndex = 21;
+            this.mtxtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtCpf_KeyPress);
             // 
             // mtxtCep
             // 

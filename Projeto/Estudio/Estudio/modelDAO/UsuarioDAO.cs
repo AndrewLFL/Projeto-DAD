@@ -47,15 +47,16 @@ namespace Estudio.modelDAO
             return null;
         }
 
-        public void cadastrar(Usuario u)
+        public bool cadastrar(Usuario u)
         {
-
+            bool cad = false;
             try
             {
                 con = new Conexao().getConnection();
                 con.Open();
                 MySqlCommand sql = new MySqlCommand($"INSERT INTO EstudioUsuario (username,senha,tipo) VALUES ('{u.getSetUsername}', '{u.getSetSenha}', {u.getSetTipo})", con);
                 sql.ExecuteNonQuery();
+                cad = true;
             }
             catch (Exception ex)
             {
@@ -65,6 +66,7 @@ namespace Estudio.modelDAO
             {
                 con.Close();
             }
+            return cad;
         }   
     }
 }
