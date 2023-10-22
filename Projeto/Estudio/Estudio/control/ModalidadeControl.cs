@@ -24,7 +24,7 @@ namespace Estudio.control
                 return false;
         }
 
-        public List<String> consultarTodasModalidades()
+        public List<int> consultarTodasModalidades()
         {
             try
             {
@@ -52,12 +52,26 @@ namespace Estudio.control
             return null;
         }
 
-        public bool excluir(String descricao)
+        public List<int> consultarTodasModalidadesAtivasId()
         {
             try
             {
                 ModalidadeDAO modalidadeDAO = new ModalidadeDAO();
-                return modalidadeDAO.excluir(descricao);
+                return modalidadeDAO.consultarTodasModalidadesAtivasId();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao listar: " + ex.Message);
+            }
+            return null;
+        }
+
+        public bool excluir(int id)
+        {
+            try
+            {
+                ModalidadeDAO modalidadeDAO = new ModalidadeDAO();
+                return modalidadeDAO.excluir(id);
             }
             catch (Exception ex)
             {
@@ -80,12 +94,26 @@ namespace Estudio.control
             return false;
         }
 
-        public Modalidade buscar(String descricao)
+        public Modalidade buscar(int id)
         {
             try
             {
                 ModalidadeDAO modalidadeDAO = new ModalidadeDAO();
-                return modalidadeDAO.buscar(descricao);
+                return modalidadeDAO.buscar(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            return null;
+        }
+
+        public Modalidade buscarPorDescricao(String descricao)
+        {
+            try
+            {
+                ModalidadeDAO modalidadeDAO = new ModalidadeDAO();
+                return modalidadeDAO.buscarPorDescricao(descricao);
             }
             catch (Exception ex)
             {

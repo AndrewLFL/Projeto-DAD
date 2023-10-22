@@ -30,6 +30,13 @@ namespace Estudio.view
         private void InitializeComponent()
         {
             this.gbTurma = new System.Windows.Forms.GroupBox();
+            this.txtModalidade = new System.Windows.Forms.TextBox();
+            this.txtNumAlunos = new System.Windows.Forms.TextBox();
+            this.cbAtivo = new System.Windows.Forms.ComboBox();
+            this.lblAtivo = new System.Windows.Forms.Label();
+            this.lblNumAlunos = new System.Windows.Forms.Label();
+            this.cbId = new System.Windows.Forms.ComboBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.txtHorario = new System.Windows.Forms.TextBox();
             this.txtDiaSemana = new System.Windows.Forms.TextBox();
             this.txtProfessor = new System.Windows.Forms.TextBox();
@@ -38,25 +45,18 @@ namespace Estudio.view
             this.lblDiaSemana = new System.Windows.Forms.Label();
             this.lblProfessor = new System.Windows.Forms.Label();
             this.lblModalidade = new System.Windows.Forms.Label();
-            this.cbModalidade = new System.Windows.Forms.ComboBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.cbId = new System.Windows.Forms.ComboBox();
-            this.lblNumAlunos = new System.Windows.Forms.Label();
-            this.lblAtivo = new System.Windows.Forms.Label();
-            this.cbAtivo = new System.Windows.Forms.ComboBox();
-            this.txtNumAlunos = new System.Windows.Forms.TextBox();
             this.gbTurma.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbTurma
             // 
+            this.gbTurma.Controls.Add(this.txtModalidade);
             this.gbTurma.Controls.Add(this.txtNumAlunos);
             this.gbTurma.Controls.Add(this.cbAtivo);
             this.gbTurma.Controls.Add(this.lblAtivo);
             this.gbTurma.Controls.Add(this.lblNumAlunos);
             this.gbTurma.Controls.Add(this.cbId);
             this.gbTurma.Controls.Add(this.lblId);
-            this.gbTurma.Controls.Add(this.cbModalidade);
             this.gbTurma.Controls.Add(this.txtHorario);
             this.gbTurma.Controls.Add(this.txtDiaSemana);
             this.gbTurma.Controls.Add(this.txtProfessor);
@@ -71,6 +71,71 @@ namespace Estudio.view
             this.gbTurma.TabIndex = 1;
             this.gbTurma.TabStop = false;
             this.gbTurma.Text = "Turma";
+            // 
+            // txtModalidade
+            // 
+            this.txtModalidade.Location = new System.Drawing.Point(113, 62);
+            this.txtModalidade.Name = "txtModalidade";
+            this.txtModalidade.ReadOnly = true;
+            this.txtModalidade.Size = new System.Drawing.Size(169, 20);
+            this.txtModalidade.TabIndex = 16;
+            // 
+            // txtNumAlunos
+            // 
+            this.txtNumAlunos.Location = new System.Drawing.Point(113, 193);
+            this.txtNumAlunos.Name = "txtNumAlunos";
+            this.txtNumAlunos.ReadOnly = true;
+            this.txtNumAlunos.Size = new System.Drawing.Size(169, 20);
+            this.txtNumAlunos.TabIndex = 15;
+            // 
+            // cbAtivo
+            // 
+            this.cbAtivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAtivo.FormattingEnabled = true;
+            this.cbAtivo.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cbAtivo.Location = new System.Drawing.Point(113, 229);
+            this.cbAtivo.Name = "cbAtivo";
+            this.cbAtivo.Size = new System.Drawing.Size(104, 21);
+            this.cbAtivo.TabIndex = 14;
+            // 
+            // lblAtivo
+            // 
+            this.lblAtivo.AutoSize = true;
+            this.lblAtivo.Location = new System.Drawing.Point(13, 231);
+            this.lblAtivo.Name = "lblAtivo";
+            this.lblAtivo.Size = new System.Drawing.Size(34, 13);
+            this.lblAtivo.TabIndex = 13;
+            this.lblAtivo.Text = "Ativo:";
+            // 
+            // lblNumAlunos
+            // 
+            this.lblNumAlunos.AutoSize = true;
+            this.lblNumAlunos.Location = new System.Drawing.Point(14, 196);
+            this.lblNumAlunos.Name = "lblNumAlunos";
+            this.lblNumAlunos.Size = new System.Drawing.Size(97, 13);
+            this.lblNumAlunos.TabIndex = 12;
+            this.lblNumAlunos.Text = "Número de Alunos:";
+            // 
+            // cbId
+            // 
+            this.cbId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbId.FormattingEnabled = true;
+            this.cbId.Location = new System.Drawing.Point(113, 30);
+            this.cbId.Name = "cbId";
+            this.cbId.Size = new System.Drawing.Size(104, 21);
+            this.cbId.TabIndex = 11;
+            this.cbId.SelectedIndexChanged += new System.EventHandler(this.cbId_SelectedIndexChanged);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(13, 33);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(19, 13);
+            this.lblId.TabIndex = 10;
+            this.lblId.Text = "Id:";
             // 
             // txtHorario
             // 
@@ -95,9 +160,9 @@ namespace Estudio.view
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(22, 267);
+            this.btnAtualizar.Location = new System.Drawing.Point(17, 267);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(260, 26);
+            this.btnAtualizar.Size = new System.Drawing.Size(265, 26);
             this.btnAtualizar.TabIndex = 4;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -106,7 +171,7 @@ namespace Estudio.view
             // lblHorario
             // 
             this.lblHorario.AutoSize = true;
-            this.lblHorario.Location = new System.Drawing.Point(18, 164);
+            this.lblHorario.Location = new System.Drawing.Point(13, 164);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(44, 13);
             this.lblHorario.TabIndex = 3;
@@ -115,7 +180,7 @@ namespace Estudio.view
             // lblDiaSemana
             // 
             this.lblDiaSemana.AutoSize = true;
-            this.lblDiaSemana.Location = new System.Drawing.Point(18, 133);
+            this.lblDiaSemana.Location = new System.Drawing.Point(13, 133);
             this.lblDiaSemana.Name = "lblDiaSemana";
             this.lblDiaSemana.Size = new System.Drawing.Size(83, 13);
             this.lblDiaSemana.TabIndex = 2;
@@ -124,7 +189,7 @@ namespace Estudio.view
             // lblProfessor
             // 
             this.lblProfessor.AutoSize = true;
-            this.lblProfessor.Location = new System.Drawing.Point(18, 99);
+            this.lblProfessor.Location = new System.Drawing.Point(13, 99);
             this.lblProfessor.Name = "lblProfessor";
             this.lblProfessor.Size = new System.Drawing.Size(54, 13);
             this.lblProfessor.TabIndex = 1;
@@ -133,74 +198,11 @@ namespace Estudio.view
             // lblModalidade
             // 
             this.lblModalidade.AutoSize = true;
-            this.lblModalidade.Location = new System.Drawing.Point(18, 65);
+            this.lblModalidade.Location = new System.Drawing.Point(13, 65);
             this.lblModalidade.Name = "lblModalidade";
             this.lblModalidade.Size = new System.Drawing.Size(65, 13);
             this.lblModalidade.TabIndex = 0;
             this.lblModalidade.Text = "Modalidade:";
-            // 
-            // cbModalidade
-            // 
-            this.cbModalidade.FormattingEnabled = true;
-            this.cbModalidade.Location = new System.Drawing.Point(113, 62);
-            this.cbModalidade.Name = "cbModalidade";
-            this.cbModalidade.Size = new System.Drawing.Size(169, 21);
-            this.cbModalidade.TabIndex = 9;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(18, 33);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(19, 13);
-            this.lblId.TabIndex = 10;
-            this.lblId.Text = "Id:";
-            // 
-            // cbId
-            // 
-            this.cbId.FormattingEnabled = true;
-            this.cbId.Location = new System.Drawing.Point(113, 30);
-            this.cbId.Name = "cbId";
-            this.cbId.Size = new System.Drawing.Size(104, 21);
-            this.cbId.TabIndex = 11;
-            this.cbId.SelectedIndexChanged += new System.EventHandler(this.cbId_SelectedIndexChanged);
-            // 
-            // lblNumAlunos
-            // 
-            this.lblNumAlunos.AutoSize = true;
-            this.lblNumAlunos.Location = new System.Drawing.Point(19, 196);
-            this.lblNumAlunos.Name = "lblNumAlunos";
-            this.lblNumAlunos.Size = new System.Drawing.Size(97, 13);
-            this.lblNumAlunos.TabIndex = 12;
-            this.lblNumAlunos.Text = "Número de Alunos:";
-            // 
-            // lblAtivo
-            // 
-            this.lblAtivo.AutoSize = true;
-            this.lblAtivo.Location = new System.Drawing.Point(18, 231);
-            this.lblAtivo.Name = "lblAtivo";
-            this.lblAtivo.Size = new System.Drawing.Size(34, 13);
-            this.lblAtivo.TabIndex = 13;
-            this.lblAtivo.Text = "Ativo:";
-            // 
-            // cbAtivo
-            // 
-            this.cbAtivo.FormattingEnabled = true;
-            this.cbAtivo.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.cbAtivo.Location = new System.Drawing.Point(113, 229);
-            this.cbAtivo.Name = "cbAtivo";
-            this.cbAtivo.Size = new System.Drawing.Size(104, 21);
-            this.cbAtivo.TabIndex = 14;
-            // 
-            // txtNumAlunos
-            // 
-            this.txtNumAlunos.Location = new System.Drawing.Point(113, 193);
-            this.txtNumAlunos.Name = "txtNumAlunos";
-            this.txtNumAlunos.ReadOnly = true;
-            this.txtNumAlunos.Size = new System.Drawing.Size(169, 20);
-            this.txtNumAlunos.TabIndex = 15;
             // 
             // FrmAtualizarTurma
             // 
@@ -233,6 +235,6 @@ namespace Estudio.view
         private System.Windows.Forms.Label lblNumAlunos;
         private System.Windows.Forms.ComboBox cbId;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.ComboBox cbModalidade;
+        private System.Windows.Forms.TextBox txtModalidade;
     }
 }

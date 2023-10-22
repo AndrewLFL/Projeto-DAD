@@ -20,50 +20,101 @@ namespace Estudio.view
         {
             InitializeComponent();
             ac = new AlunoControl();
+            atualizaComboBox();
         }
 
-        private void mtxtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        public void atualizaComboBox()
         {
-            if (e.KeyChar == 13)
+            cbCpf.Items.Clear();
+            try
             {
-                if (ac.consultar(mtxtCpf.Text))
+                List<String> lista = ac.consultarTodosAlunos();
+                foreach (String item in lista)
                 {
-                    Aluno al = ac.buscar(mtxtCpf.Text);
-                    txtNome.Text = al.getSetNome;
-                    txtEndereco.Text = al.getSetEndereco;
-                    txtNum.Text = al.getSetNumero;
-                    txtBairro.Text = al.getSetBairro;
-                    txtComplemento.Text = al.getSetComplemento;
-                    mtxtCep.Text = al.getSetCep;
-                    txtCidade.Text = al.getSetCidade;
-                    txtEstado.Text = al.getSetEstado;
-                    mtxtTel.Text = al.getSetTelefone;
-                    txtEmail.Text = al.getSetEmail;
+                    cbCpf.Items.Add(item);
                 }
-                else
-                {
-                    MessageBox.Show("Aluno não encontrado!");
-                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao listar: " + ex.Message);
             }
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            if (ac.consultar(mtxtCpf.Text))
+            if (txtNome.Text == "" || txtEndereco.Text == "" || txtNum.Text == "" || txtBairro.Text == "" || txtComplemento.Text == "" || mtxtCep.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || mtxtTel.Text == "" || txtEmail.Text == "")
             {
-                Aluno al = new Aluno(mtxtCpf.Text, txtNome.Text, txtEndereco.Text, txtNum.Text, txtBairro.Text, txtComplemento.Text, mtxtCep.Text, txtCidade.Text, txtEstado.Text, mtxtTel.Text, txtEmail.Text);
-                if (ac.atualizar(al))
-                {
-                    MessageBox.Show("Aluno atualizado com sucesso!");
-                }
-                else
-                {
-                    MessageBox.Show("Erro ao atualizar aluno!");
-                }
+                MessageBox.Show("Preencha todos os campos");
+                return;
+            }
+            Aluno al = new Aluno(cbCpf.SelectedItem.ToString(), txtNome.Text, txtEndereco.Text, txtNum.Text, txtBairro.Text, txtComplemento.Text, mtxtCep.Text, txtCidade.Text, txtEstado.Text, mtxtTel.Text, txtEmail.Text, int.Parse(cbAtivo.SelectedItem.ToString()));
+            if (ac.atualizar(al))
+            {
+                MessageBox.Show("Aluno atualizado com sucesso!");
             }
             else
             {
-                MessageBox.Show("Aluno não encontrado!");
+                MessageBox.Show("Erro ao atualizar aluno!");
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtEmail.ReadOnly = true;
+            txtBairro.ReadOnly = true;
+            txtCidade.ReadOnly = true;
+            txtComplemento.ReadOnly = true;
+            txtEndereco.ReadOnly = true;
+            txtEstado.ReadOnly = true;
+            txtNome.ReadOnly = true;
+            txtNum.ReadOnly = true;
+            mtxtCep.ReadOnly = true;
+            mtxtTel.ReadOnly = true;
+            txtNome.Text = "";
+            txtEndereco.Text = "";
+            txtNum.Text = "";
+            txtBairro.Text = "";
+            txtComplemento.Text = "";
+            mtxtCep.Text = "";
+            txtCidade.Text = "";
+            txtEstado.Text = "";
+            mtxtTel.Text = "";
+            txtEmail.Text = "";
+            cbCpf.Text = "";
+            cbAtivo.Text = "";
+        }
+
+        private void cbCpf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                String cpf = cbCpf.SelectedItem.ToString();
+                Aluno al = ac.buscar(cpf);
+                txtNome.Text = al.getSetNome;
+                txtEndereco.Text = al.getSetEndereco;
+                txtNum.Text = al.getSetNumero;
+                txtBairro.Text = al.getSetBairro;
+                txtComplemento.Text = al.getSetComplemento;
+                mtxtCep.Text = al.getSetCep;
+                txtCidade.Text = al.getSetCidade;
+                txtEstado.Text = al.getSetEstado;
+                mtxtTel.Text = al.getSetTelefone;
+                txtEmail.Text = al.getSetEmail;
+                cbAtivo.Text = al.getSetAtivo.ToString();
+                txtEmail.ReadOnly = false;
+                txtBairro.ReadOnly = false;
+                txtCidade.ReadOnly = false;
+                txtComplemento.ReadOnly = false;
+                txtEndereco.ReadOnly = false;
+                txtEstado.ReadOnly = false;
+                txtNome.ReadOnly = false;
+                txtNum.ReadOnly = false;
+                mtxtCep.ReadOnly = false;
+                mtxtTel.ReadOnly = false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
             }
         }
     }

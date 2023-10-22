@@ -1,4 +1,5 @@
-﻿namespace Estudio.view
+﻿
+namespace Estudio.view
 {
     partial class FrmAtualizarAluno
     {
@@ -20,11 +21,19 @@
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             this.gbAtualizarDados = new System.Windows.Forms.GroupBox();
+            this.cbAtivo = new System.Windows.Forms.ComboBox();
+            this.lblAtivo = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.mtxtCep = new System.Windows.Forms.MaskedTextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
@@ -46,13 +55,17 @@
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
+            this.cbCpf = new System.Windows.Forms.ComboBox();
             this.gbAtualizarDados.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAtualizarDados
             // 
+            this.gbAtualizarDados.Controls.Add(this.cbCpf);
+            this.gbAtualizarDados.Controls.Add(this.cbAtivo);
+            this.gbAtualizarDados.Controls.Add(this.lblAtivo);
+            this.gbAtualizarDados.Controls.Add(this.btnLimpar);
             this.gbAtualizarDados.Controls.Add(this.mtxtTel);
-            this.gbAtualizarDados.Controls.Add(this.mtxtCpf);
             this.gbAtualizarDados.Controls.Add(this.mtxtCep);
             this.gbAtualizarDados.Controls.Add(this.txtEstado);
             this.gbAtualizarDados.Controls.Add(this.txtComplemento);
@@ -81,28 +94,52 @@
             this.gbAtualizarDados.TabStop = false;
             this.gbAtualizarDados.Text = "Atualizar Dados";
             // 
+            // cbAtivo
+            // 
+            this.cbAtivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAtivo.FormattingEnabled = true;
+            this.cbAtivo.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cbAtivo.Location = new System.Drawing.Point(448, 69);
+            this.cbAtivo.Name = "cbAtivo";
+            this.cbAtivo.Size = new System.Drawing.Size(87, 21);
+            this.cbAtivo.TabIndex = 25;
+            // 
+            // lblAtivo
+            // 
+            this.lblAtivo.AutoSize = true;
+            this.lblAtivo.Location = new System.Drawing.Point(410, 73);
+            this.lblAtivo.Name = "lblAtivo";
+            this.lblAtivo.Size = new System.Drawing.Size(34, 13);
+            this.lblAtivo.TabIndex = 24;
+            this.lblAtivo.Text = "Ativo:";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(460, 19);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 23;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // mtxtTel
             // 
             this.mtxtTel.Location = new System.Drawing.Point(84, 232);
             this.mtxtTel.Mask = "(00) 00000-0000";
             this.mtxtTel.Name = "mtxtTel";
+            this.mtxtTel.ReadOnly = true;
             this.mtxtTel.Size = new System.Drawing.Size(127, 20);
             this.mtxtTel.TabIndex = 22;
-            // 
-            // mtxtCpf
-            // 
-            this.mtxtCpf.Location = new System.Drawing.Point(84, 41);
-            this.mtxtCpf.Mask = "000,000,000-00";
-            this.mtxtCpf.Name = "mtxtCpf";
-            this.mtxtCpf.Size = new System.Drawing.Size(127, 20);
-            this.mtxtCpf.TabIndex = 21;
-            this.mtxtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtCpf_KeyPress);
             // 
             // mtxtCep
             // 
             this.mtxtCep.Location = new System.Drawing.Point(84, 190);
             this.mtxtCep.Mask = "00,000-00";
             this.mtxtCep.Name = "mtxtCep";
+            this.mtxtCep.ReadOnly = true;
             this.mtxtCep.Size = new System.Drawing.Size(104, 20);
             this.mtxtCep.TabIndex = 20;
             // 
@@ -110,6 +147,7 @@
             // 
             this.txtEstado.Location = new System.Drawing.Point(397, 192);
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(138, 20);
             this.txtEstado.TabIndex = 19;
             // 
@@ -117,6 +155,7 @@
             // 
             this.txtComplemento.Location = new System.Drawing.Point(397, 146);
             this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.ReadOnly = true;
             this.txtComplemento.Size = new System.Drawing.Size(138, 20);
             this.txtComplemento.TabIndex = 18;
             // 
@@ -124,6 +163,7 @@
             // 
             this.txtNum.Location = new System.Drawing.Point(448, 112);
             this.txtNum.Name = "txtNum";
+            this.txtNum.ReadOnly = true;
             this.txtNum.Size = new System.Drawing.Size(86, 20);
             this.txtNum.TabIndex = 17;
             // 
@@ -131,6 +171,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(266, 232);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(269, 20);
             this.txtEmail.TabIndex = 16;
             // 
@@ -138,6 +179,7 @@
             // 
             this.txtCidade.Location = new System.Drawing.Point(249, 190);
             this.txtCidade.Name = "txtCidade";
+            this.txtCidade.ReadOnly = true;
             this.txtCidade.Size = new System.Drawing.Size(86, 20);
             this.txtCidade.TabIndex = 15;
             // 
@@ -145,6 +187,7 @@
             // 
             this.txtBairro.Location = new System.Drawing.Point(84, 146);
             this.txtBairro.Name = "txtBairro";
+            this.txtBairro.ReadOnly = true;
             this.txtBairro.Size = new System.Drawing.Size(218, 20);
             this.txtBairro.TabIndex = 14;
             // 
@@ -152,6 +195,7 @@
             // 
             this.txtEndereco.Location = new System.Drawing.Point(84, 112);
             this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.ReadOnly = true;
             this.txtEndereco.Size = new System.Drawing.Size(308, 20);
             this.txtEndereco.TabIndex = 13;
             // 
@@ -159,6 +203,7 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(84, 70);
             this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(308, 20);
             this.txtNome.TabIndex = 12;
             // 
@@ -166,7 +211,7 @@
             // 
             this.btnAtualizar.Location = new System.Drawing.Point(27, 279);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(508, 20);
+            this.btnAtualizar.Size = new System.Drawing.Size(508, 27);
             this.btnAtualizar.TabIndex = 11;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -271,6 +316,16 @@
             this.lblCpf.TabIndex = 0;
             this.lblCpf.Text = "Cpf:";
             // 
+            // cbCpf
+            // 
+            this.cbCpf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCpf.FormattingEnabled = true;
+            this.cbCpf.Location = new System.Drawing.Point(84, 41);
+            this.cbCpf.Name = "cbCpf";
+            this.cbCpf.Size = new System.Drawing.Size(162, 21);
+            this.cbCpf.TabIndex = 26;
+            this.cbCpf.SelectedIndexChanged += new System.EventHandler(this.cbCpf_SelectedIndexChanged);
+            // 
             // FrmAtualizarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,9 +340,10 @@
 
         }
 
+        #endregion
+
         private System.Windows.Forms.GroupBox gbAtualizarDados;
         private System.Windows.Forms.MaskedTextBox mtxtTel;
-        private System.Windows.Forms.MaskedTextBox mtxtCpf;
         private System.Windows.Forms.MaskedTextBox mtxtCep;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtComplemento;
@@ -309,5 +365,9 @@
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.ComboBox cbAtivo;
+        private System.Windows.Forms.Label lblAtivo;
+        private System.Windows.Forms.ComboBox cbCpf;
     }
 }

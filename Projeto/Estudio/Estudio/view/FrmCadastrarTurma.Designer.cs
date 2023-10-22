@@ -1,4 +1,5 @@
-﻿namespace Estudio.view
+﻿
+namespace Estudio.view
 {
     partial class FrmCadastrarTurma
     {

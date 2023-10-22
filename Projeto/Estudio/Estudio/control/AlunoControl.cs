@@ -36,7 +36,35 @@ namespace Estudio.control
                 Console.WriteLine("Erro ao consultar: " + ex.Message);
             }
             return false;
-        }   
+        } 
+        
+        public List<String> consultarTodosAlunos()
+        {
+            try
+            {
+                AlunoDAO alunoDAO = new AlunoDAO();
+                return alunoDAO.consultarTodosAlunos();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            return null;
+        }
+
+        public List<String> consultarTodosAlunosAtivos()
+        {
+            try
+            {
+                AlunoDAO alunoDAO = new AlunoDAO();
+                return alunoDAO.consultarTodosAlunosAtivos();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            return null;
+        }
 
         public bool excluir(String cpf)
         {

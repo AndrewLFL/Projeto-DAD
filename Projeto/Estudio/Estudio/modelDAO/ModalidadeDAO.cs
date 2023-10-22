@@ -35,9 +35,9 @@ namespace Estudio.modelDAO
             return cad;
         }
 
-        public List<String> consultarTodasModalidades()
+        public List<int> consultarTodasModalidades()
         {
-            List<String> lista = new List<String>();
+            List<int> lista = new List<int>();
             try
             {
                 con = new Conexao().getConnection();
@@ -46,7 +46,7 @@ namespace Estudio.modelDAO
                 MySqlDataReader dr = sql.ExecuteReader();
                 while (dr.Read())
                 {
-                    lista.Add(dr.GetString("descricao"));
+                    lista.Add(dr.GetInt32("id"));
                 }
             }
             catch (Exception ex)
@@ -85,14 +85,39 @@ namespace Estudio.modelDAO
             return lista;
         }
 
-        public bool excluir(String descricao)
+        public List<int> consultarTodasModalidadesAtivasId()
+        {
+            List<int> lista = new List<int>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioModalidade WHERE ativo = 1 ", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(dr.GetInt32("id"));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro na consulta: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
+        public bool excluir(int id)
         {
             bool exc = false;
             try
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioModalidade SET ativo = 0 WHERE descricao = '{descricao}'", con);
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioModalidade SET ativo = 0 WHERE id = '{id}'", con);
                 sql.ExecuteNonQuery();
                 exc = true;
             }
@@ -114,7 +139,7 @@ namespace Estudio.modelDAO
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioModalidade SET preco = {mod.getSetPreco.ToString().Replace(',','.')}, qtdeAlunos = {mod.getSetQtdeAlunos}, qtdeAulas = {mod.getSetQtdeAulas}, ativo = {mod.getSetAtivo} WHERE descricao = '{mod.getSetDescricao}'", con);
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioModalidade SET descricao = '{mod.getSetDescricao}', preco = {mod.getSetPreco.ToString().Replace(',','.')}, qtdeAlunos = {mod.getSetQtdeAlunos}, qtdeAulas = {mod.getSetQtdeAulas}, ativo = {mod.getSetAtivo} WHERE id = {mod.getSetId}", con);
                 sql.ExecuteNonQuery();
                 att = true;
             }
@@ -129,7 +154,32 @@ namespace Estudio.modelDAO
             return att;
         }
 
-        public Modalidade buscar(String descricao)
+        public Modalidade buscar(int id)
+        {
+            Modalidade mod = null;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioModalidade WHERE id = {id}", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    mod = new Modalidade(dr.GetInt32("id"), dr.GetString("descricao"), dr.GetDouble("preco"), dr.GetInt32("qtdeAlunos"), dr.GetInt32("qtdeAulas"), dr.GetInt32("ativo"));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return mod;
+        }
+
+        public Modalidade buscarPorDescricao(String descricao)
         {
             Modalidade mod = null;
             try

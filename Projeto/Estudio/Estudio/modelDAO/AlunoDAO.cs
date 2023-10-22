@@ -60,6 +60,56 @@ namespace Estudio.modelDAO
             return cons;
         }
 
+        public List<String> consultarTodosAlunos()
+        {
+            List<String> lista = new List<String>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAluno", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(dr.GetString("cpf"));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro na consulta: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
+        public List<String> consultarTodosAlunosAtivos()
+        {
+            List<String> lista = new List<String>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAluno where ativo = 1", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(dr.GetString("cpf"));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro na consulta: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
         public bool excluir(String cpf)
         {
             bool exc = false;
@@ -94,7 +144,7 @@ namespace Estudio.modelDAO
                 if (dr.HasRows)
                 {
                     dr.Read();
-                    al = new Aluno(dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6), dr.GetString(7), dr.GetString(8), dr.GetString(9), dr.GetString(10));
+                    al = new Aluno(dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6), dr.GetString(7), dr.GetString(8), dr.GetString(9), dr.GetString(10), dr.GetInt32(11));
                 }
             }
             catch (Exception ex)
@@ -115,7 +165,7 @@ namespace Estudio.modelDAO
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioAluno SET nome = '{al.getSetNome}', endereco = '{al.getSetEndereco}', numero = '{al.getSetNumero}', bairro = '{al.getSetBairro}', complemento = '{al.getSetComplemento}', cep = '{al.getSetCep}', cidade = '{al.getSetCidade}', estado = '{al.getSetEstado}', telefone = '{al.getSetTelefone}', email = '{al.getSetEmail}' WHERE cpf = '{al.getSetCpf}'", con);
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioAluno SET nome = '{al.getSetNome}', endereco = '{al.getSetEndereco}', numero = '{al.getSetNumero}', bairro = '{al.getSetBairro}', complemento = '{al.getSetComplemento}', cep = '{al.getSetCep}', cidade = '{al.getSetCidade}', estado = '{al.getSetEstado}', telefone = '{al.getSetTelefone}', email = '{al.getSetEmail}', ativo = {al.getSetAtivo} WHERE cpf = '{al.getSetCpf}'", con);
                 sql.ExecuteNonQuery();
                 att = true;
             }

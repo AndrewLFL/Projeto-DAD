@@ -52,12 +52,40 @@ namespace Estudio.control
             return null;
         }
 
+        public bool consultarPorModalidade(int id)
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                return turmaDAO.consultarPorModalidade(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            return false;
+        }
+
         public bool excluir(int id)
         {
             try
             {
                 TurmaDAO turmaDAO = new TurmaDAO();
                 return turmaDAO.excluir(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao excluir: " + ex.Message);
+            }
+            return false;
+        }
+
+        public bool excluirPorModalidade(int modalidade)
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                return turmaDAO.excluirPorModalidade(modalidade);
             }
             catch (Exception ex)
             {

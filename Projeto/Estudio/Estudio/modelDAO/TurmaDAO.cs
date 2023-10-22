@@ -85,6 +85,32 @@ namespace Estudio.modelDAO
             return lista;
         }
 
+        public bool consultarPorModalidade(int modalidade)
+        {
+            bool consulta = false;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioTurma WHERE modalidade = {modalidade}", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    consulta = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return consulta;
+        }
+
+
         public bool excluir(int id)
         {
             bool exc = false;
@@ -93,6 +119,28 @@ namespace Estudio.modelDAO
                 con = new Conexao().getConnection();
                 con.Open();
                 MySqlCommand sql = new MySqlCommand($"UPDATE EstudioTurma SET ativo = 0 WHERE id = {id}", con);
+                sql.ExecuteNonQuery();
+                exc = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao excluir: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return exc;
+        }
+
+        public bool excluirPorModalidade(int modalidade)
+        {
+            bool exc = false;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioTurma SET ativo = 0 WHERE modalidade = {modalidade}", con);
                 sql.ExecuteNonQuery();
                 exc = true;
             }
@@ -139,7 +187,7 @@ namespace Estudio.modelDAO
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioTurma SET modalidade = {t.getSetModalidade}, professor = '{t.getSetProfessor}', diaSemana = '{t.getSetDiaSemana}', horario = '{t.getSetHorario}', ativo = {t.getSetAtivo} WHERE id = '{t.getSetId}'", con);
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioTurma SET professor = '{t.getSetProfessor}', diaSemana = '{t.getSetDiaSemana}', horario = '{t.getSetHorario}', ativo = {t.getSetAtivo} WHERE id = '{t.getSetId}'", con);
                 sql.ExecuteNonQuery();
                 att = true;
             }

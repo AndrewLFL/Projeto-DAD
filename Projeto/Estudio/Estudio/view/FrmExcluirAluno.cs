@@ -14,19 +14,37 @@ namespace Estudio.view
 {
     public partial class FrmExcluirAluno : Form
     {
+
+        AlunoControl ac;
         public FrmExcluirAluno()
         {
             InitializeComponent();
+            ac = new AlunoControl();
+            atualizaComboBox();
         }
 
-        private void mtxtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        public void atualizaComboBox()
         {
-            AlunoControl ac = new AlunoControl();
-            if (e.KeyChar == 13)
+            cbCpf.Items.Clear();
+            try
             {
-                if (ac.consultar(mtxtCpf.Text))
+                List<String> lista = ac.consultarTodosAlunosAtivos();
+                foreach (String item in lista)
                 {
-                    if (ac.excluir(mtxtCpf.Text))
+                    cbCpf.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao listar: " + ex.Message);
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+                if (ac.consultar(cbCpf.SelectedItem.ToString()))
+                {
+                    if (ac.excluir(cbCpf.SelectedItem.ToString()))
                     {
                         MessageBox.Show("Aluno excluído!");
                     }
@@ -35,6 +53,28 @@ namespace Estudio.view
                 {
                     MessageBox.Show("Aluno não encontrado!");
                 }
+        }
+
+        private void cbCpf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                String cpf = cbCpf.SelectedItem.ToString();
+                Aluno al = ac.buscar(cpf);
+                txtNome.Text = al.getSetNome;
+                txtEndereco.Text = al.getSetEndereco;
+                txtNum.Text = al.getSetNumero;
+                txtBairro.Text = al.getSetBairro;
+                txtComplemento.Text = al.getSetComplemento;
+                mtxtCep.Text = al.getSetCep;
+                txtCidade.Text = al.getSetCidade;
+                txtEstado.Text = al.getSetEstado;
+                mtxtTel.Text = al.getSetTelefone;
+                txtEmail.Text = al.getSetEmail;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
             }
         }
     }

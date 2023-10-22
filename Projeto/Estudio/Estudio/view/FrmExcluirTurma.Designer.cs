@@ -1,4 +1,5 @@
-﻿namespace Estudio.view
+﻿
+namespace Estudio.view
 {
     partial class FrmExcluirTurma
     {
@@ -27,7 +28,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+        { 
             this.gbTurma = new System.Windows.Forms.GroupBox();
             this.txtNumAlunos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@
             // 
             // cbId
             // 
+            this.cbId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbId.FormattingEnabled = true;
             this.cbId.Location = new System.Drawing.Point(123, 29);
             this.cbId.Name = "cbId";

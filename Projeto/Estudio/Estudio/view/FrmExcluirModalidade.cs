@@ -1,6 +1,5 @@
 ﻿using Estudio.control;
 using Estudio.model;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,13 +26,13 @@ namespace Estudio.view
 
         public void atualizaComboBox()
         {
-            cbDescricao.Items.Clear();
+            cbId.Items.Clear();
             try
             {
-                List<String> lista = mc.consultarTodasModalidadesAtivas();
-                foreach (String item in lista)
+                List<int> lista = mc.consultarTodasModalidadesAtivasId();
+                foreach (int item in lista)
                 {
-                    cbDescricao.Items.Add(item);
+                    cbId.Items.Add(item);
                 }
             }
             catch (Exception ex)
@@ -47,12 +46,28 @@ namespace Estudio.view
         {
             try
             {
-                if (cbDescricao.SelectedItem == null)
+                TurmaControl tc = new TurmaControl();
+                if (cbId.SelectedItem == null)
                     return;
-                if (mc.excluir(cbDescricao.SelectedItem.ToString()))
+                if (mc.excluir(Convert.ToInt32(cbId.SelectedItem.ToString())))
                 {
                     MessageBox.Show("Modalidade excluída!");
+                    if (tc.consultarPorModalidade(Convert.ToInt32(cbId.SelectedItem.ToString())))
+                    {
+                        if(tc.excluirPorModalidade(Convert.ToInt32(cbId.SelectedItem.ToString())))
+                        {
+                            MessageBox.Show("Turmas relacionadas a essa modalidade também foram excluídas!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi possível excluir as turmas relacionadas a essa modalidade!");
+                        }
+                    }
                     atualizaComboBox();
+                    txtPreco.Text = "";
+                    txtDescricao.Text = "";
+                    txtQtdeAlunos.Text = "";
+                    txtQtdeAulas.Text = "";
                 }
                 else
                 {
@@ -63,6 +78,22 @@ namespace Estudio.view
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao excluir: " + ex.Message);
+            }
+        }
+
+        private void cbId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Modalidade mod = mc.buscar(Convert.ToInt32(cbId.SelectedItem.ToString()));
+                txtPreco.Text = mod.getSetPreco.ToString();
+                txtDescricao.Text = mod.getSetDescricao;
+                txtQtdeAlunos.Text = mod.getSetQtdeAlunos.ToString();
+                txtQtdeAulas.Text = mod.getSetQtdeAulas.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar Modalidade: " + ex.Message);
             }
         }
     }

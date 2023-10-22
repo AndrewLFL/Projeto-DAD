@@ -16,11 +16,13 @@ namespace Estudio.view
     {
 
         private ModalidadeControl mc;
+        private TurmaControl tc;
 
         public FrmCadastrarTurma()
         {
             InitializeComponent();
             mc = new ModalidadeControl();
+            tc = new TurmaControl();
             try
             {
                 List<String> modalidades = mc.consultarTodasModalidadesAtivas();
@@ -39,8 +41,12 @@ namespace Estudio.view
         {
             try
             {
-                int modalidade = mc.buscar(txtModalidade.Text).getSetId;
-                TurmaControl tc = new TurmaControl();
+                if (txtDiaSemana.Text == "" || txtHorario.Text == "" || txtModalidade.Text == "" || txtProfessor.Text == "")
+                {
+                    MessageBox.Show("Preencha todos os campos!");
+                    return;
+                }
+                int modalidade = mc.buscarPorDescricao(txtModalidade.Text).getSetId;
                 Turma t = new Turma(modalidade, txtProfessor.Text, txtDiaSemana.Text, txtHorario.Text);
                 if (tc.cadastrar(t))
                 {
@@ -53,7 +59,7 @@ namespace Estudio.view
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar turma:"+ ex.Message);
+                MessageBox.Show("Erro ao cadastrar turma:" + ex.Message);
             }
         }
 

@@ -46,7 +46,7 @@ namespace Estudio.view
                     return;
                 }
 
-                if(uc.cadastrar(u))
+                if (uc.cadastrar(u))
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso!");
                 }

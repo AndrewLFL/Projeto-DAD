@@ -47,7 +47,6 @@ namespace Estudio.view
                 txtModalidade.Text = mc.buscarDescricao(t.getSetModalidade);
                 txtProfessor.Text = t.getSetProfessor;
                 txtNumAlunos.Text = t.getSetNumAlunos.ToString();
-                txtAtivo.Text = t.getSetAtivo.ToString();
             }
             catch (Exception ex)
             {

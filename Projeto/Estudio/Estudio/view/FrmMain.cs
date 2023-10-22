@@ -1,5 +1,4 @@
 ﻿using Estudio.control;
-using Estudio.view;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Estudio
+namespace Estudio.view
 {
     public partial class FrmMain : Form
     {
@@ -29,14 +28,15 @@ namespace Estudio
                 String username = txtUsername.Text;
                 String senha = txtSenha.Text;
                 String msg = uc.logar(username, senha);
-                MessageBox.Show(msg);
                 if (msg.Equals("Login realizado como Administrador!"))
                 {
+                    this.Text = "Estúdio - Administrador";
                     gbValidacao.Visible = false;
                     menuStrip.Enabled = true;
                 }
                 else if (msg.Equals("Login realizado como Restrito!"))
                 {
+                    this.Text = "Estúdio - Restrito";
                     gbValidacao.Visible = false;
                     menuStrip.Enabled = true;
                     mitAtualizarModalidade.Enabled = false;
@@ -115,25 +115,47 @@ namespace Estudio
             frmCadastrarTurma.Show();
         }
 
-        private void excluirTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mitExcluirTurma_Click(object sender, EventArgs e)
         {
             FrmExcluirTurma frmExcluirTurma = new FrmExcluirTurma();
             frmExcluirTurma.MdiParent = this;
             frmExcluirTurma.Show();
         }
 
-        private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mitCadastrarUsuario_Click(object sender, EventArgs e)
         {
             FrmCadastrarUsuario frmCadastrarUsuario = new FrmCadastrarUsuario();
             frmCadastrarUsuario.MdiParent = this;
             frmCadastrarUsuario.Show();
         }
 
-        private void atualizarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mitAtualizarTurma_Click(object sender, EventArgs e)
         {
             FrmAtualizarTurma frmAtualizarTurma = new FrmAtualizarTurma();
             frmAtualizarTurma.MdiParent = this;
             frmAtualizarTurma.Show();
         }
+
+        private void mitConsultarTurma_Click(object sender, EventArgs e)
+        {
+            FrmConsultarTurma frmConsultarTurma = new FrmConsultarTurma();
+            frmConsultarTurma.MdiParent = this;
+            frmConsultarTurma.Show();
+        }
+
+        private void consultarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarAluno frmConsultarAluno = new FrmConsultarAluno();
+            frmConsultarAluno.MdiParent = this;
+            frmConsultarAluno.Show();
+        }
+
+        private void consultarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarModalidade frmConsultarModalidade = new FrmConsultarModalidade();
+            frmConsultarModalidade.MdiParent = this;
+            frmConsultarModalidade.Show();
+        }
     }
+
 }

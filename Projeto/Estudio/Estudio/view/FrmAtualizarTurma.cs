@@ -24,12 +24,6 @@ namespace Estudio.view
             tc = new TurmaControl();
             try
             {
-                List<String> modalidades = mc.consultarTodasModalidadesAtivas();
-                foreach (String mod in modalidades)
-                {
-                    cbModalidade.Items.Add(mod);
-                }
-
                 List<String> lista = tc.consultarTodasTurmas();
                 foreach (String turma in lista)
                 {
@@ -47,13 +41,18 @@ namespace Estudio.view
             try
             {
                 int id = int.Parse(cbId.Text);
-                int modalidade = mc.buscar(cbModalidade.SelectedItem.ToString()).getSetId;
+                int modalidade = mc.buscarPorDescricao(txtModalidade.Text).getSetId;
                 String professor = txtProfessor.Text;
                 String diaSemana = txtDiaSemana.Text;
                 String horario = txtHorario.Text;
                 int numAlunos = int.Parse(txtNumAlunos.Text);
                 int ativo = int.Parse(cbAtivo.Text);
-                Turma t = new Turma(modalidade,professor,diaSemana,horario,numAlunos,ativo,id);
+                if(mc.buscar(modalidade).getSetAtivo == 0 && ativo == 1)
+                {
+                    MessageBox.Show("A turma não pode ser reativada pois sua modalidade está inativa!");
+                    return;
+                }
+                Turma t = new Turma(modalidade, professor, diaSemana, horario, numAlunos, ativo, id);
                 if (tc.atualizar(t))
                 {
                     MessageBox.Show("Turma atualizada com sucesso!");
@@ -76,7 +75,7 @@ namespace Estudio.view
                 Turma t = tc.buscar(int.Parse(cbId.SelectedItem.ToString()));
                 txtDiaSemana.Text = t.getSetDiaSemana;
                 txtHorario.Text = t.getSetHorario;
-                cbModalidade.Text = mc.buscarDescricao(t.getSetModalidade);
+                txtModalidade.Text = mc.buscarDescricao(t.getSetModalidade);
                 txtProfessor.Text = t.getSetProfessor;
                 txtNumAlunos.Text = t.getSetNumAlunos.ToString();
                 cbAtivo.Text = t.getSetAtivo.ToString();

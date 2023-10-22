@@ -27,13 +27,13 @@ namespace Estudio.view
 
         public void atualizaComboBox()
         {
-            cbDescricao.Items.Clear();
+            cbId.Items.Clear();
             try
             {
-                List<String> lista = mc.consultarTodasModalidades();
-                foreach (String item in lista)
+                List<int> lista = mc.consultarTodasModalidades();
+                foreach (int item in lista)
                 {
-                    cbDescricao.Items.Add(item);
+                    cbId.Items.Add(item);
                 }
             }
             catch (Exception ex)
@@ -46,12 +46,13 @@ namespace Estudio.view
         {
             try
             {
-                String descricao = cbDescricao.SelectedItem.ToString();
+                int id = Convert.ToInt32(cbId.SelectedItem.ToString());
+                String descricao = txtDescricao.Text;
                 double preco = double.Parse(txtPreco.Text, new CultureInfo("pt"));
                 int qtdeAlunos = Convert.ToInt32(txtQtdeAlunos.Text);
                 int qtdeAulas = Convert.ToInt32(txtQtdeAulas.Text);
                 int ativo = Convert.ToInt32(cbAtivo.SelectedItem.ToString());
-                Modalidade mod = new Modalidade(descricao, preco, qtdeAlunos, qtdeAulas, ativo);
+                Modalidade mod = new Modalidade(id, descricao, preco, qtdeAlunos, qtdeAulas, ativo);
                 if (mc.atualizar(mod))
                 {
                     MessageBox.Show("Modalidade atualizada com sucesso!");
@@ -67,21 +68,25 @@ namespace Estudio.view
             }
         }
 
-        private void cbDescricao_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbId_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                Modalidade mod = mc.buscar(cbDescricao.SelectedItem.ToString());
+                Modalidade mod = mc.buscar(Convert.ToInt32(cbId.SelectedItem.ToString()));
                 txtPreco.Text = mod.getSetPreco.ToString();
+                txtDescricao.Text = mod.getSetDescricao;
                 txtQtdeAlunos.Text = mod.getSetQtdeAlunos.ToString();
                 txtQtdeAulas.Text = mod.getSetQtdeAulas.ToString();
                 cbAtivo.Text = mod.getSetAtivo.ToString();
+                txtPreco.ReadOnly = false;
+                txtDescricao.ReadOnly = false;
+                txtQtdeAlunos.ReadOnly = false;
+                txtQtdeAulas.ReadOnly = false;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao buscar Modalidade: " + ex.Message);
             }
-
         }
     }
 }
