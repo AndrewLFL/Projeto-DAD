@@ -156,6 +156,27 @@ namespace Estudio.view
             frmConsultarModalidade.MdiParent = this;
             frmConsultarModalidade.Show();
         }
+
+        private void matricularAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMatricularAluno frmMatricularAluno = new FrmMatricularAluno();
+            frmMatricularAluno.MdiParent = this;
+            frmMatricularAluno.Show();
+        }
+
+        private void desmatricularAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDesmatricularAluno frmDesmatricularAluno = new FrmDesmatricularAluno();
+            frmDesmatricularAluno.MdiParent = this;
+            frmDesmatricularAluno.Show();
+        }
+
+        private void consultarMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarMatricula frmConsultarMatricula = new FrmConsultarMatricula();
+            frmConsultarMatricula.MdiParent = this;
+            frmConsultarMatricula.Show();
+        }
     }
 
 }

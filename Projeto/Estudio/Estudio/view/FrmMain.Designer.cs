@@ -38,10 +38,12 @@ namespace Estudio.view
             this.mitCadastrarAluno = new System.Windows.Forms.ToolStripMenuItem();
             this.mitExcluirAluno = new System.Windows.Forms.ToolStripMenuItem();
             this.mitAtualizarAluno = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitModalidade = new System.Windows.Forms.ToolStripMenuItem();
             this.mitCadastrarModalidade = new System.Windows.Forms.ToolStripMenuItem();
             this.mitExcluirModalidade = new System.Windows.Forms.ToolStripMenuItem();
             this.mitAtualizarModalidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarModalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.mitCadastrarTurma = new System.Windows.Forms.ToolStripMenuItem();
             this.mitExcluirTurma = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +55,10 @@ namespace Estudio.view
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.consultarAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarModalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.matricularAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desmatricularAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.gbValidacao.SuspendLayout();
             this.SuspendLayout();
@@ -87,14 +91,19 @@ namespace Estudio.view
             // mitCadastrarUsuario
             // 
             this.mitCadastrarUsuario.Name = "mitCadastrarUsuario";
-            this.mitCadastrarUsuario.Size = new System.Drawing.Size(174, 22);
+            this.mitCadastrarUsuario.Size = new System.Drawing.Size(180, 22);
             this.mitCadastrarUsuario.Text = "Cadastrar Usuário";
             this.mitCadastrarUsuario.Click += new System.EventHandler(this.mitCadastrarUsuario_Click);
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // mitSair
             // 
             this.mitSair.Name = "mitSair";
-            this.mitSair.Size = new System.Drawing.Size(174, 22);
+            this.mitSair.Size = new System.Drawing.Size(180, 22);
             this.mitSair.Text = "Sair";
             this.mitSair.Click += new System.EventHandler(this.mitSair_Click);
             // 
@@ -112,23 +121,30 @@ namespace Estudio.view
             // mitCadastrarAluno
             // 
             this.mitCadastrarAluno.Name = "mitCadastrarAluno";
-            this.mitCadastrarAluno.Size = new System.Drawing.Size(159, 22);
+            this.mitCadastrarAluno.Size = new System.Drawing.Size(180, 22);
             this.mitCadastrarAluno.Text = "Cadastrar Aluno";
             this.mitCadastrarAluno.Click += new System.EventHandler(this.mitCadastrarAluno_Click);
             // 
             // mitExcluirAluno
             // 
             this.mitExcluirAluno.Name = "mitExcluirAluno";
-            this.mitExcluirAluno.Size = new System.Drawing.Size(159, 22);
+            this.mitExcluirAluno.Size = new System.Drawing.Size(180, 22);
             this.mitExcluirAluno.Text = "Excluir Aluno";
             this.mitExcluirAluno.Click += new System.EventHandler(this.mitExcluirAluno_Click);
             // 
             // mitAtualizarAluno
             // 
             this.mitAtualizarAluno.Name = "mitAtualizarAluno";
-            this.mitAtualizarAluno.Size = new System.Drawing.Size(159, 22);
+            this.mitAtualizarAluno.Size = new System.Drawing.Size(180, 22);
             this.mitAtualizarAluno.Text = "Atualizar Aluno";
             this.mitAtualizarAluno.Click += new System.EventHandler(this.mitAtualizarAluno_Click);
+            // 
+            // consultarAlunoToolStripMenuItem
+            // 
+            this.consultarAlunoToolStripMenuItem.Name = "consultarAlunoToolStripMenuItem";
+            this.consultarAlunoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarAlunoToolStripMenuItem.Text = "Consultar Aluno";
+            this.consultarAlunoToolStripMenuItem.Click += new System.EventHandler(this.consultarAlunoToolStripMenuItem_Click);
             // 
             // mitModalidade
             // 
@@ -144,23 +160,30 @@ namespace Estudio.view
             // mitCadastrarModalidade
             // 
             this.mitCadastrarModalidade.Name = "mitCadastrarModalidade";
-            this.mitCadastrarModalidade.Size = new System.Drawing.Size(190, 22);
+            this.mitCadastrarModalidade.Size = new System.Drawing.Size(191, 22);
             this.mitCadastrarModalidade.Text = "Cadastrar Modalidade";
             this.mitCadastrarModalidade.Click += new System.EventHandler(this.mitCadastrarModalidade_Click);
             // 
             // mitExcluirModalidade
             // 
             this.mitExcluirModalidade.Name = "mitExcluirModalidade";
-            this.mitExcluirModalidade.Size = new System.Drawing.Size(190, 22);
+            this.mitExcluirModalidade.Size = new System.Drawing.Size(191, 22);
             this.mitExcluirModalidade.Text = "Excluir Modalidade";
             this.mitExcluirModalidade.Click += new System.EventHandler(this.mitExcluirModalidade_Click);
             // 
             // mitAtualizarModalidade
             // 
             this.mitAtualizarModalidade.Name = "mitAtualizarModalidade";
-            this.mitAtualizarModalidade.Size = new System.Drawing.Size(190, 22);
+            this.mitAtualizarModalidade.Size = new System.Drawing.Size(191, 22);
             this.mitAtualizarModalidade.Text = "Atualizar Modalidade";
             this.mitAtualizarModalidade.Click += new System.EventHandler(this.mitAtualizarModalidade_Click);
+            // 
+            // consultarModalidadeToolStripMenuItem
+            // 
+            this.consultarModalidadeToolStripMenuItem.Name = "consultarModalidadeToolStripMenuItem";
+            this.consultarModalidadeToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.consultarModalidadeToolStripMenuItem.Text = "Consultar Modalidade";
+            this.consultarModalidadeToolStripMenuItem.Click += new System.EventHandler(this.consultarModalidadeToolStripMenuItem_Click);
             // 
             // mitTurma
             // 
@@ -168,7 +191,11 @@ namespace Estudio.view
             this.mitCadastrarTurma,
             this.mitExcluirTurma,
             this.mitAtualizarTurma,
-            this.mitConsultarTurma});
+            this.mitConsultarTurma,
+            this.toolStripSeparator1,
+            this.matricularAlunoToolStripMenuItem,
+            this.desmatricularAlunoToolStripMenuItem,
+            this.consultarMatriculaToolStripMenuItem});
             this.mitTurma.Name = "mitTurma";
             this.mitTurma.Size = new System.Drawing.Size(53, 20);
             this.mitTurma.Text = "Turma";
@@ -176,28 +203,28 @@ namespace Estudio.view
             // mitCadastrarTurma
             // 
             this.mitCadastrarTurma.Name = "mitCadastrarTurma";
-            this.mitCadastrarTurma.Size = new System.Drawing.Size(162, 22);
+            this.mitCadastrarTurma.Size = new System.Drawing.Size(180, 22);
             this.mitCadastrarTurma.Text = "Cadastrar Turma";
             this.mitCadastrarTurma.Click += new System.EventHandler(this.mitCadastrarTurma_Click);
             // 
             // mitExcluirTurma
             // 
             this.mitExcluirTurma.Name = "mitExcluirTurma";
-            this.mitExcluirTurma.Size = new System.Drawing.Size(162, 22);
+            this.mitExcluirTurma.Size = new System.Drawing.Size(180, 22);
             this.mitExcluirTurma.Text = "Excluir Turma ";
             this.mitExcluirTurma.Click += new System.EventHandler(this.mitExcluirTurma_Click);
             // 
             // mitAtualizarTurma
             // 
             this.mitAtualizarTurma.Name = "mitAtualizarTurma";
-            this.mitAtualizarTurma.Size = new System.Drawing.Size(162, 22);
+            this.mitAtualizarTurma.Size = new System.Drawing.Size(180, 22);
             this.mitAtualizarTurma.Text = "Atualizar Turma";
             this.mitAtualizarTurma.Click += new System.EventHandler(this.mitAtualizarTurma_Click);
             // 
             // mitConsultarTurma
             // 
             this.mitConsultarTurma.Name = "mitConsultarTurma";
-            this.mitConsultarTurma.Size = new System.Drawing.Size(162, 22);
+            this.mitConsultarTurma.Size = new System.Drawing.Size(180, 22);
             this.mitConsultarTurma.Text = "Consultar Turma";
             this.mitConsultarTurma.Click += new System.EventHandler(this.mitConsultarTurma_Click);
             // 
@@ -259,19 +286,31 @@ namespace Estudio.view
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Nome de usuario:";
             // 
-            // consultarAlunoToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.consultarAlunoToolStripMenuItem.Name = "consultarAlunoToolStripMenuItem";
-            this.consultarAlunoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarAlunoToolStripMenuItem.Text = "Consultar Aluno";
-            this.consultarAlunoToolStripMenuItem.Click += new System.EventHandler(this.consultarAlunoToolStripMenuItem_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
-            // consultarModalidadeToolStripMenuItem
+            // matricularAlunoToolStripMenuItem
             // 
-            this.consultarModalidadeToolStripMenuItem.Name = "consultarModalidadeToolStripMenuItem";
-            this.consultarModalidadeToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.consultarModalidadeToolStripMenuItem.Text = "Consultar Modalidade";
-            this.consultarModalidadeToolStripMenuItem.Click += new System.EventHandler(this.consultarModalidadeToolStripMenuItem_Click);
+            this.matricularAlunoToolStripMenuItem.Name = "matricularAlunoToolStripMenuItem";
+            this.matricularAlunoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.matricularAlunoToolStripMenuItem.Text = "Matricular Aluno";
+            this.matricularAlunoToolStripMenuItem.Click += new System.EventHandler(this.matricularAlunoToolStripMenuItem_Click);
+            // 
+            // desmatricularAlunoToolStripMenuItem
+            // 
+            this.desmatricularAlunoToolStripMenuItem.Name = "desmatricularAlunoToolStripMenuItem";
+            this.desmatricularAlunoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.desmatricularAlunoToolStripMenuItem.Text = "Desmatricular Aluno";
+            this.desmatricularAlunoToolStripMenuItem.Click += new System.EventHandler(this.desmatricularAlunoToolStripMenuItem_Click);
+            // 
+            // consultarMatriculaToolStripMenuItem
+            // 
+            this.consultarMatriculaToolStripMenuItem.Name = "consultarMatriculaToolStripMenuItem";
+            this.consultarMatriculaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.consultarMatriculaToolStripMenuItem.Text = "Consultar Matrícula";
+            this.consultarMatriculaToolStripMenuItem.Click += new System.EventHandler(this.consultarMatriculaToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -323,5 +362,9 @@ namespace Estudio.view
         private System.Windows.Forms.ToolStripMenuItem mitConsultarTurma;
         private System.Windows.Forms.ToolStripMenuItem consultarAlunoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarModalidadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem matricularAlunoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desmatricularAlunoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMatriculaToolStripMenuItem;
     }
 }

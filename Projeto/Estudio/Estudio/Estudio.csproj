@@ -52,15 +52,18 @@
     <Compile Include="connection\Conexao.cs" />
     <Compile Include="control\AlunoControl.cs" />
     <Compile Include="control\ModalidadeControl.cs" />
+    <Compile Include="control\AlunoTurmaControl.cs" />
     <Compile Include="control\TurmaControl.cs" />
     <Compile Include="control\UsuarioControl.cs" />
     <Compile Include="modelDAO\AlunoDAO.cs" />
     <Compile Include="modelDAO\ModalidadeDAO.cs" />
+    <Compile Include="modelDAO\AlunoTurmaDAO.cs" />
     <Compile Include="modelDAO\TurmaDAO.cs" />
     <Compile Include="modelDAO\UsuarioDAO.cs" />
     <Compile Include="model\Aluno.cs" />
     <Compile Include="model\Modalidade.cs" />
     <Compile Include="model\Turma.cs" />
+    <Compile Include="model\AlunoTurma.cs" />
     <Compile Include="model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +115,12 @@
     <Compile Include="view\FrmConsultarAluno.Designer.cs">
       <DependentUpon>FrmConsultarAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FrmConsultarMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmConsultarMatricula.Designer.cs">
+      <DependentUpon>FrmConsultarMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FrmConsultarModalidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +132,12 @@
     </Compile>
     <Compile Include="view\FrmConsultarTurma.Designer.cs">
       <DependentUpon>FrmConsultarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmDesmatricularAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmDesmatricularAluno.Designer.cs">
+      <DependentUpon>FrmDesmatricularAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="view\FrmExcluirAluno.cs">
       <SubType>Form</SubType>
@@ -147,6 +162,12 @@
     </Compile>
     <Compile Include="view\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmMatricularAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmMatricularAluno.Designer.cs">
+      <DependentUpon>FrmMatricularAluno.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,11 +202,17 @@
     <EmbeddedResource Include="view\FrmConsultarAluno.resx">
       <DependentUpon>FrmConsultarAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmConsultarMatricula.resx">
+      <DependentUpon>FrmConsultarMatricula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\FrmConsultarModalidade.resx">
       <DependentUpon>FrmConsultarModalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmConsultarTurma.resx">
       <DependentUpon>FrmConsultarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmDesmatricularAluno.resx">
+      <DependentUpon>FrmDesmatricularAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmExcluirAluno.resx">
       <DependentUpon>FrmExcluirAluno.cs</DependentUpon>
@@ -198,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmMatricularAluno.resx">
+      <DependentUpon>FrmMatricularAluno.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
