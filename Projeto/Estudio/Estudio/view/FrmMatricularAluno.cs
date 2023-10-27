@@ -77,7 +77,6 @@ namespace Estudio.view
 
                 int limAlunos = mc.buscar(tc.buscar(Convert.ToInt32(cbIdTurma.SelectedItem.ToString())).getSetModalidade).getSetQtdeAlunos;
                 int qtdeAlunos = tac.qtdeAlunosMatriculados(Convert.ToInt32(cbIdTurma.SelectedItem.ToString()));
-                MessageBox.Show(limAlunos.ToString() + " " + qtdeAlunos.ToString());
                 if(qtdeAlunos+1 <= limAlunos)
                 {
                     AlunoTurma ta = new AlunoTurma(cbCpfAluno.SelectedItem.ToString(),Convert.ToInt32(cbIdTurma.SelectedItem.ToString()));
@@ -89,6 +88,10 @@ namespace Estudio.view
                     {
                         MessageBox.Show("Erro ao matricular aluno!");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("O limite de alunos para essa turma já foi alcançado!");
                 }
             }
             catch (Exception ex)

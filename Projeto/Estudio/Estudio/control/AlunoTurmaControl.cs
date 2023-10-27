@@ -24,12 +24,12 @@ namespace Estudio.control
             return false;
         }
 
-        public bool desmatricular(AlunoTurma ta)
+        public bool desmatricular(int id)
         {
             try
             {
                 AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
-                return turmaAlunoDAO.desmatricular(ta);
+                return turmaAlunoDAO.desmatricular(id);
             }
             catch (Exception ex)
             {
@@ -50,6 +50,34 @@ namespace Estudio.control
                 Console.WriteLine("Erro ao matricular: " + ex.Message);
             }
             return 0;
+        }
+
+        public List<String> consultarTodasAlunoTurma()
+        {
+            try
+            {
+                AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
+                return turmaAlunoDAO.consultarTodasAlunoTurma();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao matricular: " + ex.Message);
+            }
+            return null;
+        }
+
+        public AlunoTurma buscar(int id)
+        {
+            try
+            {
+                AlunoTurmaDAO alunoTurmaDAO = new AlunoTurmaDAO();
+                return alunoTurmaDAO.buscar(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            return null;
         }
     }
 }

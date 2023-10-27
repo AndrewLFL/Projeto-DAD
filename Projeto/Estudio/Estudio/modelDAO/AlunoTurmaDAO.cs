@@ -36,14 +36,14 @@ namespace Estudio.modelDAO
             }
             return mat;
         }
-        public bool desmatricular(AlunoTurma ta)
+        public bool desmatricular(int id)
         {
             bool mat = false;
             try
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"DELETE FROM EstudioAlunoTurma (aluno,turma) VALUES ('{ta.getSetCpfAluno}', {ta.getSetIdTurma})", con);
+                MySqlCommand sql = new MySqlCommand($"DELETE FROM EstudioAlunoTurma WHERE id = {id}", con);
                 sql.ExecuteNonQuery();
                 mat = true;
             }
@@ -56,6 +56,31 @@ namespace Estudio.modelDAO
                 con.Close();
             }
             return mat;
+        }
+
+        public List<String> consultarTodasAlunoTurma()
+        {
+            List<String> lista = new List<String>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand("SELECT * FROM EstudioAlunoTurma", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(dr["id"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
         }
 
         public int qtdeAlunosMatriculados(int idTurma)
@@ -82,7 +107,30 @@ namespace Estudio.modelDAO
             }
             return qtde;
         }
-    }
 
-    
+        public AlunoTurma buscar(int id)
+        {
+            AlunoTurma at = null;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAlunoTurma WHERE id = {id}", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                if (dr.Read())
+                {
+                    at = new AlunoTurma(dr["aluno"].ToString(), Convert.ToInt32(dr["turma"].ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao buscar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return at;
+        }
+    }
 }

@@ -140,10 +140,12 @@ namespace Estudio.view
             // 
             // dgvTurma
             // 
+            this.dgvTurma.AllowUserToAddRows = false;
+            this.dgvTurma.AllowUserToDeleteRows = false;
             this.dgvTurma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTurma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cdgvModalidade});
-            this.dgvTurma.Location = new System.Drawing.Point(22, 224);
+            this.dgvTurma.Location = new System.Drawing.Point(22, 222);
             this.dgvTurma.Name = "dgvTurma";
             this.dgvTurma.ReadOnly = true;
             this.dgvTurma.RowTemplate.Height = 25;
