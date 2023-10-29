@@ -82,6 +82,7 @@ namespace Estudio.view
                     AlunoTurma ta = new AlunoTurma(cbCpfAluno.SelectedItem.ToString(),Convert.ToInt32(cbIdTurma.SelectedItem.ToString()));
                     if (tac.matricular(ta))
                     {
+                        tc.atualizarNumAlunos(Convert.ToInt32(cbIdTurma.SelectedItem.ToString()), qtdeAlunos+1);
                         MessageBox.Show("Aluno matriculado com sucesso!");
                     }
                     else

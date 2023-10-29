@@ -83,6 +83,31 @@ namespace Estudio.modelDAO
             return lista;
         }
 
+        public List<String> consultarTodosAlunoPorTurma(int turma)
+        {
+            List<String> lista = new List<String>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAlunoTurma WHERE turma = {turma}", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(dr["aluno"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
         public int qtdeAlunosMatriculados(int idTurma)
         {
             int qtde = 0;

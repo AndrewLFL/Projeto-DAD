@@ -38,6 +38,20 @@ namespace Estudio.control
             return null;
         }
 
+        public List<Turma> consultarTodasTurmasAtivasObjeto()
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                return turmaDAO.consultarTodasTurmasAtivasObjeto();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            return null;
+        }
+
         public List<String> consultarTodasTurmas()
         {
             try
@@ -120,6 +134,19 @@ namespace Estudio.control
                 Console.WriteLine("Erro ao atualizar: " + ex.Message);
             }
             return false;
+        }
+
+        public void atualizarNumAlunos(int id, int qtdeAlunos)
+        {
+            try
+            {
+                TurmaDAO turmaDAO = new TurmaDAO();
+                turmaDAO.atualizarNumAlunos(id, qtdeAlunos);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao atualizar: " + ex.Message);
+            }
         }
     }
 }

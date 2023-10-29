@@ -85,6 +85,32 @@ namespace Estudio.modelDAO
             return lista;
         }
 
+        public List<Turma> consultarTodasTurmasAtivasObjeto()
+        {
+            List<Turma> lista = new List<Turma>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand("SELECT * FROM EstudioTurma WHERE ativo = 1", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    Turma turma = new Turma(int.Parse(dr["modalidade"].ToString()), dr["professor"].ToString(), dr["diaSemana"].ToString(), dr["horario"].ToString(), int.Parse(dr["numAlunos"].ToString()), int.Parse(dr["ativo"].ToString()), int.Parse(dr["id"].ToString()));
+                    lista.Add(turma);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
         public bool consultarPorModalidade(int modalidade)
         {
             bool consulta = false;
@@ -200,6 +226,25 @@ namespace Estudio.modelDAO
                 con.Close();
             }
             return att;
+        }
+
+        public void atualizarNumAlunos(int id, int qtdeAlunos)
+        {
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"UPDATE EstudioTurma SET numAlunos = {qtdeAlunos} WHERE id = '{id}'", con);
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao atualizar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

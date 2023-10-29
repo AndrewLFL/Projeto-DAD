@@ -65,6 +65,8 @@ namespace Estudio.view
                 if (tac.desmatricular(Convert.ToInt32(cbId.SelectedItem.ToString())))
                 {
                     MessageBox.Show("Aluno desmatriculado com sucesso!");
+                    int qtdeAlunos = tac.qtdeAlunosMatriculados(Convert.ToInt32(txtIdTurma.Text));
+                    tc.atualizarNumAlunos(Convert.ToInt32(txtIdTurma.Text), qtdeAlunos);
                     atualizarCbId();
                     txtCpfAluno.Text = "";
                     txtIdTurma.Text = "";

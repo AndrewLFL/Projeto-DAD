@@ -66,6 +66,20 @@ namespace Estudio.control
             return null;
         }
 
+        public List<String> consultarTodosAlunoPorTurma(int turma)
+        {
+            try
+            {
+                AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
+                return turmaAlunoDAO.consultarTodosAlunoPorTurma(turma);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao matricular: " + ex.Message);
+            }
+            return null;
+        }
+
         public AlunoTurma buscar(int id)
         {
             try
