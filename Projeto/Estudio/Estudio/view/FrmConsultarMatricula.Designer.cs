@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.dgvTurma = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvAlunos = new System.Windows.Forms.DataGridView();
-            this.gbAlunos = new System.Windows.Forms.GroupBox();
-            this.txtcCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtcNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtcId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtcModalidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtcProfessor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtcDiaSemana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtcHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtcNumAlunos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvAlunos = new System.Windows.Forms.DataGridView();
+            this.txtcCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtcNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbAlunos = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
@@ -66,51 +66,6 @@
             this.dgvTurma.Size = new System.Drawing.Size(622, 590);
             this.dgvTurma.TabIndex = 0;
             this.dgvTurma.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTurma_CellMouseClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvTurma);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(634, 615);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados da Turma";
-            // 
-            // dgvAlunos
-            // 
-            this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.txtcCpf,
-            this.txtcNome});
-            this.dgvAlunos.Location = new System.Drawing.Point(6, 19);
-            this.dgvAlunos.Name = "dgvAlunos";
-            this.dgvAlunos.Size = new System.Drawing.Size(322, 590);
-            this.dgvAlunos.TabIndex = 1;
-            // 
-            // gbAlunos
-            // 
-            this.gbAlunos.Controls.Add(this.dgvAlunos);
-            this.gbAlunos.Location = new System.Drawing.Point(652, 12);
-            this.gbAlunos.Name = "gbAlunos";
-            this.gbAlunos.Size = new System.Drawing.Size(334, 615);
-            this.gbAlunos.TabIndex = 2;
-            this.gbAlunos.TabStop = false;
-            this.gbAlunos.Text = "Alunos Matriculados";
-            // 
-            // txtcCpf
-            // 
-            this.txtcCpf.HeaderText = "CPF";
-            this.txtcCpf.Name = "txtcCpf";
-            this.txtcCpf.ReadOnly = true;
-            this.txtcCpf.Width = 120;
-            // 
-            // txtcNome
-            // 
-            this.txtcNome.HeaderText = "Nome";
-            this.txtcNome.Name = "txtcNome";
-            this.txtcNome.ReadOnly = true;
-            this.txtcNome.Width = 158;
             // 
             // txtcId
             // 
@@ -150,6 +105,53 @@
             this.txtcNumAlunos.Name = "txtcNumAlunos";
             this.txtcNumAlunos.ReadOnly = true;
             this.txtcNumAlunos.Width = 120;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvTurma);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(634, 615);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados da Turma";
+            // 
+            // dgvAlunos
+            // 
+            this.dgvAlunos.AllowUserToAddRows = false;
+            this.dgvAlunos.AllowUserToDeleteRows = false;
+            this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.txtcCpf,
+            this.txtcNome});
+            this.dgvAlunos.Location = new System.Drawing.Point(6, 19);
+            this.dgvAlunos.Name = "dgvAlunos";
+            this.dgvAlunos.Size = new System.Drawing.Size(322, 590);
+            this.dgvAlunos.TabIndex = 1;
+            // 
+            // txtcCpf
+            // 
+            this.txtcCpf.HeaderText = "CPF";
+            this.txtcCpf.Name = "txtcCpf";
+            this.txtcCpf.ReadOnly = true;
+            this.txtcCpf.Width = 120;
+            // 
+            // txtcNome
+            // 
+            this.txtcNome.HeaderText = "Nome";
+            this.txtcNome.Name = "txtcNome";
+            this.txtcNome.ReadOnly = true;
+            this.txtcNome.Width = 158;
+            // 
+            // gbAlunos
+            // 
+            this.gbAlunos.Controls.Add(this.dgvAlunos);
+            this.gbAlunos.Location = new System.Drawing.Point(652, 12);
+            this.gbAlunos.Name = "gbAlunos";
+            this.gbAlunos.Size = new System.Drawing.Size(334, 615);
+            this.gbAlunos.TabIndex = 2;
+            this.gbAlunos.TabStop = false;
+            this.gbAlunos.Text = "Alunos Matriculados";
             // 
             // FrmConsultarMatricula
             // 

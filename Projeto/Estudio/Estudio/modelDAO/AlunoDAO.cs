@@ -110,6 +110,32 @@ namespace Estudio.modelDAO
             return lista;
         }
 
+        public List<Aluno> consultarTodosAlunosAtivosObjeto()
+        {
+            List<Aluno> lista = new List<Aluno>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAluno where ativo = 1", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    Aluno aluno = new Aluno(dr["cpf"].ToString(), dr["nome"].ToString(), dr["endereco"].ToString(), dr["numero"].ToString(), dr["bairro"].ToString(), dr["complemento"].ToString(), dr["cep"].ToString(), dr["cidade"].ToString(), dr["estado"].ToString(), dr["telefone"].ToString(), dr["email"].ToString());
+                    lista.Add(aluno);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro na consulta: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
         public bool excluir(String cpf)
         {
             bool exc = false;

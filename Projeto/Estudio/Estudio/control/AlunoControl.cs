@@ -66,6 +66,20 @@ namespace Estudio.control
             return null;
         }
 
+        public List<Aluno> consultarTodosAlunosAtivosObjeto()
+        {
+            try
+            {
+                AlunoDAO alunoDAO = new AlunoDAO();
+                return alunoDAO.consultarTodosAlunosAtivosObjeto();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            return null;
+        }
+
         public bool excluir(String cpf)
         {
             try

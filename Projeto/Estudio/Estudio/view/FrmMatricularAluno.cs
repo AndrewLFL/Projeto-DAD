@@ -18,6 +18,8 @@ namespace Estudio.view
         TurmaControl tc;
         AlunoTurmaControl tac;
         ModalidadeControl mc;
+        int idTurma;
+        String cpfAluno;
 
         public FrmMatricularAluno()
         {
@@ -27,41 +29,41 @@ namespace Estudio.view
             tac = new AlunoTurmaControl();
             mc = new ModalidadeControl();
 
-            atualizarCbTurma();
-            atualizarCbAluno();
+            atualizarDgvTurma();
+            atualizarDgvAluno();
         }
 
-        public void atualizarCbTurma()
+        private void atualizarDgvTurma()
         {
-            cbIdTurma.Items.Clear();
             try
             {
-                List<String> lista = tc.consultarTodasTurmasAtivas();
-                foreach (String item in lista)
+                dgvTurma.Rows.Clear();
+                List<Turma> lista = tc.consultarTodasTurmasAtivasObjeto();
+                foreach (Turma turma in lista)
                 {
-                    cbIdTurma.Items.Add(item);
+                    dgvTurma.Rows.Add(turma.getSetId, mc.buscarDescricao(turma.getSetModalidade), turma.getSetProfessor, turma.getSetDiaSemana, turma.getSetHorario, turma.getSetNumAlunos);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao listar: " + ex.Message);
+                MessageBox.Show("Erro ao listar alunos e turmas: " + ex.Message);
             }
         }
 
-        public void atualizarCbAluno()
+        private void atualizarDgvAluno()
         {
-            cbCpfAluno.Items.Clear();
             try
             {
-                List<String> lista = ac.consultarTodosAlunos();
-                foreach (String item in lista)
+                dgvAlunos.Rows.Clear();
+                List<Aluno> lista = ac.consultarTodosAlunosAtivosObjeto();
+                foreach (Aluno aluno in lista)
                 {
-                    cbCpfAluno.Items.Add(item);
+                    dgvAlunos.Rows.Add(aluno.getSetCpf,aluno.getSetNome);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao listar: " + ex.Message);
+                MessageBox.Show("Erro ao listar alunos e turmas: " + ex.Message);
             }
         }
 
@@ -69,20 +71,21 @@ namespace Estudio.view
         {
             try
             {
-                if (cbCpfAluno.Text == "" || cbIdTurma.Text == "")
+                if (cpfAluno == null || idTurma == null)
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Selecione uma Turma e um Aluno!");
                     return;
                 }
 
-                int limAlunos = mc.buscar(tc.buscar(Convert.ToInt32(cbIdTurma.SelectedItem.ToString())).getSetModalidade).getSetQtdeAlunos;
-                int qtdeAlunos = tac.qtdeAlunosMatriculados(Convert.ToInt32(cbIdTurma.SelectedItem.ToString()));
+                int limAlunos = mc.buscar(tc.buscar(idTurma).getSetModalidade).getSetQtdeAlunos;
+                int qtdeAlunos = tac.qtdeAlunosMatriculados(idTurma);
                 if(qtdeAlunos+1 <= limAlunos)
                 {
-                    AlunoTurma ta = new AlunoTurma(cbCpfAluno.SelectedItem.ToString(),Convert.ToInt32(cbIdTurma.SelectedItem.ToString()));
+                    AlunoTurma ta = new AlunoTurma(cpfAluno,idTurma);
                     if (tac.matricular(ta))
                     {
-                        tc.atualizarNumAlunos(Convert.ToInt32(cbIdTurma.SelectedItem.ToString()), qtdeAlunos+1);
+                        tc.atualizarNumAlunos(idTurma, qtdeAlunos+1);
+                        atualizarDgvTurma();
                         MessageBox.Show("Aluno matriculado com sucesso!");
                     }
                     else
@@ -98,6 +101,30 @@ namespace Estudio.view
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao Matricular: " + ex.Message);
+            }
+        }
+
+        private void dgvTurma_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                idTurma = int.Parse(dgvTurma.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            catch
+            {
+                
+            }
+        }
+
+        private void dgvAlunos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                cpfAluno = dgvAlunos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+            catch
+            {
+
             }
         }
     }
