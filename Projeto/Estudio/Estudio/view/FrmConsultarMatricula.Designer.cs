@@ -63,7 +63,7 @@
             this.dgvTurma.Name = "dgvTurma";
             this.dgvTurma.ReadOnly = true;
             this.dgvTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTurma.Size = new System.Drawing.Size(622, 590);
+            this.dgvTurma.Size = new System.Drawing.Size(625, 590);
             this.dgvTurma.TabIndex = 0;
             this.dgvTurma.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTurma_CellMouseClick);
             // 

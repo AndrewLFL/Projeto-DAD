@@ -192,7 +192,7 @@ namespace Estudio.modelDAO
                 MySqlDataReader dr = sql.ExecuteReader();
                 if (dr.Read())
                 {
-                    turma = new Turma(int.Parse(dr["modalidade"].ToString()), dr["professor"].ToString(), dr["diaSemana"].ToString(), dr["horario"].ToString(), int.Parse(dr["numAlunos"].ToString()), int.Parse(dr["ativo"].ToString()));
+                    turma = new Turma(int.Parse(dr["modalidade"].ToString()), dr["professor"].ToString(), dr["diaSemana"].ToString(), dr["horario"].ToString(), int.Parse(dr["numAlunos"].ToString()), int.Parse(dr["ativo"].ToString()), int.Parse(dr["id"].ToString()));
                 }
             }
             catch (Exception ex)

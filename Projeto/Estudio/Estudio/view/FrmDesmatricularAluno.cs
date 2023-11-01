@@ -62,14 +62,16 @@ namespace Estudio.view
                     return;
                 }
 
+                AlunoTurma at = tac.buscar(Convert.ToInt32(cbId.SelectedItem.ToString()));
+
                 if (tac.desmatricular(Convert.ToInt32(cbId.SelectedItem.ToString())))
                 {
                     MessageBox.Show("Aluno desmatriculado com sucesso!");
-                    int qtdeAlunos = tac.qtdeAlunosMatriculados(Convert.ToInt32(txtIdTurma.Text));
-                    tc.atualizarNumAlunos(Convert.ToInt32(txtIdTurma.Text), qtdeAlunos);
+                    int qtdeAlunos = tac.qtdeAlunosMatriculados(at.getSetIdTurma);
+                    tc.atualizarNumAlunos(at.getSetIdTurma, qtdeAlunos);
+                    dgvTurma.Rows.Clear();
+                    dgvAluno.Rows.Clear();
                     atualizarCbId();
-                    txtCpfAluno.Text = "";
-                    txtIdTurma.Text = "";
                 }
                 else
                 {
@@ -86,9 +88,13 @@ namespace Estudio.view
         {
             try
             {
+                dgvTurma.Rows.Clear();
+                dgvAluno.Rows.Clear();
                 AlunoTurma at = tac.buscar(Convert.ToInt32(cbId.SelectedItem.ToString()));
-                txtCpfAluno.Text = at.getSetCpfAluno;
-                txtIdTurma.Text = at.getSetIdTurma.ToString();
+                Turma turma = tc.buscar(at.getSetIdTurma);
+                dgvTurma.Rows.Add(turma.getSetId, mc.buscarDescricao(turma.getSetModalidade), turma.getSetProfessor, turma.getSetDiaSemana, turma.getSetHorario, turma.getSetNumAlunos);
+                Aluno aluno = ac.buscar(at.getSetCpfAluno);
+                dgvAluno.Rows.Add(aluno.getSetCpf, aluno.getSetNome);
             }
             catch (Exception ex)
             {
