@@ -31,6 +31,7 @@ namespace Estudio.view
         {
             this.lblCpf = new System.Windows.Forms.Label();
             this.gbDados = new System.Windows.Forms.GroupBox();
+            this.cbCpf = new System.Windows.Forms.ComboBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
             this.mtxtCep = new System.Windows.Forms.MaskedTextBox();
@@ -53,7 +54,6 @@ namespace Estudio.view
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.cbCpf = new System.Windows.Forms.ComboBox();
             this.gbDados.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,16 @@ namespace Estudio.view
             this.gbDados.TabStop = false;
             this.gbDados.Text = "Dados Cadastrais";
             // 
+            // cbCpf
+            // 
+            this.cbCpf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCpf.FormattingEnabled = true;
+            this.cbCpf.Location = new System.Drawing.Point(84, 36);
+            this.cbCpf.Name = "cbCpf";
+            this.cbCpf.Size = new System.Drawing.Size(162, 21);
+            this.cbCpf.TabIndex = 24;
+            this.cbCpf.SelectedIndexChanged += new System.EventHandler(this.cbCpf_SelectedIndexChanged);
+            // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(459, 34);
@@ -107,6 +117,7 @@ namespace Estudio.view
             this.btnLimpar.TabIndex = 23;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // mtxtTel
             // 
@@ -289,15 +300,6 @@ namespace Estudio.view
             this.lblNome.Size = new System.Drawing.Size(38, 13);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome:";
-            // 
-            // cbCpf
-            // 
-            this.cbCpf.FormattingEnabled = true;
-            this.cbCpf.Location = new System.Drawing.Point(84, 36);
-            this.cbCpf.Name = "cbCpf";
-            this.cbCpf.Size = new System.Drawing.Size(162, 21);
-            this.cbCpf.TabIndex = 24;
-            this.cbCpf.SelectedIndexChanged += new System.EventHandler(this.cbCpf_SelectedIndexChanged);
             // 
             // FrmExcluirAluno
             // 

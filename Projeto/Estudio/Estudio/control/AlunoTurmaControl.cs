@@ -38,6 +38,34 @@ namespace Estudio.control
             return false;
         }
 
+        public bool excluirMatriculasPorAluno(String cpf)
+        {
+            try
+            {
+                AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
+                return turmaAlunoDAO.excluirMatriculasPorAluno(cpf);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao matricular: " + ex.Message);
+            }
+            return false;
+        }
+
+        public bool excluirMatriculasPorTurma(int id)
+        {
+            try
+            {
+                AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
+                return turmaAlunoDAO.excluirMatriculasPorTurma(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao matricular: " + ex.Message);
+            }
+            return false;
+        }
+
         public int qtdeAlunosMatriculados(int idTurma)
         {
             try
@@ -72,6 +100,20 @@ namespace Estudio.control
             {
                 AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
                 return turmaAlunoDAO.consultarTodosAlunoPorTurma(turma);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao matricular: " + ex.Message);
+            }
+            return null;
+        }
+
+        public List<int> consultarTodasTurmasPorAluno(String aluno)
+        {
+            try
+            {
+                AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
+                return turmaAlunoDAO.consultarTodasTurmasPorAluno(aluno);
             }
             catch (Exception ex)
             {

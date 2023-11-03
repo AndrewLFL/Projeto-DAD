@@ -20,7 +20,7 @@ namespace Estudio.modelDAO
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"INSERT INTO EstudioAluno (cpf,nome,endereco,numero,bairro,complemento,cep,cidade,estado,telefone,email) VALUES ('{al.getSetCpf}', '{al.getSetNome}', '{al.getSetEndereco}', '{al.getSetNumero}', '{al.getSetBairro}', '{al.getSetComplemento}', '{al.getSetCep}', '{al.getSetCidade}', '{al.getSetEstado}', '{al.getSetTelefone}', '{al.getSetEmail}')", con);
+                MySqlCommand sql = new MySqlCommand($"INSERT INTO EstudioAluno (cpf,nome,endereco,numero,bairro,complemento,cep,cidade,estado,telefone,email,foto) VALUES ('{al.getSetCpf}', '{al.getSetNome}', '{al.getSetEndereco}', '{al.getSetNumero}', '{al.getSetBairro}', '{al.getSetComplemento}', '{al.getSetCep}', '{al.getSetCidade}', '{al.getSetEstado}', '{al.getSetTelefone}', '{al.getSetEmail}', '{al.getSetFoto}')", con);
                 sql.ExecuteNonQuery(); 
                 cad = true;
             }
@@ -170,7 +170,7 @@ namespace Estudio.modelDAO
                 if (dr.HasRows)
                 {
                     dr.Read();
-                    al = new Aluno(dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4), dr.GetString(5), dr.GetString(6), dr.GetString(7), dr.GetString(8), dr.GetString(9), dr.GetString(10), dr.GetInt32(11));
+                    al = new Aluno(dr["cpf"].ToString(), dr["nome"].ToString(), dr["endereco"].ToString(), dr["numero"].ToString(), dr["bairro"].ToString(), dr["complemento"].ToString(), dr["cep"].ToString(), dr["cidade"].ToString(), dr["estado"].ToString(), dr["telefone"].ToString(), dr["email"].ToString(), (byte[]) dr["foto"], int.Parse(dr["ativo"].ToString()));
                 }
             }
             catch (Exception ex)

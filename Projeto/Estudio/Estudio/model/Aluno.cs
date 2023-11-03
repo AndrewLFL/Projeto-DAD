@@ -19,6 +19,7 @@ namespace Estudio.model
         private String estado;
         private String telefone;
         private String email;
+        private byte[] foto;
         private int ativo;
 
         public Aluno(string cpf, string nome, string endereco, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, int ativo)
@@ -52,6 +53,16 @@ namespace Estudio.model
             this.email = email;
         }
 
+        public Aluno(string cpf, string nome, string endereco, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, byte[] foto) : this(cpf, nome, endereco, numero, bairro, complemento, cep, cidade, estado, telefone, email)
+        {
+            this.foto = foto;
+        }
+
+        public Aluno(string cpf, string nome, string endereco, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, byte[] foto, int ativo) : this(cpf, nome, endereco, numero, bairro, complemento, cep, cidade, estado, telefone, email, foto)
+        {
+            this.ativo = ativo;
+        }
+
         public string getSetCpf { get => cpf; set => cpf = value; }
         public string getSetNome { get => nome; set => nome = value; }
         public string getSetEndereco { get => endereco; set => endereco = value; }
@@ -64,5 +75,6 @@ namespace Estudio.model
         public string getSetTelefone { get => telefone; set => telefone = value; }
         public string getSetEmail { get => email; set => email = value; }
         public int getSetAtivo { get => ativo; set => ativo = value; }
+        public byte[] getSetFoto { get => foto; set => foto = value; }
     }
 }

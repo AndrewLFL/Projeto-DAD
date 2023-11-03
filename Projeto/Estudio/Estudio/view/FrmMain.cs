@@ -33,6 +33,9 @@ namespace Estudio.view
                     this.Text = "Estúdio - Administrador";
                     gbValidacao.Visible = false;
                     menuStrip.Enabled = true;
+                    rbAdmin.Visible = false;
+                    rbRestrito.Visible = false;
+                    lblEscolha.Visible = false;
                 }
                 else if (msg.Equals("Login realizado como Restrito!"))
                 {
@@ -46,6 +49,11 @@ namespace Estudio.view
                     mitCadastrarUsuario.Enabled = false;
                     mitExcluirModalidade.Enabled = false;
                     mitExcluirTurma.Enabled = false;
+                    mitMatricularAluno.Enabled = false;
+                    mitDesmatricularAluno.Enabled = false;
+                    rbAdmin.Visible = false;
+                    rbRestrito.Visible = false;
+                    lblEscolha.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -157,26 +165,39 @@ namespace Estudio.view
             frmConsultarModalidade.Show();
         }
 
-        private void matricularAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mitMatricularAluno_Click(object sender, EventArgs e)
         {
             FrmMatricularAluno frmMatricularAluno = new FrmMatricularAluno();
             frmMatricularAluno.MdiParent = this;
             frmMatricularAluno.Show();
         }
 
-        private void desmatricularAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mitDesmatricularAluno_Click(object sender, EventArgs e)
         {
             FrmDesmatricularAluno frmDesmatricularAluno = new FrmDesmatricularAluno();
             frmDesmatricularAluno.MdiParent = this;
             frmDesmatricularAluno.Show();
         }
 
-        private void consultarMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mitConsultarMatricula_Click(object sender, EventArgs e)
         {
             FrmConsultarMatricula frmConsultarMatricula = new FrmConsultarMatricula();
             frmConsultarMatricula.MdiParent = this;
             frmConsultarMatricula.Show();
         }
+
+        private void rbAdmin_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUsername.Text = "carla";
+            txtSenha.Text = "2343";
+        }
+
+        private void rbRestrito_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUsername.Text = "mario";
+            txtSenha.Text = "1234";
+        }
+
     }
 
 }

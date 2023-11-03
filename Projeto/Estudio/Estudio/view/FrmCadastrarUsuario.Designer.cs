@@ -68,6 +68,7 @@ namespace Estudio.view
             // 
             // cbbTipo
             // 
+            this.cbbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTipo.FormattingEnabled = true;
             this.cbbTipo.Items.AddRange(new object[] {
             "Administrador",

@@ -62,6 +62,21 @@ namespace Estudio.view
             return true;
         }
 
+        private byte[] ConverterFotoParaByteArray()
+        {
+            using (var stream = new System.IO.MemoryStream())
+            {
+                pictureBox1.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //deslocamento de bytes em relação ao parâmetro original
+                //redefine a posição do fluxo para a gravação
+                stream.Seek(0, System.IO.SeekOrigin.Begin);
+                byte[] bArray = new byte[stream.Length];
+                //Lê um bloco de bytes e grava os dados em um buffer (stream)
+                stream.Read(bArray, 0, System.Convert.ToInt32(stream.Length));
+                return bArray;
+            }
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
@@ -73,6 +88,9 @@ namespace Estudio.view
                         MessageBox.Show("Preencha todos os campos");
                         return;
                     }
+
+                    byte[] foto = ConverterFotoParaByteArray();
+
                     String cpf = mtxtCpf.Text;
                     String nome = txtNome.Text;
                     String endereco = txtEndereco.Text;
@@ -84,7 +102,7 @@ namespace Estudio.view
                     String estado = txtEstado.Text;
                     String tel = mtxtTel.Text;
                     String email = txtEmail.Text;
-                    Aluno al = new Aluno(cpf, nome, endereco, numero, bairro, complemento, cep, cidade, estado, tel, email);
+                    Aluno al = new Aluno(cpf, nome, endereco, numero, bairro, complemento, cep, cidade, estado, tel, email, foto);
                     if (ac.cadastrar(al))
                     {
                         MessageBox.Show("Cadastro realizado com sucesso");
@@ -117,6 +135,7 @@ namespace Estudio.view
                     }
                     else
                     {
+                        mtxtCpf.ReadOnly = true;
                         txtBairro.ReadOnly = false;
                         txtCidade.ReadOnly = false;
                         txtComplemento.ReadOnly = false;
@@ -132,6 +151,7 @@ namespace Estudio.view
                 else
                 {
                     MessageBox.Show("Insira um cpf válido!");
+                    mtxtCpf.ReadOnly = false;
                     txtEmail.ReadOnly = true;
                     txtBairro.ReadOnly = true;
                     txtCidade.ReadOnly = true;
@@ -170,6 +190,27 @@ namespace Estudio.view
             mtxtTel.Text = "";
             txtEmail.Text = "";
             mtxtCpf.Text = "";
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            dialog.Title = "Abrir Foto";
+            dialog.Filter = "JPG (*.jpg)|*.jpg" + "|All files (*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    pictureBox1.Image = new Bitmap(dialog.OpenFile());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Não foi possivel carregar a foto: " + ex.Message);
+                }//catch
+            }//if
+            dialog.Dispose();
         }
     }
 }

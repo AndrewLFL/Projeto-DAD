@@ -30,6 +30,7 @@ namespace Estudio.view
         private void InitializeComponent()
         {
             this.gbDados = new System.Windows.Forms.GroupBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
             this.mtxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.mtxtCep = new System.Windows.Forms.MaskedTextBox();
@@ -53,12 +54,16 @@ namespace Estudio.view
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnFoto = new System.Windows.Forms.Button();
             this.gbDados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDados
             // 
+            this.gbDados.Controls.Add(this.btnFoto);
+            this.gbDados.Controls.Add(this.pictureBox1);
             this.gbDados.Controls.Add(this.btnLimpar);
             this.gbDados.Controls.Add(this.mtxtTel);
             this.gbDados.Controls.Add(this.mtxtCpf);
@@ -85,10 +90,20 @@ namespace Estudio.view
             this.gbDados.Controls.Add(this.lblCpf);
             this.gbDados.Location = new System.Drawing.Point(28, 23);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(564, 325);
+            this.gbDados.Size = new System.Drawing.Size(793, 325);
             this.gbDados.TabIndex = 0;
             this.gbDados.TabStop = false;
             this.gbDados.Text = "Dados Cadastrais";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(459, 34);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 23;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // mtxtTel
             // 
@@ -290,26 +305,35 @@ namespace Estudio.view
             this.lblCpf.TabIndex = 0;
             this.lblCpf.Text = "Cpf:";
             // 
-            // btnLimpar
+            // pictureBox1
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(459, 34);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 23;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(553, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 218);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(553, 279);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(221, 27);
+            this.btnFoto.TabIndex = 25;
+            this.btnFoto.Text = "Escolher Foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // FrmCadastrarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 367);
+            this.ClientSize = new System.Drawing.Size(846, 367);
             this.Controls.Add(this.gbDados);
             this.Name = "FrmCadastrarAluno";
             this.Text = "Cadastrar Aluno";
             this.gbDados.ResumeLayout(false);
             this.gbDados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +365,7 @@ namespace Estudio.view
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

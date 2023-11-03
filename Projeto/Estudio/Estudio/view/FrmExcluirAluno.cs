@@ -9,17 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Estudio.view
 {
     public partial class FrmExcluirAluno : Form
     {
-
+        AlunoTurmaControl atc;
         AlunoControl ac;
+        TurmaControl tc;
         public FrmExcluirAluno()
         {
             InitializeComponent();
             ac = new AlunoControl();
+            atc = new AlunoTurmaControl();
+            tc = new TurmaControl();
             atualizaComboBox();
         }
 
@@ -42,17 +46,40 @@ namespace Estudio.view
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-                if (ac.consultar(cbCpf.SelectedItem.ToString()))
+            String cpf = cbCpf.SelectedItem.ToString();
+            List<int> lista = atc.consultarTodasTurmasPorAluno(cpf);
+            if (ac.excluir(cbCpf.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Aluno excluído!");
+                atualizaComboBox();
+                if(atc.excluirMatriculasPorAluno(cpf))
                 {
-                    if (ac.excluir(cbCpf.SelectedItem.ToString()))
+                    foreach(int id in lista) 
                     {
-                        MessageBox.Show("Aluno excluído!");
+                        int qtdeAlunos = atc.qtdeAlunosMatriculados(id);
+                        tc.atualizarNumAlunos(id, qtdeAlunos);
                     }
                 }
-                else
+                else 
                 {
-                    MessageBox.Show("Aluno não encontrado!");
+                    MessageBox.Show("Houve um problema ao excluir as matriculas relacionadas a esse aluno!");
                 }
+                txtNome.Text = "";
+                txtEndereco.Text = "";
+                txtNum.Text = "";
+                txtBairro.Text = "";
+                txtComplemento.Text = "";
+                mtxtCep.Text = "";
+                txtCidade.Text = "";
+                txtEstado.Text = "";
+                mtxtTel.Text = "";
+                txtEmail.Text = "";
+                cbCpf.Text = "";
+            }
+            else
+            {                         
+                MessageBox.Show("Erro ao excluir!");                 
+            }
         }
 
         private void cbCpf_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +103,21 @@ namespace Estudio.view
             {
                 Console.WriteLine("Erro ao consultar: " + ex.Message);
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = "";
+            txtEndereco.Text = "";
+            txtNum.Text = "";
+            txtBairro.Text = "";
+            txtComplemento.Text = "";
+            mtxtCep.Text = "";
+            txtCidade.Text = "";
+            txtEstado.Text = "";
+            mtxtTel.Text = "";
+            txtEmail.Text = "";
+            cbCpf.Text = "";
         }
     }
 }

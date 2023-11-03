@@ -71,7 +71,7 @@ namespace Estudio.view
         {
             try
             {
-                if (cpfAluno == null || idTurma == null)
+                if (cpfAluno == null || idTurma == 0)
                 {
                     MessageBox.Show("Selecione uma Turma e um Aluno!");
                     return;

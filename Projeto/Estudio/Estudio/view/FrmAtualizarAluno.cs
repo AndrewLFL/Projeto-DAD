@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,21 @@ namespace Estudio.view
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao listar: " + ex.Message);
+            }
+        }
+
+        private Image ConverteByteParaImagem(byte[] arquivo)
+        {
+            try
+            {
+                using (MemoryStream mStream = new MemoryStream(arquivo))
+                {
+                    return Image.FromStream(mStream);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
@@ -101,6 +117,9 @@ namespace Estudio.view
                 mtxtTel.Text = al.getSetTelefone;
                 txtEmail.Text = al.getSetEmail;
                 cbAtivo.Text = al.getSetAtivo.ToString();
+                Console.WriteLine(al.getSetFoto.Length);
+                Image img = ConverteByteParaImagem(al.getSetFoto);
+                pictureBox1.Image = img;
                 txtEmail.ReadOnly = false;
                 txtBairro.ReadOnly = false;
                 txtCidade.ReadOnly = false;

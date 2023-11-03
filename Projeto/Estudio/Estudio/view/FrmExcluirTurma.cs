@@ -1,6 +1,7 @@
 ﻿using Estudio.control;
 using Estudio.model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,13 +16,23 @@ namespace Estudio.view
     public partial class FrmExcluirTurma : Form
     {
         private TurmaControl tc;
+        private AlunoTurmaControl atc;
+        private ModalidadeControl mc;
 
         public FrmExcluirTurma()
         {
             InitializeComponent();
             tc = new TurmaControl();
+            atc = new AlunoTurmaControl();
+            mc = new ModalidadeControl();
+            atualizarCbId();
+        }
+
+        private void atualizarCbId()
+        {
             try
             {
+                cbId.Items.Clear();
                 List<String> lista = tc.consultarTodasTurmasAtivas();
                 foreach (String turma in lista)
                 {
@@ -35,7 +46,6 @@ namespace Estudio.view
         }
 
 
-
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -44,6 +54,21 @@ namespace Estudio.view
                 if (tc.excluir(id))
                 {
                     MessageBox.Show("Turma excluída com sucesso!");
+                    if (atc.excluirMatriculasPorTurma(id))
+                    {
+                        int qtdeAlunos = atc.qtdeAlunosMatriculados(id);
+                        tc.atualizarNumAlunos(id, qtdeAlunos);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Houve um problema ao excluir as matriculas relacionadas a esse aluno!");
+                    }
+                    txtDiaSemana.Text = "";
+                    txtHorario.Text = "";
+                    txtModalidade.Text = "";
+                    txtProfessor.Text = "";
+                    txtNumAlunos.Text = "";
+                    atualizarCbId();
                 }
                 else
                 {
@@ -63,7 +88,7 @@ namespace Estudio.view
                 Turma t = tc.buscar(int.Parse(cbId.SelectedItem.ToString()));
                 txtDiaSemana.Text = t.getSetDiaSemana;
                 txtHorario.Text = t.getSetHorario;
-                txtModalidade.Text = t.getSetModalidade.ToString();
+                txtModalidade.Text = mc.buscarDescricao(t.getSetModalidade);
                 txtProfessor.Text = t.getSetProfessor;
                 txtNumAlunos.Text = t.getSetNumAlunos.ToString();
             }

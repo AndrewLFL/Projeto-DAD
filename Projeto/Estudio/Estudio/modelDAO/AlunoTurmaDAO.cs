@@ -49,7 +49,51 @@ namespace Estudio.modelDAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao matricular: " + ex.Message);
+                Console.WriteLine("Erro ao desmatricular: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return mat;
+        }
+
+        public bool excluirMatriculasPorAluno(String cpf)
+        {
+            bool mat = false;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"DELETE FROM EstudioAlunoTurma WHERE aluno = '{cpf}'", con);
+                sql.ExecuteNonQuery();
+                mat = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao Excluir Matriculas Por Aluno: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return mat;
+        }
+
+        public bool excluirMatriculasPorTurma(int id)
+        {
+            bool mat = false;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"DELETE FROM EstudioAlunoTurma WHERE turma = {id}", con);
+                sql.ExecuteNonQuery();
+                mat = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao Excluir Matriculas Por Turma: " + ex.Message);
             }
             finally
             {
@@ -95,6 +139,31 @@ namespace Estudio.modelDAO
                 while (dr.Read())
                 {
                     lista.Add(dr["aluno"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista;
+        }
+
+        public List<int> consultarTodasTurmasPorAluno(String aluno)
+        {
+            List<int> lista = new List<int>();
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAlunoTurma WHERE aluno = '{aluno}'", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    lista.Add(int.Parse(dr["turma"].ToString()));
                 }
             }
             catch (Exception ex)
