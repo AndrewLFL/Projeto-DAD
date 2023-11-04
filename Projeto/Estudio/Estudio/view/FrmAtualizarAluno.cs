@@ -41,21 +41,6 @@ namespace Estudio.view
             }
         }
 
-        private Image ConverteByteParaImagem(byte[] arquivo)
-        {
-            try
-            {
-                using (MemoryStream mStream = new MemoryStream(arquivo))
-                {
-                    return Image.FromStream(mStream);
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             if (txtNome.Text == "" || txtEndereco.Text == "" || txtNum.Text == "" || txtBairro.Text == "" || txtComplemento.Text == "" || mtxtCep.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || mtxtTel.Text == "" || txtEmail.Text == "")
@@ -117,9 +102,6 @@ namespace Estudio.view
                 mtxtTel.Text = al.getSetTelefone;
                 txtEmail.Text = al.getSetEmail;
                 cbAtivo.Text = al.getSetAtivo.ToString();
-                Console.WriteLine(al.getSetFoto.Length);
-                Image img = ConverteByteParaImagem(al.getSetFoto);
-                pictureBox1.Image = img;
                 txtEmail.ReadOnly = false;
                 txtBairro.ReadOnly = false;
                 txtCidade.ReadOnly = false;

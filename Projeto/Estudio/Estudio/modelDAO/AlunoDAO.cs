@@ -170,7 +170,7 @@ namespace Estudio.modelDAO
                 if (dr.HasRows)
                 {
                     dr.Read();
-                    al = new Aluno(dr["cpf"].ToString(), dr["nome"].ToString(), dr["endereco"].ToString(), dr["numero"].ToString(), dr["bairro"].ToString(), dr["complemento"].ToString(), dr["cep"].ToString(), dr["cidade"].ToString(), dr["estado"].ToString(), dr["telefone"].ToString(), dr["email"].ToString(), (byte[]) dr["foto"], int.Parse(dr["ativo"].ToString()));
+                    al = new Aluno(dr["cpf"].ToString(), dr["nome"].ToString(), dr["endereco"].ToString(), dr["numero"].ToString(), dr["bairro"].ToString(), dr["complemento"].ToString(), dr["cep"].ToString(), dr["cidade"].ToString(), dr["estado"].ToString(), dr["telefone"].ToString(), dr["email"].ToString(), int.Parse(dr["ativo"].ToString()));
                 }
             }
             catch (Exception ex)

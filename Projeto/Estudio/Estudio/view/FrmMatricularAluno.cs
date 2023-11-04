@@ -39,9 +39,20 @@ namespace Estudio.view
             {
                 dgvTurma.Rows.Clear();
                 List<Turma> lista = tc.consultarTodasTurmasAtivasObjeto();
+                int i = 0;
                 foreach (Turma turma in lista)
                 {
                     dgvTurma.Rows.Add(turma.getSetId, mc.buscarDescricao(turma.getSetModalidade), turma.getSetProfessor, turma.getSetDiaSemana, turma.getSetHorario, turma.getSetNumAlunos);
+                    int limAlunos = mc.buscar(turma.getSetModalidade).getSetQtdeAlunos;
+                    int qtdeAlunos = tac.qtdeAlunosMatriculados(turma.getSetId);
+                    if (qtdeAlunos == limAlunos)
+                    {
+                        dgvTurma.Rows[i].ReadOnly = true;
+                        dgvTurma.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
+                        dgvTurma.Rows[i].DefaultCellStyle.SelectionBackColor = Color.Gray;
+
+                    }
+                    i++;
                 }
             }
             catch (Exception ex)

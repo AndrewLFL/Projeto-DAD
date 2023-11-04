@@ -56,16 +56,11 @@ namespace Estudio.view
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.btnFoto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbAtualizarDados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbAtualizarDados
             // 
-            this.gbAtualizarDados.Controls.Add(this.btnFoto);
-            this.gbAtualizarDados.Controls.Add(this.pictureBox1);
             this.gbAtualizarDados.Controls.Add(this.cbCpf);
             this.gbAtualizarDados.Controls.Add(this.cbAtivo);
             this.gbAtualizarDados.Controls.Add(this.lblAtivo);
@@ -94,7 +89,7 @@ namespace Estudio.view
             this.gbAtualizarDados.Controls.Add(this.lblCpf);
             this.gbAtualizarDados.Location = new System.Drawing.Point(10, 10);
             this.gbAtualizarDados.Name = "gbAtualizarDados";
-            this.gbAtualizarDados.Size = new System.Drawing.Size(804, 325);
+            this.gbAtualizarDados.Size = new System.Drawing.Size(559, 325);
             this.gbAtualizarDados.TabIndex = 1;
             this.gbAtualizarDados.TabStop = false;
             this.gbAtualizarDados.Text = "Atualizar Dados";
@@ -331,34 +326,16 @@ namespace Estudio.view
             this.lblCpf.TabIndex = 0;
             this.lblCpf.Text = "Cpf:";
             // 
-            // btnFoto
-            // 
-            this.btnFoto.Location = new System.Drawing.Point(566, 279);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(221, 27);
-            this.btnFoto.TabIndex = 28;
-            this.btnFoto.Text = "Escolher Foto";
-            this.btnFoto.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(566, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 233);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmAtualizarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 346);
+            this.ClientSize = new System.Drawing.Size(585, 346);
             this.Controls.Add(this.gbAtualizarDados);
             this.Name = "FrmAtualizarAluno";
             this.Text = "Atualizar Aluno";
             this.gbAtualizarDados.ResumeLayout(false);
             this.gbAtualizarDados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,7 +369,5 @@ namespace Estudio.view
         private System.Windows.Forms.ComboBox cbAtivo;
         private System.Windows.Forms.Label lblAtivo;
         private System.Windows.Forms.ComboBox cbCpf;
-        private System.Windows.Forms.Button btnFoto;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
