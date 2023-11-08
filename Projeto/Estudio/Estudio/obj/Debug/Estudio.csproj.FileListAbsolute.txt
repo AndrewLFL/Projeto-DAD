@@ -186,3 +186,36 @@ C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.CopyComplete
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.exe
 C:\Users\aluno\3D Objects\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.pdb
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\Estudio.exe.config
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\Estudio.exe
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\Estudio.pdb
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\MySql.Data.dll
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\System.Memory.dll
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\System.Buffers.dll
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\bin\Debug\MySql.Data.xml
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.AssemblyReference.cache
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.Properties.Resources.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarAluno.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarModalidade.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmAtualizarTurma.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarAluno.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarModalidade.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarTurma.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmCadastrarUsuario.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmConsultarAluno.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmConsultarMatricula.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmConsultarModalidade.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmConsultarTurma.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmDesmatricularAluno.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirAluno.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirModalidade.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmExcluirTurma.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmMain.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.view.FrmMatricularAluno.resources
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.GenerateResource.cache
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.csproj.CopyComplete
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.exe
+C:\Users\aluno\Downloads\Projeto-DAD\Projeto\Estudio\Estudio\obj\Debug\Estudio.pdb

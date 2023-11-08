@@ -83,7 +83,7 @@ namespace Estudio.view
             {
                 if (verificaCPF(mtxtCpf.Text))
                 {
-                    if (mtxtCpf.Text == "" || txtNome.Text == "" || txtEndereco.Text == "" || txtNum.Text == "" || txtBairro.Text == "" || txtComplemento.Text == "" || mtxtCep.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || mtxtTel.Text == "" || txtEmail.Text == "")
+                    if (mtxtCpf.Text == "" || txtNome.Text == "" || txtEndereco.Text == "" || txtNum.Text == "" || txtBairro.Text == "" || txtComplemento.Text == "" || mtxtCep.Text == "" || txtCidade.Text == "" || txtEstado.Text == "" || mtxtTel.Text == "" || txtEmail.Text == "" || pictureBox1.Image == null)
                     {
                         MessageBox.Show("Preencha todos os campos");
                         return;
