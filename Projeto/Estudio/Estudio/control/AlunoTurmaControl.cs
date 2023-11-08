@@ -24,16 +24,30 @@ namespace Estudio.control
             return false;
         }
 
-        public bool desmatricular(int id)
+        public bool desmatricular(int idTurma,String cpfAluno)
         {
             try
             {
                 AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
-                return turmaAlunoDAO.desmatricular(id);
+                return turmaAlunoDAO.desmatricular(idTurma,cpfAluno);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao matricular: " + ex.Message);
+            }
+            return false;
+        }
+
+        public bool validar(int idTurma, String cpfAluno)
+        {
+            try
+            {
+                AlunoTurmaDAO turmaAlunoDAO = new AlunoTurmaDAO();
+                return turmaAlunoDAO.validar(idTurma, cpfAluno);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao validar: " + ex.Message);
             }
             return false;
         }

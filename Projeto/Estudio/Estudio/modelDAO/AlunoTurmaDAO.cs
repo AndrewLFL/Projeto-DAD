@@ -36,14 +36,14 @@ namespace Estudio.modelDAO
             }
             return mat;
         }
-        public bool desmatricular(int id)
+        public bool desmatricular(int idTurma , String cpfAluno)
         {
             bool mat = false;
             try
             {
                 con = new Conexao().getConnection();
                 con.Open();
-                MySqlCommand sql = new MySqlCommand($"DELETE FROM EstudioAlunoTurma WHERE id = {id}", con);
+                MySqlCommand sql = new MySqlCommand($"DELETE FROM EstudioAlunoTurma WHERE turma = {idTurma} and aluno = '{cpfAluno}'", con);
                 sql.ExecuteNonQuery();
                 mat = true;
             }
@@ -151,6 +151,32 @@ namespace Estudio.modelDAO
             }
             return lista;
         }
+
+        public bool validar(int turma, String aluno)
+        {
+            bool r = false;
+            try
+            {
+                con = new Conexao().getConnection();
+                con.Open();
+                MySqlCommand sql = new MySqlCommand($"SELECT * FROM EstudioAlunoTurma WHERE turma = {turma} and aluno = '{aluno}'", con);
+                MySqlDataReader dr = sql.ExecuteReader();
+                while (dr.Read())
+                {
+                    r = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao consultar: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return r;
+        }
+
 
         public List<int> consultarTodasTurmasPorAluno(String aluno)
         {

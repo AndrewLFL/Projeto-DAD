@@ -19,6 +19,8 @@ namespace Estudio.view
         TurmaControl tc;
         AlunoTurmaControl tac;
         ModalidadeControl mc;
+        int idTurma = 0;
+        String cpfAluno = "";
 
         public FrmDesmatricularAluno()
         {
@@ -28,25 +30,23 @@ namespace Estudio.view
             tac = new AlunoTurmaControl();
             mc = new ModalidadeControl();
 
-            atualizarCbId();
+            atualizarDgvTurma();
         }
 
- 
-
-        public void atualizarCbId()
+        private void atualizarDgvTurma()
         {
-            cbId.Items.Clear();
             try
             {
-                List<String> lista = tac.consultarTodasAlunoTurma();
-                foreach (String item in lista)
+                dgvTurma.Rows.Clear();
+                List<Turma> lista = tc.consultarTodasTurmasAtivasObjeto();
+                foreach (Turma turma in lista)
                 {
-                    cbId.Items.Add(item);
+                    dgvTurma.Rows.Add(turma.getSetId, mc.buscarDescricao(turma.getSetModalidade), turma.getSetProfessor, turma.getSetDiaSemana, turma.getSetHorario, turma.getSetNumAlunos);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao listar: " + ex.Message);
+                MessageBox.Show("Erro ao listar alunos e turmas: " + ex.Message);
             }
         }
 
@@ -56,22 +56,20 @@ namespace Estudio.view
 
             try
             {
-                if (cbId.Text == "")
+                if (idTurma == 0 || cpfAluno == "")
                 {
-                    MessageBox.Show("Selecione um Id!");
+                    MessageBox.Show("Selecione uma turma e um aluno!");
                     return;
                 }
-
-                AlunoTurma at = tac.buscar(Convert.ToInt32(cbId.SelectedItem.ToString()));
-
-                if (tac.desmatricular(Convert.ToInt32(cbId.SelectedItem.ToString())))
+                if (tac.desmatricular(idTurma,cpfAluno))
                 {
                     MessageBox.Show("Aluno desmatriculado com sucesso!");
-                    int qtdeAlunos = tac.qtdeAlunosMatriculados(at.getSetIdTurma);
-                    tc.atualizarNumAlunos(at.getSetIdTurma, qtdeAlunos);
-                    dgvTurma.Rows.Clear();
-                    dgvAluno.Rows.Clear();
-                    atualizarCbId();
+                    int qtdeAlunos = tac.qtdeAlunosMatriculados(idTurma);
+                    tc.atualizarNumAlunos(idTurma, qtdeAlunos);
+                    atualizarDgvTurma();
+                    dgvAlunos.Rows.Clear();
+                    idTurma = 0;
+                    cpfAluno = "";
                 }
                 else
                 {
@@ -84,22 +82,29 @@ namespace Estudio.view
             }
         }
 
-        private void cbId_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgvTurma_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
-                dgvTurma.Rows.Clear();
-                dgvAluno.Rows.Clear();
-                AlunoTurma at = tac.buscar(Convert.ToInt32(cbId.SelectedItem.ToString()));
-                Turma turma = tc.buscar(at.getSetIdTurma);
-                dgvTurma.Rows.Add(turma.getSetId, mc.buscarDescricao(turma.getSetModalidade), turma.getSetProfessor, turma.getSetDiaSemana, turma.getSetHorario, turma.getSetNumAlunos);
-                Aluno aluno = ac.buscar(at.getSetCpfAluno);
-                dgvAluno.Rows.Add(aluno.getSetCpf, aluno.getSetNome);
+                this.idTurma = int.Parse(dgvTurma.Rows[e.RowIndex].Cells[0].Value.ToString());
+                dgvAlunos.Rows.Clear();
+                String idTurma = dgvTurma.Rows[e.RowIndex].Cells[0].Value.ToString();
+                List<String> lista = tac.consultarTodosAlunoPorTurma(int.Parse(idTurma));
+                foreach (String cpf in lista)
+                {
+                    Aluno aluno = ac.buscar(cpf);
+                    dgvAlunos.Rows.Add(aluno.getSetCpf, aluno.getSetNome);
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao buscar Modalidade: " + ex.Message);
+                Console.WriteLine("Erro ao selecionar uma linha: " + ex.Message);
             }
+        }
+
+        private void dgvAlunos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            this.cpfAluno = dgvAlunos.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }

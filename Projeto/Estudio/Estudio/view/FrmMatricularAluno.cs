@@ -92,16 +92,23 @@ namespace Estudio.view
                 int qtdeAlunos = tac.qtdeAlunosMatriculados(idTurma);
                 if(qtdeAlunos+1 <= limAlunos)
                 {
-                    AlunoTurma ta = new AlunoTurma(cpfAluno,idTurma);
-                    if (tac.matricular(ta))
+                    if (!tac.validar(idTurma , cpfAluno))
                     {
-                        tc.atualizarNumAlunos(idTurma, qtdeAlunos+1);
-                        atualizarDgvTurma();
-                        MessageBox.Show("Aluno matriculado com sucesso!");
+                        AlunoTurma ta = new AlunoTurma(cpfAluno,idTurma);
+                        if (tac.matricular(ta))
+                        {
+                            tc.atualizarNumAlunos(idTurma, qtdeAlunos+1);
+                            atualizarDgvTurma();
+                            MessageBox.Show("Aluno matriculado com sucesso!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao matricular aluno!");
+                        }
                     }
-                    else
+                    else 
                     {
-                        MessageBox.Show("Erro ao matricular aluno!");
+                        MessageBox.Show("Esse aluno já está matriculado nessa turma!");
                     }
                 }
                 else
